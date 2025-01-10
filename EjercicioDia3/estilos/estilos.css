@@ -1,0 +1,33 @@
+body {
+    background-color: #33383b;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: aqua;
+}
+
+
+h2 {
+    color: lightcoral;
+    text-align: center;
+}
+
+
+ul li {
+    display: inline;
+    vertical-align:top;
+    padding: 8rem;
+}
+
+a {
+    justify-content: center;
+    text-decoration: none;
+    color: chocolate;
+}
+
+img {
+    max-width: 22rem;
+    height: 15rem;
+}

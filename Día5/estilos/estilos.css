@@ -1,0 +1,81 @@
+body{
+    background-color: gray;
+}
+header{
+    font-family: Arial, sans-serif;
+}
+
+nav{  
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+nav ul li h2{
+    display: inline;
+    color: black;
+}
+ul li{
+    display: inline;
+    vertical-align: top;
+    margin-right: 5rem;
+    text-decoration: none;
+}
+
+main{
+    background-color:lightgray;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+nav ul li img{
+    max-width: 3rem;
+    height: 1.5rem;
+
+}
+
+
+section{
+    display: flex;
+    background-color:darkgray;
+    justify-content: center;
+}
+
+section .imagen img{
+    vertical-align: top;
+    color: white;
+    width: 40rem;
+    height: 40rem;
+    z-index: 1;
+}
+
+.texto ul{
+    background-color:lightgray;
+    color: white;
+    padding: 8rem;
+    margin: 0;
+    margin-bottom: 0;
+    height: 24rem;
+    z-index: 1;
+}
+
+section button{
+    background-color: black;
+    margin-left: auto;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    height: 3rem;
+    width: 8rem;
+    z-index: 1;
+}
+.fondo{ 
+    background-color: black;
+    width: 0;
+    height: 5%;
+    opacity: 0.5;
+    z-index: 0;
+}
+

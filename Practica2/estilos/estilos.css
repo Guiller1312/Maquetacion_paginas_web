@@ -1,0 +1,155 @@
+header{
+    color: #262626;
+    padding: 20px 0;
+    vertical-align: left;
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+.menu{
+    color: #707070;
+    font-family: sans-serif;
+    font-size: 14px;
+    line-height: 1;
+    width: 100%;
+    margin-left: auto;
+}
+
+.imagen.header{
+    max-width: 45%;
+    min-height: 375%;
+    margin: 0 auto;
+}
+
+.menu1 ul{
+    display: block;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+.icono{
+    width: 20px;
+    height: 20px;
+    padding: 11px 8px;
+    margin-right: auto;
+    line-height: 1;
+}
+
+
+
+h1 {
+    font-size: 225%;
+    margin: 3rem 10% 1.5em;
+    color: #262626;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1rem;
+}
+
+main {
+    font-size: 1.125em;
+    font-weight: 400;
+    line-height: 1.625em;
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 66%;
+    color: #707070;
+
+}
+h2 {
+    font-size: 1.8rem;
+    color: #262626;
+}
+
+p {
+    line-height: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: 0 0 1.625em;
+
+}
+
+.naranja {
+    color: #ea361f;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+}
+
+p span.gris.claro {
+    font-size: 100%;
+    font-style: italic;
+    margin-top: .5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    display: block;
+}
+
+.gris {
+    color: gray;
+}
+
+main ul {
+    margin-bottom: 2.25em;
+}
+
+.em {
+    font-style: italic;
+}
+
+footer {
+    display: flex;
+    background-color: #262626;
+    color: #f0f0f0;
+    padding: 60px 0 10px;
+    text-decoration: none;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;  
+}
+
+
+h3 {
+    color: #f0f0f0;
+    font-size: 23px;
+    margin-bottom: 1rem;
+}
+
+footer ul{
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    line-height: 1.625rem;
+}
+.footer1{
+    margin-left: 17%;
+    margin-right: 10%;
+   
+}
+.footer2{
+    margin-right: 10%;
+}
+
+footer ul li{
+   margin: auto;
+}
+.footer3{
+    display: inline-block;
+    padding: 20px 0;
+    background-color: #262626;
+    width: 100%;
+    
+}
+.footer3 p{
+    border-top: 1px solid #707070;
+    margin-left: 20%;
+    margin-right: 29.9%;
+    color: #f0f0f0;
+}

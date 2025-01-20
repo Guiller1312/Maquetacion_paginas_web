@@ -1,0 +1,49 @@
+/* Seccion 1 */
+.seccion1 {
+    display: flex;
+    width: 100vw;
+    height: 33vh;
+}
+
+.seccion1 img {
+    margin-left: auto;
+    width: 49vw;
+}
+.seccion1 h2{
+    display: flex;
+    margin-right: auto;
+}
+.seccion1 p {
+    display: flex;
+    margin-right: auto;
+    width: 49vw;
+}
+
+/* Seccion 2 */
+
+.seccion2 img {
+    width: 98vw;
+    height: 40vh;
+}
+
+
+
+/* Seccion 3 */
+
+.seccion3 {
+    width: 100vw;
+    height: 33vh;
+}
+
+.seccion3 h2 {
+    margin-left: auto;
+}
+
+.seccion3 p {
+
+    margin-left: auto;
+}
+
+.seccion3 img {
+    margin-right: auto;
+}

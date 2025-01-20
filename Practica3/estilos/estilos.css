@@ -1,6 +1,10 @@
 body{
     margin: 0%;
 }
+*{
+    /* CON ESTA INSTRUCCIÓN  */
+    box-sizing:border-box;
+}
 header {   
     background-color: aqua; 
     width: 100vw;
@@ -9,13 +13,6 @@ header {
     position: absolute;
 }
 
-/* .menu.header .titulo.cabecera{
-    margin: 0px;
-    display: inline-block;
-    text-align: center;
-    line-height: 0%;
-    margin-left: 10%;
-} */
 .menu.header ul li {
     height: 10vw;
     height: auto;

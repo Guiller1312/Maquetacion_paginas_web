@@ -1,19 +1,25 @@
-header {
-    margin-top: 25%;
-    background-color: aqua;
+body{
+    padding: 0%;
+    margin: 0%;
+    margin-bottom: 0%;
+}
+header {   
+    background-color: aqua; 
+    margin-bottom: 25%;
 }
 
-.menu.header {
-    margin-bottom: 10%;
-    display: flex;
+.menu.header ul li {
+    display: inline-block;
+    
+    margin-left: 10%
 }
 
 footer {
-    margin-top: 40%;
-    background-color: blue;
-
+    background-color: chartreuse;
+    
 }
 
-.menu.footer {
-    display: block;
+.menu.footer ul li {
+    display: flex;
+    margin-bottom: 2rem;
 }

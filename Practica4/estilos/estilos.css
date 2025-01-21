@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* CON ESTA INSTRUCCIÓN  */
+    box-sizing: border-box;
+}
+
 /* Seccion 1 */
 .seccion1 {
     display: flex;
@@ -6,17 +13,14 @@
 }
 
 .seccion1 img {
-    margin-left: auto;
-    width: 49vw;
+    width: 48vw;
+    height: 33vh;
 }
-.seccion1 h2{
-    display: flex;
-    margin-right: auto;
-}
-.seccion1 p {
-    display: flex;
-    margin-right: auto;
-    width: 49vw;
+
+.seccion1 article {
+    width: 50vw;
+    text-align: center;
+    margin: 2% 5% 5% 5%;
 }
 
 /* Seccion 2 */

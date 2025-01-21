@@ -1,7 +1,4 @@
 * {
-    margin: 0;
-    padding: 0;
-    /* CON ESTA INSTRUCCIÓN  */
     box-sizing: border-box;
 }
 
@@ -17,7 +14,7 @@
     height: 33vh;
 }
 
-.seccion1 article {
+.seccion1 h2, p {
     width: 50vw;
     text-align: center;
     margin: 2% 5% 5% 5%;
@@ -49,5 +46,7 @@
 }
 
 .seccion3 img {
+    width: 48vw;
+    height: 33vh;
     margin-right: auto;
 }

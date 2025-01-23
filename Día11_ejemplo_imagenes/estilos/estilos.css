@@ -10,9 +10,7 @@ section{
     border: 1px solid red;
 }
 
-img{
-    max-width: 100%;
-}
+
 #foto2, #foto1{
-    max-width: 80%;
+    max-width: 60%;
 }

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CONTENEDORES</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        /* RECOMENDADO USAR ANCHOS CON 'vw' Y ALTOS CON 'vh' EN CONTENEDORES PRINCIPALES */
+        .contenedores {
+            width: 100vw;
+            /* border: 1px solid black; */
+        }
+
+        #cabecera {
+            background: gray;
+            height: 20vh;
+            /* border: 1px solid blue; */
+        }
+
+        #navega {
+            background-color: lightgray;
+            height: 5vh;
+        }
+
+        #cuerpo {
+            /* background-color: yellow; */
+            min-height: 50vh;
+            /* border: 1px solid red; */
+            /* padding-top: 1rem; */
+        }
+
+        #pie {
+            background-color: black;
+            height: 25vh;
+        }
+
+        /* CONTENIDO DE MAIN */
+        #separa {
+            width: 100%;
+            height: 1rem;
+        }
+
+        .contenido {
+            /* background-color: green; */
+            width: 80%;
+            /* NO PODEMOS USAR % SOBRE MEDIDAS DE SU CONTENEDOR CON 'max- ó min-' */
+            height: 20vh;
+            margin: auto;
+            text-align: center;
+            border-top: 1rem solid white;
+        }
+
+        .cajita {
+            background-color: brown;
+            width: 9%;
+            height: 80%;
+            display: inline-block;
+            margin-inline: 18%;
+
+        }
+
+        .cajita2 {
+            width: 9%;
+            height: 80%;
+            display: inline-block;
+            margin-inline: 0.5%;
+            
+        }
+        .pintada {
+            background-color: brown;
+        }
+
+        .contenido2 {
+            background-color: cadetblue;
+        }
+
+        .bolita {
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .elegida {
+            background-color: coral;
+        }
+
+        .escondida {
+            /* DESAPARECE DE LA PANTALLA PERO GUARDA SU ESPACIO EN EL DOCUMENTO */
+            visibility: hidden;
+        }
+
+        .desaparecida {
+            /* DESAPARECE EL ELEMENTO DEL DOCUMENTO, NO OCUPA ESPACIO */
+            display: none;
+        }
+
+        .semiOpaca {
+            /* PARA MOSTRAR UN ELEMENTO CON UNA TRANSPARENCIA DE 0 A 1 */
+            opacity: 80%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 1. PRIMERO MAQUETAMOS LOS CONTENEDORES PRINCIPALES DE LA PAGINA -->
+    <!-- header#cabecera.contenedores+nav#navega.contenedores.menus+main#cuerpo.contenedores+footer#pie.contenedores -->
+    <header id="cabecera" class="contenedores">
+        <p>Hola soy verdana</p>
+    </header>
+    <nav id="navega" class="contenedores menus"></nav>
+    <main id="cuerpo" class="contenedores">
+        <!-- section.contenido>div.cajita*2 -->
+        <!-- <div class="separa"></div> -->
+        <section class="contenido">
+            <div class="cajita"></div>
+            <div class="cajita"></div>
+        </section>
+        <section class="contenido">
+            <!-- div.cajita*10 -->
+            <div class="cajita2"></div>
+            <div class="cajita2"></div>
+            <div class="cajita2 pintada"></div>
+            <div class="cajita2"></div>
+            <div class="cajita2"></div>
+            <div class="cajita2"></div>
+            <div class="cajita2 pintada"></div>
+            <div class="cajita2"></div>
+            <div class="cajita2"></div>
+            <div class="cajita2"></div>
+        </section>
+        <section class="contenido contenido2">
+            <!-- 2, 5, 8, 11 -->
+            <div class="bolita escondida"></div>
+            <div class="bolita elegida"></div>
+            <div class="bolita escondida"></div>
+            <div class="bolita escondida"></div>
+            <div class="bolita elegida escondida"></div>
+            <div class="bolita desaparecida"></div>
+            <div class="bolita desaparecida"></div>
+            <div class="bolita elegida escondida"></div>
+            <div class="bolita escondida"></div>
+            <div class="bolita escondida"></div>
+            <div class="bolita elegida semiOpaca"></div>
+            <div class="bolita escondida"></div>
+        </section>
+    </main>
+    <footer id="pie" class="contenedores">
+
+    </footer>
+</body>
+
+</html>

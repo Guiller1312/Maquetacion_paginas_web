@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* CON ESTA INSTRUCCION LE INDICAMOS AL NAVEGADOR QUE DIBUJE CADA ELEMENTO CONTANDO SUS BORDES */
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}
+

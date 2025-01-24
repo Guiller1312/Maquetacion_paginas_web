@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloque o Linea</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        header {
+            background-color: blue;
+            width: 100vw;
+            height: 25vh;
+            text-align: center;
+        }
+
+        .cuadros {
+            background-color: red!important;
+            width: 20vh;
+            height: 20vh;
+            display: inline-block;
+            border: 1px solid black;
+            margin-top: 2.5vh;
+        }
+
+        #centradito {
+            background-color: orange;
+            width: 20vh;
+            height: 20vh;
+            margin: auto;
+            margin-top: 12.5vh;
+            margin-bottom: 12.5vh;
+        }
+
+        footer {
+            background-color: gray;
+            width: 100vw;
+            height: 25vh;
+        }
+        .ajustaditos{
+            background-color: lightblue;
+            width: 25%;
+            height: 100%;
+            display: inline-block;
+            border: 1px solid black;
+        }
+        #cuadro1{
+            background-color: blueviolet;
+        }
+        #cuadro2{
+            background-color: brown;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <!-- div.cuadros*3 -->
+        <div id="cuadro1" class="cuadros ">
+
+        </div><div id="cuadro2" class="cuadros" style="background-color: green">
+
+        </div><div id="cuadro3" class="cuadros">
+
+        </div>
+    </header>
+
+    <div id="centradito"></div>
+
+    <footer>
+        <!-- div.ajustaditos*3 -->
+        <div class="ajustaditos">
+            
+        </div><div class="ajustaditos">
+
+        </div><div class="ajustaditos">
+
+        </div><div class="ajustaditos">
+
+        </div>
+    </footer>
+</body>
+
+</html>

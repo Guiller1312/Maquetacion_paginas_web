@@ -1,9 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     /* hace que no se nos salgan los bordes del límite que le hemos dado */
     box-sizing: border-box;
 }
+
 /* Seccion 1 */
 .seccion1 {
     background-color: aqua;
@@ -23,15 +24,17 @@
     margin: 5%;
     text-align: center;
 }
-.seccion1 article h2{
- margin-bottom: 1%;
+
+.seccion1 article h2 {
+    margin-bottom: 1%;
 }
 
 /* Seccion 2 */
-.seccion2{
+.seccion2 {
     width: 100vw;
     max-height: 32vh;
 }
+
 .seccion2 img {
     width: 100vw;
     max-height: 32vh;
@@ -52,21 +55,23 @@
     max-width: 48vw;
     margin-left: 0;
 }
-.seccion3 article h2{
+
+.seccion3 article h2 {
     margin-bottom: 1%;
-   }
+}
 
 .seccion3 img {
     width: 48vw;
     height: 32.5vh;
-    
+
 }
 
 /* Pagina 2 Seccion 1 */
-.seccion4{
+.seccion4 {
     width: 100vw;
     max-height: 33vh;
 }
+
 .seccion4 img {
     width: 100vw;
     max-height: 33vh;
@@ -93,7 +98,8 @@
     max-width: 33vw;
     margin-left: 0;
 }
-.seccion5 article p{
+
+.seccion5 article p {
     margin-left: 3rem;
 }
 
@@ -117,9 +123,10 @@
     text-align: center;
     margin: 2.5%;
     max-width: 33vw;
-    
+
 }
-.seccion6 article p{
+
+.seccion6 article p {
     margin-left: 3rem;
 }
 
@@ -127,63 +134,69 @@
 /* Sección 3 */
 
 /* Pagina 3 Seccion 1 */
-.seccion7{
-    width: 48vw;
+#seccionp3 {
+    display: flex;
+}
+
+.seccion7 {
+    width: 50vw;
     height: 48vh;
     display: inline-flex;
 }
-.seccion71{
-    width: 24vw;
+
+.seccion71 {
+    width: 25vw;
 }
 
 .seccion7 .seccion71 img {
-    width: 24vw;
-    height: 23.8vh;
-    
+    width: 25vw;
+    height: 24.8vh;
+
 }
-.seccion72{
-    width: 24vw;
+
+.seccion72 {
+    width: 25vw;
 }
 
 .seccion7 .seccion72 img {
-    width: 24vw;
-    height: 23.8vh;
+    width: 25vw;
+    height: 24.8vh;
 }
 
 
-/* Pagina 3 Seccion 1 */
-
-.seccion8{
+/* Pagina 3 Seccion 2 */
+.seccion8 {
     width: 50vw;
     height: 50vh;
-    
+
 }
 
 .seccion8 img {
-    width: 48vw;
-    height: 50vh;  
+    width: 50vw;
+    height: 50vh;
 }
 
 
 /* Pagina 3 Seccion 3 */
-.seccion9{
+.seccion9 {
     display: inline-block;
     width: 48vw;
     height: 49vh;
 }
+
 .seccion9 img {
     width: 48vw;
     height: 16vh;
 }
 
 /* Pagina 3 Seccion 4 */
-.seccion10{
-display: inline-flex;
+.seccion10 {
+    display: inline-flex;
     width: 49vw;
     height: 49vh;
 }
+
 .seccion10 img {
-    
-    width: 25.45vw;
+    width: 25.89vw;
     height: 49vh
 }

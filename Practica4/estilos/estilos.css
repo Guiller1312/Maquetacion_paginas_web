@@ -167,13 +167,13 @@
 /* Pagina 3 Seccion 2 */
 .seccion8 {
     width: 50vw;
-    height: 50vh;
+    height: 48vh;
 
 }
 
 .seccion8 img {
     width: 50vw;
-    height: 50vh;
+    height: 48vh;
 }
 
 
@@ -181,7 +181,7 @@
 .seccion9 {
     display: inline-block;
     width: 48vw;
-    height: 49vh;
+    height: 48vh;
 }
 
 .seccion9 img {
@@ -192,8 +192,8 @@
 /* Pagina 3 Seccion 4 */
 .seccion10 {
     display: inline-flex;
-    width: 49vw;
-    height: 49vh;
+    width: 50vw;
+    height: 47vh;
 }
 
 .seccion10 img {

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N de N...</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        div{
+            background-color: #b1060f;
+            width: 60px;
+            height: 250px;
+            /* 'relative' SALTA DEL FLUJO DEL CODIGO (DE SU POSICION) PERO GUARDA SITIO */
+            position: relative;
+        }
+        /* PSEUDO-ELEMENTO '::before' PARA METER CONTENIDO ANTES DE UN ELEMENTO */
+        div::before{
+            background-color: #b1060f;
+            width: 60px;
+            height: 250px;
+            /* 'absolute' SACA DEL FLUJO EL ELEMENTO Y LO POSICIONA SOBRE EL ULTIMO SITIO */
+            position: absolute;
+            /* LO SITUA A 90px DESDE LA IZQUIERDA */
+            left: 90px;
+            /* AÑADE ESTE CONTENIDO '' --VACIO-- */
+            content: '';
+        }
+        /* PSEUDO-ELEMENTO '::after' PARA METER CONTENIDO DESPUES DE UN ELEMENTO */
+        div::after{
+            background-color: #222;
+            width: 155px;
+            height: 15px;
+            /* 'absolute' SACA DEL FLUJO EL ELEMENTO Y LO POSICIONA SOBRE EL ULTIMO SITIO */
+            position: absolute;
+            /* LO SITUA A -15px DESDE LA IZQUIERDA */
+            left: -1px;
+            /* LO SITUA A -10px DESDE ABAJO */
+            bottom: -8px;
+            /* AÑADE ESTE CONTENIDO '' --VACIO-- */
+            content: '';
+            /* REDONDEAMOS LA PARTE INFERIOR */
+            border-radius: 50%;
+            box-shadow: 2px 2px 10px 2px#e50913;
+        }
+        span{
+            background-color: #e50913;
+            width: 60px;
+            height: 250px;
+            /* 'absolute' SACA DEL FLUJO EL ELEMENTO Y LO POSICIONA SOBRE EL ULTIMO SITIO */
+            position: absolute;
+            /* LO SITUA A 45px DESDE LA IZQUIERDA */
+            left: 45px;
+            /* TRANSFORMAMOS EL ELEMENTO DEFORMANDO EL EJE X SOLAMENTE */
+            transform: skew(20deg);
+            box-shadow: 0px 0 10px 4px #222;
+
+        }
+        section{
+            margin-top: 2rem;
+            background-color: coral;
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            transition: all ease 2000;
+        }
+        section:hover{
+            width: 10rem;
+            height: 10rem;
+            background-color: cadetblue;
+            border-radius: 10%;
+            opacity: 0.5;
+            transition: 4s all ease 1s;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <span></span>
+    </div>
+    <section></section>
+</body>
+</html>

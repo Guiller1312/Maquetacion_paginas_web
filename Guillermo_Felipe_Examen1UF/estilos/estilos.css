@@ -1,0 +1,50 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+  
+    display: flex;
+}
+header h1{
+    margin: 2% 10% 2.3% 35%;
+}
+#imagen_header {
+    width: 5%; 
+}
+
+/* Main */
+
+main{
+    text-align: center;
+}
+
+main h2{
+    margin-bottom: 1%;
+}
+
+main h3{
+    margin: 1%;
+}
+
+main h4{
+    margin: 1%;
+}
+
+/* Imágenes del main */
+.Donquijote{
+    margin: 1%;
+}
+
+/* Párrafos del main */
+p{
+    margin: 2% 5% 1% 5%;
+}
+
+/* footer */
+
+footer{
+    text-align: center;
+    text-decoration: none;
+}

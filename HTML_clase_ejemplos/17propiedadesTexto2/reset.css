@@ -1,0 +1,10 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* DE ESTE MODO CUENTA LOS BORDES COMO PARTE DEL ANCHO Y ALTO */
+    /* ESTA PROPIEDAD ES MECESARIA PARA HACER EL DISEÑO RESPONSIVO */
+    box-sizing: border-box;
+}
+ul{
+    list-style-type: none;
+}

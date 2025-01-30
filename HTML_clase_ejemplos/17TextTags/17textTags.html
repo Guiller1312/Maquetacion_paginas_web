@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etiquetas Texto</title>
+    <style>
+        h3{
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+    <!-- ******************** ******************** ******************** ******************** -->
+    <!-- ******************** REPASO HTML ETIQUETAS PERMITIDAS/USABLES  ******************** -->
+    <!-- ******************** ******************** ******************** ******************** -->
+
+    <!-- TODAS ESTAS ETIQUETAS LAS USAREMOS A DISCRECCIÓN SEGÚN NOS CONVENGA EXPRESAR UN TIPO U OTRO DE SIGNIFICADO -->
+    <!-- LA ETIQUETA MARK ES NUEVA EN HTML5 Y CREA UN EFECTO DE FONDO DE FUENTE EN COLOR AMARILLO, USAR CON CUIDADO -->
+
+    <div>
+        <h1 style="text-align:center; text-decoration: underline;">ETIQUETAS CON USO SEMÁNTICO O LINGÜÍSTICO </h1>
+        <h2>ETIQUETAS APROBADAS Y DE USO COMUN</h2>
+
+        <!-- ******************** H1... H6 - Encabezados - Titulos ******************** -->
+        <h1>TITULOS</h1>
+        <!-- ENCABEZADOS, TITULOS, SUBTITULOS, SOLO USAMOS 3-4 NIVELES NORMALMENTE -->
+        <h1>H1 30 TITULO PRINCIPAL &#128169;</h1> <!-- POU - CACA -->
+        <h2>H2 26 TITULO SECUNDARIO</h2>
+        <h3>H3 22 NO DEBEN USARSE COMO UN ESTILO &#128169;</h3>
+        <h4>H4 18 NO RECOMENDADO OMITIR NINGUN NIVEL</h4>
+        <h5>H5 16 SOLO SUELEN TENER 3-4 NIVELES</h5>
+        <h6>H6 14 ESTE ES EL NIVEL MENOR DE TITULAR</h6>
+    
+        <!-- ******************** DIV - CAPA, DIVISION ******************** -->
+        <h3>DIV - Capa, división</h3>
+        <!-- Contenedor genérico para el contenido de flujo, NO se pinta hasta que tenga contenido -->
+        <!-- No tiene ningún efecto sobre el contenido o el diseño hasta que se le aplica estilo -->
+        <!-- Debe usarse solo cuando ningún otro elemento semántico sea apropiado -->
+        <div><p><span>Esto es una capa</span></p></div>
+
+        <!-- ******************** P - PARRAFO ******************** -->
+        <h3>P - parrafo</h3>
+        <!-- Representan en medios visuales como bloques de texto separados de los bloques adyacentes -->
+        <!-- Se separan por líneas en blanco y/o sangría en la primera línea -->
+        <!-- Pueden ser cualquier agrupación estructural de contenido relacionado: imágenes o campos de formulario  -->
+        <!-- SON ELEMENTOS EN BLOQUE, SE PUEDEN SEPARAR CON SANGRIA text-indent: 3ch -->
+        <P>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum, fugit.</P>
+
+        <!-- ******************** SPAN - BLOQUE DE TEXTO EN LINEA ******************** -->
+        <h3>SPAN - Bloque de texto en línea</h3>
+        <!-- Contenedor en línea genérico para redactar contenido, que no representa inherentemente nada -->
+        <!-- Debe usarse solo cuando ningún otro elemento semántico sea apropiado -->
+        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, iusto!</span>
+    
+        <!-- ******************** A - ANCHOR, ANCLA, ENLACE ******************** -->
+        <h3>A - Anchor, ancla, enlace</h3>
+        <!-- Crea hipervínculo a páginas web, archivos, direcciones mail, ubicaciones a misma página o cualquier cosa que URL aborde -->
+        <!-- El contenido dentro debe indicar el destino del enlace. si href está, presionar Intro mientras enfoca enlace y se activa -->
+        <a href="https://html.spec.whatwg.org/multipage/named-characters.html#named-character-references">Entidades, ref. x nombre...</a>
+
+        <!-- ******************** ABBR - ABREVIATURA, ACRONIMO ******************** -->
+        <h3>ABBR - Abreviatura</h3>
+        <!-- Representa una abreviatura o un acrónimo -->
+        <!-- USO PARA NOMBRAR HERRAMIENTAS, MENUS... -->
+        <!-- TEXTO NORMAL, SE MARCAN SUBRAYADAS CON PUNTEO, SE DESACTIVA ESTO CON text-decoration: none -->    
+        <abbr title="Standard Generalized MarkUp Language">SGML</abbr>
+
+        <!-- ******************** DFN - DEFINICION ******************** -->
+        <h3>DFN - Definición</h3>
+        <!-- Indica el término que se define dentro del contexto de una frase -->
+        <dfn title="Very Important People">VIP</dfn>
+        <!-- TEXTO EN CURSIVA, PUEDE ANIDAR DENTRO UNA abbr -->
+        <p><dfn title="html"><abbr title="HyperText Markup Language">HTML</abbr> </dfn>Lenguaje de marcado de hipertexto</p>
+
+        <!-- BDO - DIRECCIONALIDAD DEL TEXTO -->
+        <h3>BDO - Direccionalidad del texto</h3>
+        <!-- Anula la direccionalidad actual del texto, de modo que el texto que contiene se representa en una dirección diferente -->
+        <bdo dir="rtl">
+            <p>Texto direccionado RTL (Right To Left)</p>
+            <p>Para países con escritura de derecha a izquierda</p>
+        </bdo>
+        <p>Texto direccionado según la página de códigos, LTR (Left To Right)</p>
+
+        <!-- DETAILS - SUMMARY WIDGET ESCONDE INFO -->
+        <h3>DETAILS - SUMMARY Widget esconde info</h3>
+        <!-- crea un widget de divulgación en el que la información solo es visible cuando el widget se cambia a un estado "abierto" -->
+        <details>
+            <summary>Sumario de los detalles</summary>
+            Detalles escondidos que se muestran al pulsar el triángulo.
+        </details>
+
+        <!-- MARK - TEXTO MARCADO -->
+        <h3>MARK - Texto marcado</h3>
+        <!-- Texto marcado o resaltado con fin de referencia o notación debido a relevancia del pasaje marcado en contexto de cierre -->
+        <p>Texto <mark>marcado</mark></p>
+        
+        <!-- ******************** PRE - TEXTO PREFORMATEADO ******************** -->
+        <h3>PRE - Texto preformateado</h3>
+        <!-- Representa texto preformateado que debe presentarse exactamente como está escrito en el archivo HTML -->
+        <!-- SE VISUALIZA EN MONOSPACE, RESPETANDO ESPACIOS, SALTOS CARRO... CARACTERES ESPECIALES NECESITAN ENTIDADES -->
+        <pre>Texto Preformateado
+
+            &ltp&gt Esto es un parrafo preformateado  &lt/p&gt
+
+                        Pero no se debe de usar con asiduidad
+                            
+                            Solo en documentación técnica, planos, código fuente...
+        </pre>
+
+        <!-- SUB - SUBINDICE -->
+        <h3>SUB - Subindice</h3>
+        <!-- Especifica el texto en línea que debe mostrarse como subíndice únicamente por razones tipográficas -->
+        <p>Texto <sub>subindice</sub></p>
+
+        <!-- SUP - SUPRAINDICE -->
+        <h3>SUP - Supraíndice</h3>
+        <!-- Especifica el texto en línea que se mostrará como superíndice únicamente por razones tipográficas -->
+        <p>Texto <sup>supraíndice</sup></p>
+    </div>
+
+    <!-- ******************** ******************** ******************** ******************** -->
+    <!-- ******************** REPASO HTML ETIQUETAS PERMITIDAS/POCO USO ******************** -->
+    <!-- ******************** ******************** ******************** ******************** -->
+    
+    <!-- LA MAYORIA DE ESTAS ETIQUETAS SOLO DEBEMOS USARLAS CUANDO ESA PARTE DEL TEXTO QUEREMOS QUE TENGA UN SIGNIFICADO ESPECIAL -->
+    <!-- NUNCA LAS USAREMOS PARA CREAR ESTILO O DISEÑO DE NUESTRA PÁGINA, PARA ELLO SIEMPRE USAREMOS LAS REGLAS CSS CORRESPONDIENTES -->
+
+    <div>
+        <h2>ETIQUETAS APROBADAS PERO CON POCO USO EN LA WEB ACTUAL</h2>
+        <hr>
+        <h3>HR - Regla horizontal</h3>
+        <!-- Representa una regla horizontal que cubre casi la totalidad del ancho del contenedor que la tiene -->
+        <!-- REPRESENTA UNA LINEA, NO USAR PARA ESTILO, EXCEPTO POR USO SEMANTICO, USAR COMO SEPARADOR SIMILAR UN DIV PINTADO -->
+        <hr>
+
+        <h3>BR - Retorno de carro, linea aparte</h3>
+        <!-- produce un salto de línea en el texto, útil para escribir poema o discurso, donde la división de líneas es significativa -->
+        <!-- NO REPRESENTA VISUALMENTE NADA, PARA SEPARAR BLOQUES SEGUN SU POSICIONAMIENTO USAR CSS CORRESPONDIENTE -->
+        <p>&lt; br &gt; --> </p><br>
+
+        <h3>B - Palabra/texto con atención especial</h3>
+        <!-- Para llamar la atención sobre el contenido del elemento, al que de otro modo no se le concede una importancia especial -->
+        <!-- SE PRESENTA EN CURSIVA, NO USAR B PARA ESTILO, USAR CSS CORESPONDIENTE -->
+        <p>Texto para llamar la <b>atención especial</b></p>
+
+        <!-- ******************** BLOCKQUOTE - BLOQUE DE CITA ******************** -->
+        <h3>BLOCKQUOTE - Bloque de cita</h3>
+        <!-- Indica que el texto adjunto es una cita extendida, se representa con una sangría, se puede dar una URL del orígen -->
+        <!-- SE PRESENTA CON SANGRIA, NO USAR BLOCKQUOTE PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <!-- Se usa q para usar citas cortas en vez de blockquote -->
+        <p>
+            <blockquote cite="https://www.cervantesvirtual.com">En un lugar de la mancha...</blockquote>
+        </p>
+        <!-- Se pueden anidar dentro de un figure con su correspondiente cite... -->
+        <figure>
+            <blockquote cite="https://www.cervantesvirtual.com/"><p>En un lugar de la mancha, cuyo nombre no quiero acordarme...</p>
+            </blockquote>
+            <figcaption>—Miguel de Cervantes, <cite>Biblioteca Virtual Miguel de Cervantes</cite></figcaption>
+        </figure>
+
+        <!-- CITE - CITA, MARCA TITULO U OBRA CREATIVA -->
+        <h3>CITE - Cita, marca título u obra creativa...</h3>
+        <!-- Se utiliza para marcar el título de una obra creativa citada. Suele anidar dentro un enlace con la URL de la cita/obra -->
+        <!-- Se usa para: trabajos literarios, exposiciones, sitios web, programas, tweets, partituras, audiovisuales, juegos...  -->
+        <!-- SE PRESENTA EN CURSIVA, NO USAR CITE PARA ESO, USAR CSS CORRESPONDIENTE -->
+        <cite>Buscador más utilizado en internet: <a href="www.google.com">Google</a> Esto es una cita.</cite>
+        
+        <!-- CODE - MUESTRA CODIGO INFORMATICO -->
+        <h3>CODE - Muestra código informático</h3>
+        <!-- Muestra su contenido diseñado de una manera destinada a indicar que el texto es un fragmento corto de código informático -->
+        <!-- SE PRESENTAN EN FUENTE MONOESPACE, NO USAR CODE PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <p>La etiqueta <code>&lt;code&gt;</code> se usa para representar código fuente</p>
+ 
+        <h3>DEL - Texto suprimido del documento</h3>
+        <!-- Representa un rango de texto que se ha eliminado de un documento,  -->
+        <!-- APARECE TACHADO EL TEXTO, NO USAR DEL PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <p>Texto <del>suprimido</del> del documento</p>
+
+        <!-- EM - TEXTO ENFATIZADO -->
+        <h3>EM - Texto enfatizado</h3>
+        <!-- Texto que tiene énfasis en el acento. Se pueden anidar, cada nivel de anidamiento indica umayor grado de énfasis -->
+        <!-- SE MUESTRA EN CURSIVA, NO USAR EM PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <p>Texto de <em>énfasis</em>
+    
+        <!-- I - ITALICA, CURSIVA -->
+        <h3>I - Itálica, cursiva</h3>
+        <!-- Representa un rango de texto que se desmarca del texto normal por alguna razón, texto idiomático, términos técnicos... -->
+        <!-- SE MUESTRA EN CURSIVA, NO USAR I PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <p>Texto en <i>itálica</i></p>
+
+        <h3>INS - Texto añadido al documento</h3>
+        <!-- Representa un rango de texto que se ha añadido a un documento,  -->
+        <!-- APARECE SUBRAYADO, NO USAR INS PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <p>Texto <ins>añadido</ins> al documento</p>
+
+        <!-- KBD - ENTRADA DE TEXTO TIPO TECLADO -->
+        <h3>KBD - Entrada de texto tipo teclado</h3>
+        <!-- Representa un intervalo de texto en línea que indica la entrada textual del usuario desde un teclado, entrada de voz... -->
+        <!-- SE MUESTRA EN FUENTE TIPO TERMINAL, NO USAR KBD PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <kbd>Entrada de texto tipo teclado</kbd>
+        
+        <!-- Q - CUOTA, ADJUNTO A CITA -->
+        <h3>Q - Cuota, adjunto a cita</h3>
+        <!-- Indica que el texto adjunto es una cita corta en línea, se muestra entre comillas, para citas largas usar blockquote -->
+        <!-- REPRESENTA UN TEXTO ENTRE PAREJAS DE CORCHETES, NO USAR Q PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <p>Este es el ejemplo de <q>cita corta</q> en un párrafo.</p>
+
+        <!-- SAMP - TEXTO EN LINEA DE SALIDA ORDENADOR -->
+        <h3>SAMP - Texto en línea de salida ordenador</h3>
+        <!-- Se utiliza para encerrar texto en línea que representa la salida de muestra (o citada) de un programa informático -->
+        <!-- SE PRESENTAN EN FUENTE MONOESPACE, NO USAR SAMP PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <samp>C:/>PC CODE SAMPLE </samp>
+
+        <!-- STRONG - TEXTO FUERTE -->
+        <h3>STRONG - Texto fuerte</h3>
+        <!-- Indica contenido CON gran importancia, seriedad o urgencia (como advertencias) en comparación con el contenido cercano -->
+        <!-- SE PRESENTAN EN NEGRITA, NO USAR STRONG PARA ESTILO, USAR CSS CORRESPONDIENTE -->
+        <P>Texto <strong>fuerte</strong></P>
+    </div>
+
+    <!-- ******************** MARCADO DE TEXTO SEGUN IMPORTANCIA ******************** -->
+    <div>
+        <h2>Marcado de texto según su importancia</h2>
+        <p>Utilice <b> b </b> para llamar la atención sobre determinado texto sin indicar un mayor nivel de importancia. Se utiliza para llamar la atención del lector sobre el contenido del elemento, al que de otro modo no se le otorga una importancia especial</p>
+        <p>Utilice <em> em </em> para marcar el texto que tiene énfasis en el acento.</p>
+        <p>Utilice <i>i</i> si representa un rango de texto que se desmarca del texto normal por alguna razón, como texto idiomático, términos técnicos, designaciones taxonómicas, etc.</p>
+        <p>Utilice <mark>mark</mark> si representa el texto que está marcado o resaltado con fines de referencia o notación debido a la relevancia del pasaje marcado en el contexto de cierre</p>
+        <p>Utilice <strong> strong </strong> para  una oración que es de gran importancia para toda la página, o para palabras de mayor importancia en comparación con el contenido cercano.</p>
+    </div>
+
+    <!-- ******************** MARCADO DE TEXTO EN CITA ******************** -->
+    <div>
+        <h2>Marcado de texto en cita</h2>
+        <p>Utilizamos <blockquote>blockquote</blockquote> para indicar que el texto adjunto es una cita extendida. Para incluir comillas más cortas en línea en lugar de en un bloque separado, utilice el elemento &lt;q&gt; (Cita).</p>
+        <p>Utilizamos <cite>cite </cite>para marcar el título de una obra creativa citada como: Un libro. Un trabajo de investigación. Un ensayo. Un poema. Una partitura musical. Una canción. Una obra de teatro o guión de película. Una película. Un programa de televisión. Un juego. Una escultura. Una pintura. Una producción teatral. Una obra de teatro. Una ópera. Un musical. Una exposición. Un informe de caso legal. Un programa informático. Un sitio web. Una página web. Una entrada de blog o comentario. Una publicación o comentario en el foro. Un tweet. Una publicación de Facebook. Una declaración escrita u oral. Etc. Para incluir una referencia a la fuente del material citado que está contenida dentro de un elemento &lt;blockquote&gt; o &lt;q&gt;, use el atributo cite en el elemento.</p>
+        <p>Utilizamos <q>q</q> para indicar que el texto adjunto es una cita corta en línea. El valor de este atributo es una dirección URL que designa un documento o mensaje de origen para la información citada. Este atributo está destinado a apuntar a información que explica el contexto o la referencia de la cita.</p>
+    </div>
+
+    <!-- ******************** MARCADO DE TEXTO INF. O CODIGO FUENTE ******************** -->
+    <div>
+        <h2>Marcado de texto informático o código fuente</h2>
+        <p>Utilizamos <code>code </code> para mostrar su contenido diseñado de una manera destinada a indicar que el texto es un fragmento corto de código informático.</p>
+        <p>Utilizamos <kbd>kbd</kbd> para representar un intervalo de texto en línea que indica la entrada textual del usuario desde un teclado, entrada de voz o cualquier otro dispositivo de entrada de texto.</p>
+        <p>Utilizamos <pre>pre</pre> para representar texto preformateado que debe presentarse exactamente como está escrito en el archivo HTML.</p>
+        <p>Utilizamos <samp>samp</samp> para encerrar texto en línea que representa la salida de muestra (o citada) de un programa informático.</p>
+    </div>
+    <!-- ******************** MARCADO DE TEXTO POR INTERACCION CON DOCUMENTO ******************* -->
+    <div>
+        <h2>Marcado de texto por su interacción con el documento</h2>
+        <p>Utilizamos <ins>insertar </ins>si representa un intervalo de texto que se ha agregado a un documento.</p>
+        <p>Utilizamos <del>suprimir </del>si representa un intervalo de texto que se ha eliminado de un documento. Esto se puede usar al representar "control de cambios" o información de diferencias de código fuente.</p>
+        <p>Utilizamos &lt;details&gt; para crear un widget de divulgación en el que la información solo es visible cuando el widget se cambia a un estado "abierto". Se debe proporcionar un resumen o etiqueta utilizando el elemento &lt;summary&gt;</p>
+        <p>Utilizamos <sup>subíndice</sub> C<sup>o</sup> cuando necesitemos por motivos tipográficos subir o bajar la fuente para su correcto diseño.</p>
+        <p>Utilizamos <sup>supraíndice</sup> Log<sub>n</sub> cuando necesitemos por motivos tipográficos subir o bajar la fuente para su correcto diseño.</p>
+    </div>
+    
+</body>
+</html>

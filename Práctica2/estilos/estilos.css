@@ -1,13 +1,357 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-#grid_principal{
-display: grid;
-width: 100%;
-height: 100%;
-border: 1px solid black;
+#grid_principal {
+    height: 100vh;
+    width: 100%;
+    background-color: darkorchid;
+}
 
+.grid {
+    display: inline-block;
+    border: 1px solid black;
+    height: 33%;
+    width: 33%;
+    
+    background-color: aqua;
+}
+
+/* Cuadrado 1 (arriba izquierda)*/
+#grid_separador {
+    display: inline-block;
+    width: 100%;
+    height: 49%;
+    margin:0;
+}
+
+#grid11 {
+    display: inline-block;
+    width: 49.3%;
+    height: 100%;
+    background-color: chocolate;
+}
+
+#grid12 {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    margin:0;
+}
+
+#grid13 {
+    display: inline-block;
+    width: 49.3%;
+    height: 50%;
+    background-color: yellow;
+    margin:0;
+
+}
+
+#grid14 {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    margin:0;
+}
+
+/* Cuadrado 2 (arriba centro)*/
+#grid21 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: darkgreen;
+}
+
+#grid22 {
+    display: block;
+    width: 100%;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+/* Cuadrado 3 (arriba derecha)*/
+#grid31 {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+}
+
+#grid32 {
+    display: inline-block;
+    width: 49.3%;
+    height: 100%;
+    background-color: red;
+}
+
+/* Cuadrado 4 (centro izquierda)*/
+#grid41 {
+    display: block;
+    width: 100%;
+    height: 33.3%;
+    background-color: aquamarine;
+}
+
+
+#grid42 {
+    display: block;
+    width: 100%;
+    height: 33.3%;
+    background-color: darkslategrey;
+}
+
+#grid43 {
+    display: block;
+    width: 100%;
+    height: 33.3%;
+    background-color: mediumpurple;
+
+}
+
+/* Cuadrado 5 (centro)*/
+#grid51 {
+    background-color: oldlace;
+    width: 100%;
+    height: 100%;
+}
+
+/* Cuadrado 6 (centro derecha)*/
+#grid61 {
+    display: inline-block;
+    width: 32%;
+    height: 100%;
+    background-color: mediumpurple;
+
+}
+
+#grid62 {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    background-color: lightgray;
+
+}
+
+#grid63 {
+    display: inline-block;
+    width: 33%;
+    height: 100%;
+    background-color: indianred;
+
+}
+
+/* Cuadrado 7 (abajo izquierda)*/
+
+.grid_diferente{
+    width: auto;
+    height: auto;
+    display: block;
+}
+#grid71 {
+    display: inline-block;
+    width: 50%;
+    height: 24%;
+    background-color: indigo;
+}
+
+#grid72 {
+    display: inline-block;
+    width: 49.3%;
+    height: 24%;
+    background-color: black;
+}
+
+#grid73 {
+    display: block;
+    width: 100%;
+    height: 49%;
+    background-color: khaki;
+}
+
+#grid74 {
+    display: block;
+    width: 100%;
+    height: 24%;
+    background-color: mediumblue;
+}
+
+/* Cuadrado 8 (abajo centro)*/
+
+#grid81 {
+    display: inline-block;
+    width: 24.2%;
+    height: 24%;
+    background-color:#3616c9;
+}
+
+#grid82 {
+    display: inline-block;
+    width: 24.2%;
+    height: 24%;
+    background-color:lightcyan;
+}
+
+#grid83 {
+    display: inline-block;
+    width: 24.2%;
+    height: 24%;
+    background-color:lightsalmon;
+}
+
+#grid84 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:#1cd134;
+}
+
+#grid85 {display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:#6614d3;}
+
+#grid86 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:rgb(199, 10, 67);
+}
+
+#grid87 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:rgb(31, 97, 221);
+}
+
+#grid88 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:rgb(26, 87, 218);
+}
+
+#grid89 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:#e73313;
+}
+
+#grid810 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:#ec0707;
+}
+
+#grid811 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:hsl(34, 82%, 48%);
+}
+
+#grid812 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:#df0f8f;
+}
+
+#grid813 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:rgb(10, 76, 219);
+}
+
+#grid814 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:rgb(27, 25, 25);
+}
+
+#grid815 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:moccasin;
+}
+
+#grid816 {
+    display: inline-block;
+    width: 24%;
+    height: 24%;
+    background-color:tomato;
+}
+
+/* Cuadrado 8 (abajo centro)*/
+#grid91 {
+    display: block;
+    width: 100%;
+    height: 25%;
+    background-color: darkgreen;
+}
+
+#grid92 {
+
+    display: block;
+    width: 100%;
+    height: 25%;
+    background-color: royalblue;
+}
+
+#grid93 {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    background-color: teal;
+}
+
+#grid94 {
+    display: inline-block;
+    width: 25%;
+    height: 50%;
+    background-color: greenyellow;
+}
+
+#grid_separador9 {
+    display: inline-block;
+    width: 48.5%;
+    height: 50%;
+}
+
+#grid95 {
+    display: inline-block;
+    width: 49.3%;
+    height: 50%;
+    background-color:grey;
+}
+
+#grid96 {
+    display: inline-block;
+    width: 49.3%;
+    height: 50%;
+    background-color: blue;
+}
+
+#grid97 {
+    display: inline-block;
+    width: 49.3%;
+    height: 50%;
+    background-color: yellow;
+}
+
+#grid98 {
+    display: inline-block;
+    width: 49.3%;
+    height: 50%;
+    background-color:tomato;
 }

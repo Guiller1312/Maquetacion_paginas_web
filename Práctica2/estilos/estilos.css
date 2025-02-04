@@ -9,7 +9,7 @@
 #grid_principal {
     height: 100vh;
     width: 100%;
-    background-color: darkorchid;
+    
 }
 
 .grid {
@@ -39,7 +39,6 @@
     width: 50%;
     height: 100%;
     background-color: blue;
-    margin: 0;
 }
 
 #grid13 {
@@ -47,16 +46,13 @@
     width: 50%;
     height: 50%;
     background-color: yellow;
-    margin: 0;
-
 }
 
 #grid14 {
     display: inline-block;
     width: 50%;
     height: 50%;
-    background-color: white;
-    margin: 0;
+    background-color: white;   
 }
 
 /* Cuadrado 2 (arriba centro)*/
@@ -70,7 +66,7 @@
 #grid22 {
     display: block;
     width: 100%;
-    height: 50%;
+    height: 51%;
     background-color: greenyellow;
 }
 
@@ -93,7 +89,7 @@
 #grid41 {
     display: block;
     width: 100%;
-    height: 33.33%;
+    height: 33.3%;
     background-color: aquamarine;
 }
 
@@ -101,14 +97,14 @@
 #grid42 {
     display: block;
     width: 100%;
-    height: 33.33%;
+    height: 33.3%;
     background-color: darkslategrey;
 }
 
 #grid43 {
     display: block;
     width: 100%;
-    height: 33.34%;
+    height: 33.3%;
     background-color: mediumpurple;
 
 }
@@ -123,7 +119,7 @@
 /* Cuadrado 6 (centro derecha)*/
 #grid61 {
     display: inline-block;
-    width: 33.4%;
+    width: 33.33%;
     height: 100%;
     background-color: mediumpurple;
 
@@ -131,7 +127,7 @@
 
 #grid62 {
     display: inline-block;
-    width: 33.3%;
+    width: 33.33%;
     height: 100%;
     background-color: dimgray;
 
@@ -139,7 +135,7 @@
 
 #grid63 {
     display: inline-block;
-    width: 33.3%;
+    width: 33.34%;
     height: 100%;
     background-color: indianred;
 

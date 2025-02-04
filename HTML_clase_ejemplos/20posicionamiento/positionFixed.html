@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUADROS RELATIVOS Y ABSOLUTOS</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #cabecera{
+            background-color: darkslategrey;
+            width: 80vw;
+            height: 15vh;
+            position: fixed;
+            top: 5vh;
+            left: 10vw;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px 5px darkslategrey;
+
+        }
+        #separaHeader{
+            height: 5vh;
+        }
+        h1{
+            color: burlywood;
+            text-align: center;
+            height: 5vh;
+        }
+        #cuerpo{
+            background-color: burlywood;
+            height: 160vh;
+            
+        }
+        #separaMain{
+            height: 19vh;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        #c1 {
+            background-color: aqua;
+        }
+        #c2 {
+            background-color: chartreuse;
+            position: absolute;
+            top: 0px;
+            left: 200px;
+        }
+        #c3 {
+            background-color: darkorange;
+        }
+        #c4 {
+            background-color: mediumvioletred;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+        #cajon{
+            width: 93%;
+            margin: auto;
+        }
+        .caja{
+            background-color: coral;
+            display: inline-block;
+            border-radius: 15px;
+            box-shadow: 0 0 10px 5px lightsalmon;
+        }
+
+
+        #pie{
+            background-color: darkslategrey;
+            width: 80vw;
+            height: 5vh;
+            position: fixed;
+            bottom: 0px;
+            left: 10vh;
+            color: burlywood;
+            font-weight: bolder;
+            text-shadow: 1px 1px 1px white;
+            padding-top: 10px;
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            box-shadow: 0 -2px 10px 5px darkslategrey
+        }
+        ul{
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="cabecera">
+        <aside id="separaHeader"></aside>
+        <h1>ESTE ES MI TITULO!!!</h1>
+    </header>
+
+    <main id="cuerpo">
+        <section id="separaMain">
+
+        </section>
+        
+
+        <div id="cajon">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </div>
+
+
+    </main>
+    <footer id="pie">
+        <ul>
+            <li><a href="">MENU 1</a></li>
+            <li><a href="">MENU 2</a></li>
+            <li><a href="">MENU 3</a></li>
+            <li><a href="">MENU 4</a></li>
+            <li><a href="">MENU 5</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

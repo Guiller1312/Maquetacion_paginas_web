@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSITION RELATIVE & ABSOLLUTE</title>
+    <style>
+        * {
+            margin: 0;
+        }
+        #cabecera{
+            background-color: darkslategrey;
+            width: 100vw;
+            height: 15vh;
+
+        }
+        #separaHeader{
+            height: 5vh;
+        }
+        h1{
+            color: burlywood;
+            text-align: center;
+            height: 5vh;
+        }
+        #cuerpo{
+            background-color: burlywood;
+            height: 140vh;
+        }
+        #separaMain{
+            height: 10vh;
+        }
+        #cuadro {
+            width: 59vw;
+            height: 45%;
+            margin: auto;
+            border: 1px solid black;
+            /* margin-top: 2rem; */
+            position: relative;
+        }
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        #c1 {
+            background-color: aqua;
+        }
+        #c2 {
+            background-color: chartreuse;
+            position: absolute;
+            top: 0px;
+            left: 200px;
+        }
+        #c3 {
+            background-color: darkorange;
+        }
+        #c4 {
+            background-color: mediumvioletred;
+            position: absolute;
+            top: 200px;
+            left: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="cabecera">
+        <aside id="separaHeader"></aside>
+        <h1>ESTE ES MI TITULO!!!</h1>
+    </header>
+
+    <main id="cuerpo">
+        <section id="separaMain">
+
+        </section>
+        <section id="cuadro">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+            <div id="c4"></div>
+        </section>
+        <section id="cuadro">
+            <div id="c1"></div>
+            <div id="c2"></div>
+            <div id="c3"></div>
+            <div id="c4"></div>
+        </section>
+
+
+
+    </main>
+    
+</body>
+</html>

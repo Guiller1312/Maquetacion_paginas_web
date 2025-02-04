@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* Quita espacios del inline-block */
+    font-size: 0;  
 }
 
 #grid_principal {
@@ -13,8 +15,8 @@
 .grid {
     display: inline-block;
     border: 1px solid black;
-    height: 33%;
-    width: 33%;
+    height: 33.33%;
+    width: 33.33%;
     
     background-color: aqua;
 }
@@ -23,13 +25,13 @@
 #grid_separador {
     display: inline-block;
     width: 100%;
-    height: 49%;
+    height: 50%;
     margin:0;
 }
 
 #grid11 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 100%;
     background-color: chocolate;
 }
@@ -44,7 +46,7 @@
 
 #grid13 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 50%;
     background-color: yellow;
     margin:0;
@@ -84,7 +86,7 @@
 
 #grid32 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 100%;
     background-color: red;
 }
@@ -93,7 +95,7 @@
 #grid41 {
     display: block;
     width: 100%;
-    height: 33.3%;
+    height: 33.33%;
     background-color: aquamarine;
 }
 
@@ -101,21 +103,21 @@
 #grid42 {
     display: block;
     width: 100%;
-    height: 33.3%;
+    height: 33.33%;
     background-color: darkslategrey;
 }
 
 #grid43 {
     display: block;
     width: 100%;
-    height: 33.3%;
+    height: 33.34%;
     background-color: mediumpurple;
 
 }
 
 /* Cuadrado 5 (centro)*/
 #grid51 {
-    background-color: oldlace;
+    background-color: burlywood;
     width: 100%;
     height: 100%;
 }
@@ -123,7 +125,7 @@
 /* Cuadrado 6 (centro derecha)*/
 #grid61 {
     display: inline-block;
-    width: 32%;
+    width: 33.4%;
     height: 100%;
     background-color: mediumpurple;
 
@@ -131,7 +133,7 @@
 
 #grid62 {
     display: inline-block;
-    width: 33%;
+    width: 33.3%;
     height: 100%;
     background-color: lightgray;
 
@@ -139,7 +141,7 @@
 
 #grid63 {
     display: inline-block;
-    width: 33%;
+    width: 33.3%;
     height: 100%;
     background-color: indianred;
 
@@ -147,148 +149,118 @@
 
 /* Cuadrado 7 (abajo izquierda)*/
 
-.grid_diferente{
-    width: auto;
-    height: auto;
-    display: block;
-}
+
 #grid71 {
     display: inline-block;
     width: 50%;
-    height: 24%;
+    height: 25%;
     background-color: indigo;
 }
 
 #grid72 {
     display: inline-block;
-    width: 49.3%;
-    height: 24%;
+    width: 50%;
+    height: 25%;
     background-color: black;
 }
 
 #grid73 {
     display: block;
     width: 100%;
-    height: 49%;
+    height: 50%;
     background-color: khaki;
 }
 
 #grid74 {
     display: block;
     width: 100%;
-    height: 24%;
+    height: 25%;
     background-color: mediumblue;
 }
 
 /* Cuadrado 8 (abajo centro)*/
 
-#grid81 {
+.grid_8{
     display: inline-block;
-    width: 24.2%;
-    height: 24%;
+    width: 25%;
+    height: 25%;
+}
+#grid81 {
+    
     background-color:#3616c9;
 }
 
 #grid82 {
-    display: inline-block;
-    width: 24.2%;
-    height: 24%;
+   
     background-color:lightcyan;
 }
 
 #grid83 {
-    display: inline-block;
-    width: 24.2%;
-    height: 24%;
+    
     background-color:lightsalmon;
 }
 
 #grid84 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+   
     background-color:#1cd134;
 }
 
-#grid85 {display: inline-block;
-    width: 24%;
-    height: 24%;
+#grid85 {
+
     background-color:#6614d3;}
 
 #grid86 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+    
     background-color:rgb(199, 10, 67);
 }
 
 #grid87 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+   
     background-color:rgb(31, 97, 221);
 }
 
 #grid88 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
-    background-color:rgb(26, 87, 218);
+   
+    background-color:hsl(20, 4%, 16%);
 }
 
 #grid89 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+    
     background-color:#e73313;
 }
 
 #grid810 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+    
     background-color:#ec0707;
 }
 
 #grid811 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+    
     background-color:hsl(34, 82%, 48%);
 }
 
 #grid812 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+   
     background-color:#df0f8f;
 }
 
 #grid813 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+   
     background-color:rgb(10, 76, 219);
 }
 
 #grid814 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+   
     background-color:rgb(27, 25, 25);
 }
 
 #grid815 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+    
     background-color:moccasin;
 }
 
 #grid816 {
-    display: inline-block;
-    width: 24%;
-    height: 24%;
+   
     background-color:tomato;
 }
 
@@ -305,7 +277,7 @@
     display: block;
     width: 100%;
     height: 25%;
-    background-color: royalblue;
+    background-color: #e141b9;
 }
 
 #grid93 {
@@ -319,39 +291,39 @@
     display: inline-block;
     width: 25%;
     height: 50%;
-    background-color: greenyellow;
+    background-color: #f70707;
 }
 
 #grid_separador9 {
     display: inline-block;
-    width: 48.5%;
+    width: 50%;
     height: 50%;
 }
 
 #grid95 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 50%;
     background-color:grey;
 }
 
 #grid96 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 50%;
     background-color: blue;
 }
 
 #grid97 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 50%;
     background-color: yellow;
 }
 
 #grid98 {
     display: inline-block;
-    width: 49.3%;
+    width: 50%;
     height: 50%;
     background-color:tomato;
 }

@@ -13,8 +13,7 @@
 }
 
 .grid {
-    display: inline-block;
-    border: 1px solid black;
+    display: inline-block; 
     height: 33.33%;
     width: 33.33%;
     background-color: aqua;

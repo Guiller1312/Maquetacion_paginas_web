@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SELECTORES MULTIPLES EN CSS</title>
+    <style>
+        /* ********** REGLAS Y PROPIEDADES ********** */
+        /* SINTAXIS BÁSICA DE CSS */
+        /* REGLA(SELECTOR){
+                    PROPIEDAD: VALOR;
+                    PROPIEDAD: VALOR;
+                } */
+        /* ********** UNIDADES DE MEDIDA BASADAS EN EL TAMAÑO DE LA FUENTE ********** */
+        /* em y rem: ANCHURA DE LA LETRA 'm' */
+        /* ch: ANCHO DEL ELEMENTO 0 */
+        /* ex: ALTURA DE LA LETRA 'x' */
+        /* lh: ALTURA DE LA LINEA */
+        
+        /* ********** SELECTOR UNIVERSAL -COMODÍN- ********** */
+        /* APLICA ESTILOS A TODOS LOS ELEMENTOS HTML DEL DOCUMENTO */
+        *{
+            margin: 0;
+        }
+        
+        /* DIFERENCIAS ENTRE 'em' Y 'rem' */
+        /* 'em' HEREDA EL TAMAÑO DE FUENTE DE SU PADRE */
+        header{
+            background-color: khaki;
+            height: fit-content;
+            /* font-size: 1.5em; */
+        }
+        section{
+            /* font-size: 2rem; */
+        }
+        article{
+            /* font-size: 2em;    */
+        }
+
+        /* ********** SELECTOR DE ELEMENTO O ETIQUETA ********** */
+        h1{
+            text-align: center;
+        }
+        /* PODEMOS UTILIZAR VARIOS SELECTORES AL MISMO TIEMPO SEPARADOS POR , */
+        section, article {
+            text-decoration: underline;
+        }
+        
+        /* ********** SELECTOR DE CLASE ********** */
+        /* USAMOS EL NOMBRE DE 'class="nombre"' PARA APLICAR ESTILO A TODOS LOS ELEMENTOS DE ESA CLASE */
+        .tachado{
+            text-decoration: line-through;
+        }
+        
+        /* ********** SELECTOR DE 'ID' ********** */
+        /* USAMOS EL IDENTIFICADOR ÚNICO DEL ELEMENTO 'id="identificador"' */
+        #sombrita{
+            text-shadow: 2px 2px white;
+        }
+        /* ********** SELECTOR DE ATRIBUTO ********** */
+        /* CUALQUIER ELEMENTO QUE TENGA EL ATRIBUTO 'title' CON VALOR 'Hola soy un title' */
+        span[class]{
+            text-shadow: 2px 2px red;
+        }
+        /* SELECCION DE ELEMENTO CON ATRIBUTO DETERMINADO ('atributo=valor') */
+        [title="Hola soy un title"]{ 
+            width: fit-content;
+            border: 2px dotted cadetblue ;
+        }
+        /* ATRIBUTO [class~="nombre"] */
+        /* CUALQUIER ELEMENTO QUE TENGA ESE ATRIBUTO, AUNQUE PUEDE TENER MAS - POR EJEMPLO CLASES - */
+        #menu2 [class~="impar"]{
+            color: green;
+        }
+        /* ATRIBUTO [class|="nombre"] */
+        /* CUALQUIER ELEMENTO QUE COMIENCE POR 'par' O POR 'par-...' CON CUALQUIER VALOR DETRÁS */
+        header [class|="par"]{
+            color:darkblue;
+        }
+        /* ATRIBUTO [class$="nombre"] */
+        /* CUALQUIER ELEMENTO QUE TERMINE SU VALOR POR ESA PALABRA */
+        header [class$="par"]{
+            color:brown;
+        }
+        /* ATRIBUTO [class^="nombre"] */
+        /* CUALQUIER ELEMENTO QUE COMIENCE SU VALOR POR ESA PALABRA */
+        header [class^="par"]{
+            color:greenyellow;
+        }
+        /* ATRIBUTO [class*="nombre"] */
+        /* CUALQUIER ELEMENTO QUE CONTENGA EL VALOR */
+        body [class*="a"]{
+            color:goldenrod;
+        }
+
+
+
+        /* ********** SELECTOR DE DESCENDIENTES -GENERAL- (ESPACIO) ********** */
+        /* CUALQUIER ELEMENTO 'span' DE LA CLASE 'tachado' DESCENDIENTE DE 'header' */
+        header span.tachado{
+            font-size: 3rem;
+        }
+        /* CUALQUIER ELEMENTO 'span' DESCENDIENTE DE SECTION */
+        section span{
+            color: brown;
+        }
+        /* CUALQUIER ELEMENTO DE LISTA DE CLASE 'par' DESCENDIENTE DE 'header' */
+        header li.par{
+            /* color: lightsalmon; */
+        }
+        main li.impar{
+            color: slateblue;
+        }
+        /* CUALQUIER ELEMENTO 'li' DESCENDIENTE DEL ID '#menu1' */
+        #menu2 li{
+            /* display: none; */
+        }
+
+        /* ********** SELECTOR DE HIJOS -ESPECIFICO- '>' ********** */
+        /* CUALQUIER ELEMENTO 'span' HIJO DIRECTO DE 'section' */
+        section > span{
+            background-color:darkolivegreen;
+        }
+
+        /* ********** SELECTOR DE ADYACENTES -GENERAL- '~' ********** */
+        /* CUALQUIER ELEMENTO 'span' HERMANO ADYACENTE DE 'p' - A CONTINUACIÓN, NO ANTES- */
+        P ~ span{
+            text-transform: uppercase;
+            background-color: magenta;
+            color: blue;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <!-- header>p{Hello Coders!}+span{Hola alumnis!}+section>h1{EM Y REM}+p{Hello Coders!}+span{Hola alumnis!}+section>p{Hello Coders!}+span{Hola alumnis!} -->
+    <header>
+        <span class="tachado">Soy un span adyacente!</span>
+        <h1 id="sombrita">EM Y REM</h1>
+        <span class="tachado">Soy un span adyacente!</span>
+        <span class="tachado">Soy un span adyacente!</span>
+        <p>SOY EL PARRAFO HERMANO MAYOR!!!!!!!!!!!!!!!!</p>
+        <span class="tachado">Soy un span adyacente!</span>
+        <span class="tachado">Soy un span adyacente!</span>
+        <section>
+            
+            <span>Hola alumnis!</span>
+            <article>
+                <span>Hola alumnis!</span>
+            </article>
+            <!-- ul.menus#menu1>li.items#lista${menu $}*5 -->
+            <ul class="menus" id="menu1" title="Hola soy un title">
+                <li class="items impar" id="lista1">MENU 1</li>
+                <li class="items par" id="lista2">MENU 2</li>
+                <li class="items impar" id="lista3">MENU 3</li>
+                <li class="items par" id="lista4">MENU 4</li>
+                <li class="items impar" id="lista5">MENU 5</li>
+            </ul>
+            <ul>
+                <li class="par">LISTA</li>
+                <li class="par-dos">LISTA</li>
+                <li class="par">LISTA</li>
+                <li class="par-dos">LISTA</li>
+                <li class="par">LISTA</li>
+                <li class="par-dos">LISTA</li>
+            </ul>
+        </section>
+        <span class="tachado">Soy un span adyacente!</span>
+    </header>
+    <!-- main>p{Hello Coders!}+span{Hola alumnis!}+section>p{Hello Coders!}+span{Hola alumnis!}+article>p{Hello Coders!}+span{Hola alumnis!}
+      -->
+      <main>
+        <p>Hello Coders!</p>
+        <span>Hola alumnis!</span>
+        <section>
+            <p>Hello Coders!</p>
+            <span>Hola alumnis!</span>
+            <article>
+                <p>Hello Coders!</p>
+                <span class="tachado">Hola alumnis!</span>
+            </article>
+            <!-- ul.menus#menu2>li.items#lista$@6{MENU $@6}*5 -->
+            <ul class="menus" id="menu2">
+                <li class="items par" id="lista6">MENU 6</li>
+                <li class="items impar" id="lista7">MENU 7</li>
+                <li class="items par" id="lista8">MENU 8</li>
+                <li class="items impar" id="lista9">MENU 9</li>
+                <li class="items par" id="lista10">MENU 10</li>
+            </ul>
+        </section>
+      </main>
+
+    
+</body>
+</html>

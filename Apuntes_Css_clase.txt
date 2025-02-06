@@ -1,0 +1,10 @@
+*: para dar estilos a toda la página (universal).
+TAG: Etiqueta.
+Class: Clase.
+id: identificador.
+[]: Atributos.
+
+                    Todos                           Hijos
+Descendientes       " " (con espacio)                >
+
+Hermanos             ~                               +

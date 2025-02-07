@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EFECTOS CSS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="stylesheet" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/menusBoton.css">
+    <style>
+        /* body{
+            
+        } */
+        /* MANERA DE APLICAR LA FAMILIA DE FUENTE MEDIANTE UNA CLASE */
+        .roboto {
+            font-family: "Roboto", serif;
+        }
+        @font-face {
+            font-family: "miRobotoBold";
+            src: url(/fonts/Roboto-Bold.ttf);
+        }
+        @font-face {
+            font-family: "roboBlack";
+            src: url(/fonts/Roboto-Black.ttf);
+        }
+        @font-face {
+            font-family: "roboFull";
+            src: url(/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+        }
+        @font-face {
+            font-family: "montse";
+            src: url(/fonts/Montserrat-VariableFont_wght.ttf);
+        }
+        h1 {
+            font-family: "montse";
+            font-weight: 700;
+            font-size: 4rem;
+            text-align: center;
+            color: blue;
+        }
+        h1:hover {
+            color: brown;
+        }
+        p {
+            font-family: "roboBlack";
+            font-weight: 900;
+            width: 80vw;
+            margin: auto;
+            text-align: justify;
+        }
+        p:hover {
+            font-family: "montse";
+            font-weight: 700;
+        }
+        .menuPrincipal{
+            width: 80%;
+            margin: auto;
+        }
+
+
+
+
+    </style>
+</head>
+
+<body>
+    <h1>EFECTOS CSS</h1>
+    <P class="roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ut id molestias, recusandae
+        dolores iure
+        nisi excepturi deserunt eos assumenda cupiditate illo! Voluptatem quae, blanditiis corporis error inventore
+        aliquam velit?</P>
+    <section class="menuPrincipal">
+        <!-- MENU DE BOTONES CLASICOS -->
+        <!-- nav#menuBoton>ul>li*5>a{MENU $} -->
+        <nav id="menuBoton">
+            <ul>
+                <li><a href="">MENU 1</a></li>
+                <li><a href="">MENU 2</a></li>
+                <li><a href="">MENU 3</a></li>
+                <li><a href="">MENU 4</a></li>
+                <li><a href="">MENU 5</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- nav#menuSencillo>ul>li*5>a{MENU $} -->
+    <nav id="menuSencillo">
+        <ul>
+            <li><a href="">MENU 1</a></li>
+            <li>|</li>
+            <li><a href="">MENU 2</a></li>
+            <li>|</li>
+            <li><a href="">MENU 3</a></li>
+            <li>|</li>
+            <li><a href="">MENU 4</a></li>
+            <li>|</li>
+            <li><a href="">MENU 5</a></li>
+        </ul>
+    </nav>
+
+
+   
+
+    </nav>
+
+
+</body>
+
+</html>

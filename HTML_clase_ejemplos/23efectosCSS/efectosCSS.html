@@ -83,7 +83,33 @@
             background-color: lightpink;
         }
 
-        
+        header{
+            background-color: black;
+            color: white;
+            height: 25vh;
+            width: fit-content;
+            margin: auto;
+            /* background-color: lightgrey; */
+            border-bottom-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            text-align: center;
+        }
+        .separador{
+            height: 20%;
+        }
+        span{
+            /* padding: 5px; */
+            color: gray;
+            border: inset 5px dotted transparent;
+            transition: all 0.5s linear;
+            border-radius: 5px;
+            height: fit-content;
+        }
+        span:hover{
+            color: rgb(240, 240, 240);
+            /* border: 5px dotted rgb(240, 240, 240); */
+            box-shadow: 0 0 45px 10px white;
+        }
 
 
 
@@ -91,6 +117,13 @@
 </head>
 
 <body>
+    <header>
+        <section class="luces">
+            <span>Enlace</span><span>|</span><span>Enlace</span><span>|</span><span>Enlace</span><span>|</span><span>Enlace</span><span>|</span>
+        </section>
+        <section class="separador"></section>
+    </header>
+
     <h1>EFECTOS CSS</h1>
     <P class="roboto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque ut id molestias, recusandae
         dolores iure

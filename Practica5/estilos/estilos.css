@@ -4,26 +4,38 @@
     box-sizing: border-box;
 }
 
-header h1 {
-    margin: 2% 10% 2.3% 35%;
+header{
+    height: 10vh;
+    text-align: center;
+    background-color: gray;
 }
 
-section {
-    display: flex;
+
+main .section {
+    text-align: center;
 }
 
-.section1 .imagen_section {
-    width: 5%;
+
+
+main section .section1 .imagen_section {
+    width: 5vw;
+    height: 5vh;
+}
+
+main section .section2 .imagen_section {
+    width: 5vw;
+    height: 5vh;
 }
 
 h2 {
+    text-align: center;
     font-size: 1.8rem;
-    color: #262626;
+    color: hsl(96, 87%, 47%);
 }
 
 
 h3 {
-    color: #f0f0f0;
+    color: #262626;
     font-size: 23px;
     margin-bottom: 1rem;
 }

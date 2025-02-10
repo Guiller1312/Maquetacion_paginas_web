@@ -1,14 +1,36 @@
-*{
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-header{
-    display: flex;
-}
-header h1{
+
+header h1 {
     margin: 2% 10% 2.3% 35%;
 }
-#imagen_header {
-    width: 5%; 
+
+section {
+    display: flex;
+}
+
+.section1 .imagen_section {
+    width: 5%;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: #262626;
+}
+
+
+h3 {
+    color: #f0f0f0;
+    font-size: 23px;
+    margin-bottom: 1rem;
+}
+
+p {
+    line-height: 1.5rem;
+    font-family: sans-serif;
+    font-weight: 400;
+    margin: 0 0 1.625em;
 }

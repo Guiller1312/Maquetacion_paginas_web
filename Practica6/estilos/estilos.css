@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#icono {
+    display: inline-block;
+    width: 2%;
+    height:2%;
+    margin-left: auto;
+    line-height: 1;
+    margin: 3% 0 0 3%;
+}
+ul{
+    display: inline-block;
+    margin-left: 70rem;
+}
+ul li{
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+    font-size: x-large;
+    
+}
+.palo{
+    color: gray;
+}
+.section1{
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    color: gray;
+    text-shadow: gray 0 4px;
+    text-align: center;
+    font-size: 400%;
+    margin: 15% 15% 2% 15%;
+}
+#inicio p{  
+    color: gray;
+    text-align: center;
+    font-size: x-large;
+    margin: 0 25% 5% 25%;
+
+}
+hr{
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+h2{
+    color: gray;
+    text-shadow: gray 0 4px;
+    text-align: center;
+}
+
+.section3{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    margin: 5rem 0 2rem auto;
+}
+
+.ventaja{
+    display: inline-block;
+    width: 50%;
+    height: 49%;
+}
+.section1 .ventaja h4 p{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}
+.tick{
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+}

@@ -140,29 +140,35 @@ h2 {
     display: inline-block;
     border: 1px solid black;
     width: 25%;
-    height: 25%;
+    height: 40%;
     margin-left: 5%;
+    font-size: x-large;
 }
 .bordes p{
-    margin: 5%;
+    margin: 5% 5% 10% 5%;
+
 }
 .bordes h3{
     margin: 5%;
     text-align: center;
+    font-weight: 200;
 }
 #borde_dif{
     display: inline-block;
     border: 1px solid black;
     width: 25%;
-    height: 30%;
+    height: 50%;
     margin-left: 5%;
+    font-size: x-large;
+    font-weight: 200;
 }
 #borde_dif p{
-    margin: 5%;
+    margin: 5% 5% 10% 5%;
 }
 #borde_dif h3{
     margin: 5%;
     text-align: center;
+    font-weight: 100;
 }
 
 .formulario {

@@ -130,6 +130,31 @@ h2 {
     width: 20%;
     height: 30%;
 }
+
+
+.formulario{
+ width: 100%;
+}
+.formulario p{
+    width: 45vw;
+    border: 1px solid black;
+    text-shadow:1px gray;
+    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+}
+.formulario#mensaje{
+    width: 90vw;
+    border: 1px solid black;
+    text-shadow:1px gray;
+    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+}
+
+button{
+    border: 1px solid black;
+    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+    background-color: blue;
+    color: white;
+}
+
 .copyright-symbol {
     width: 40px;
     height: 40px;

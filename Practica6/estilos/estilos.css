@@ -11,6 +11,10 @@
     height: 500vh;
     background-color: aqua;
 } */
+header {
+    background-color: beige;
+}
+
 ul #icono {
     display: inline-block;
     width: 3%;
@@ -37,6 +41,13 @@ ul li {
     margin-left: 1vh;
 }
 
+#section_inicio {
+    background-color: beige;
+    display: inline-block;
+    height: 100vh;
+    width: 99vw;
+}
+
 .section1 {
     display: inline-block;
     height: 100vh;
@@ -53,7 +64,7 @@ h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-.section1 .parrafo_titulos {
+#section_inicio .parrafo_titulos {
     color: gray;
     text-align: center;
     font-size: x-large;
@@ -63,6 +74,12 @@ h1 {
 hr {
     margin-left: 40%;
     margin-right: 40%;
+}
+.section1 .parrafo_titulos {
+    color: gray;
+    text-align: center;
+    font-size: x-large;
+    margin: 0px 26% 5% 26%;
 }
 
 h2 {
@@ -119,10 +136,39 @@ h2 {
     margin: 1% 3% 0 3%
 }
 
+.bordes{
+    display: inline-block;
+    border: 1px solid black;
+    width: 25%;
+    height: 25%;
+    margin-left: 5%;
+}
+.bordes p{
+    margin: 5%;
+}
+.bordes h3{
+    margin: 5%;
+    text-align: center;
+}
+#borde_dif{
+    display: inline-block;
+    border: 1px solid black;
+    width: 25%;
+    height: 30%;
+    margin-left: 5%;
+}
+#borde_dif p{
+    margin: 5%;
+}
+#borde_dif h3{
+    margin: 5%;
+    text-align: center;
+}
+
 .formulario {
     height: 40vh;
     width: 90vw;
-
+    font-size: x-large;
 }
 
 .formulario #mensaje {
@@ -138,7 +184,7 @@ h2 {
 .formulario p {
     display: inline-block;
     width: 15%;
-    height: 10%;
+    height: 9%;
     border: 1px solid black;
     box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
     margin-right: 1%;
@@ -147,7 +193,7 @@ h2 {
 .formulario #email {
     display: inline-block;
     width: 15%;
-    height: 10%;
+    height: 9%;
     border: 1px solid black;
     box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
     margin-right: 1%;
@@ -157,11 +203,34 @@ h2 {
 .formulario button {
     display: inline-block;
     width: 15%;
-    height: 10%;
+    height: 9%;
     border: 1px solid black;
     box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
     background-color: blue;
     color: white;
+    font-size: x-large;
+}
+#ultima_seccion{
+    display: inline-block;
+    height: 100vh;
+    width: 99vw;
+}
+#ultima_seccion .parrafo_titulos {
+        color: gray;
+        text-align: center;
+        font-size: x-large;
+        margin: 5% 26% 5% 26%;
+}
+#descargar {
+    display: inline-block;
+    width: 15%;
+    height: 9%;
+    border: 1px solid black;
+    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+    background-color: rgb(9, 92, 216);
+    color: white;
+    font-size: xx-large;
+    margin-left: 42%;
 }
 
 .copyright-symbol {
@@ -171,8 +240,7 @@ h2 {
     border-radius: 50%;
     position: relative;
     text-align: center;
-    line-height: 40px;
-    /* Centra verticalmente el texto */
+    line-height: 40px; /* Centra verticalmente el texto */
     font-size: 20px;
     font-weight: bold;
     color: white;

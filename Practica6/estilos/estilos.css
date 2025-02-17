@@ -4,13 +4,23 @@
     box-sizing: border-box;
 }
 
-/* div{
+.margen_derecho {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6vw;
+    height: 625vh;
+    background-color: lightgray;
+}
+
+.margen_izquierdo {
     position: absolute;
     top: 0;
     width: 6vw;
-    height: 500vh;
-    background-color: aqua;
-} */
+    height: 625vh;
+    background-color: lightgray;
+}
+
 header {
     background-color: beige;
 }
@@ -61,7 +71,7 @@ h1 {
     text-align: center;
     font-size: 450%;
     margin: 15% 15% 2% 15%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
 }
 
 #section_inicio .parrafo_titulos {
@@ -75,6 +85,7 @@ hr {
     margin-left: 40%;
     margin-right: 40%;
 }
+
 .section1 .parrafo_titulos {
     color: gray;
     text-align: center;
@@ -93,10 +104,11 @@ h2 {
 
 .section3 {
     display: inline-block;
-    width: 30%;
-    height: 50%;
+    width: 22%;
+    height: 46%;
     text-align: center;
     margin-top: 4%;
+    margin-left: 5%
 }
 
 .ventaja {
@@ -115,8 +127,8 @@ h2 {
 }
 
 .section3 .ventaja p {
-    width: 130%;
-    height: 90%;
+    width: 107%;
+    height: 100%;
     color: gray;
     font-size: x-large;
     margin: 0;
@@ -125,50 +137,76 @@ h2 {
 
 .tick {
     display: inline-block;
-    width: 27%;
-    height: 26%;
-    margin: 0 2% 9% 0;
+    width: 32%;
+    height: 27%;
+    margin: 0 2% 28%
 }
 
-.imagenes3 {
+#imagenes1 {
     border: 1px solid black;
     box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
-    margin: 1% 3% 0 3%
+    margin: 1% 1% 0 11%;
+    width: 21%;
 }
 
-.bordes{
+#imagenes2 {
+    border: 1px solid black;
+    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+    margin: 1% 1% 0 5%;
+    width: 21%;
+}
+
+#imagenes3 {
+    border: 1px solid black;
+    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+    margin: 1% 1% 0 5%;
+    width: 21%;
+}
+
+.bordes {
     display: inline-block;
     border: 1px solid black;
-    width: 25%;
-    height: 40%;
-    margin-left: 5%;
-    font-size: x-large;
-}
-.bordes p{
-    margin: 5% 5% 10% 5%;
+    width: 21%;
+    height: 30%;
+    margin-left: 1%;
+    font-size: large;
 
 }
-.bordes h3{
+
+.bordes p {
+    margin: 5% 5% 10% 5%;
+    color: gray;
+}
+
+.bordes h3 {
     margin: 5%;
     text-align: center;
     font-weight: 200;
+    color: lightgray;
 }
-#borde_dif{
+
+#borde_dif {
     display: inline-block;
     border: 1px solid black;
-    width: 25%;
-    height: 50%;
-    margin-left: 5%;
+    width: 37%;
+    height: 38%;
+    margin-left: 8%;
+    margin-right: 8%;
     font-size: x-large;
     font-weight: 200;
+
 }
-#borde_dif p{
+
+#borde_dif p {
     margin: 5% 5% 10% 5%;
+    color: gray;
 }
-#borde_dif h3{
+
+#borde_dif h3 {
     margin: 5%;
     text-align: center;
     font-weight: 100;
+    color: lightgray;
 }
 
 .formulario {
@@ -183,17 +221,8 @@ h2 {
     height: 30%;
     margin: 0px 26% 2% 29%;
     border: 1px solid black;
-    text-shadow: 1px gray;
-    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
-}
-
-.formulario p {
-    display: inline-block;
-    width: 15%;
-    height: 9%;
-    border: 1px solid black;
-    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
-    margin-right: 1%;
+    box-shadow: inset 0.05rem 0.5rem 0.9rem 0.2rem lightgray;
+    text-shadow: 1px 2px 3px black;
 }
 
 .formulario #email {
@@ -201,9 +230,20 @@ h2 {
     width: 15%;
     height: 9%;
     border: 1px solid black;
-    box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
+    box-shadow: inset 0.05rem 0.5rem 0.9rem 0.2rem lightgray;
     margin-right: 1%;
     margin-left: 30%;
+    text-shadow: 1px 2px 3px black;
+}
+
+.formulario p {
+    display: inline-block;
+    width: 15%;
+    height: 9%;
+    border: 1px solid black;
+    box-shadow: inset 0.05rem 0.5rem 0.9rem 0.2rem lightgray;
+    text-shadow: 1px 2px 3px black;
+    margin-right: 1%;
 }
 
 .formulario button {
@@ -212,21 +252,24 @@ h2 {
     height: 9%;
     border: 1px solid black;
     box-shadow: 0.05rem 0.5rem 0.9rem 0.5rem gray;
-    background-color: blue;
+    background-color: #0059ff;
     color: white;
     font-size: x-large;
 }
-#ultima_seccion{
+
+#ultima_seccion {
     display: inline-block;
     height: 100vh;
     width: 99vw;
 }
+
 #ultima_seccion .parrafo_titulos {
-        color: gray;
-        text-align: center;
-        font-size: x-large;
-        margin: 5% 26% 5% 26%;
+    color: gray;
+    text-align: center;
+    font-size: x-large;
+    margin: 5% 26% 5% 26%;
 }
+
 #descargar {
     display: inline-block;
     width: 15%;
@@ -239,16 +282,53 @@ h2 {
     margin-left: 42%;
 }
 
-.copyright-symbol {
+footer ul {
+    display: inline-block;
+    text-align: center;
+    width: 80%;
+    margin-left: 8%;
+}
+
+footer ul li {
+    display: inline-block;
+    text-decoration: none;
+    color: gray;
+    font-size: 200%;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+
+footer .palo {
+    color: lightgray;
+    margin-left: 3vh;
+}
+
+footer #dirección {
+    display: block;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 150%;
+}
+
+footer p {
+    display: inline-block;
+    text-align: center;
+    font-size: 150%;
+}
+
+.copyright_symbol {
+    display: inline-block;
     width: 40px;
     height: 40px;
     background-color: gray;
     border-radius: 50%;
     position: relative;
     text-align: center;
-    line-height: 40px; /* Centra verticalmente el texto */
+    line-height: 40px;
+    /* Centra verticalmente el texto */
     font-size: 20px;
     font-weight: bold;
     color: white;
     font-family: Arial, sans-serif;
+    margin-left: 40%;
 }

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENU OCULTO</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        /* ********** BLOQUE RESET GENÉRICO ********** */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ******************** ******************** */
+        #cabecera {
+            position: relative;
+            width: 100vw;
+            height: 25vh;
+            background-color: lightgray;
+        }
+
+        /* ********** BARRA DE NAVEGACIÓN GENERAL ********** */
+        #barraMenu {
+            position: fixed;
+            top: opx;
+            right: 0px;
+            width: 90%;
+            margin: auto;
+            height: 100%;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: flex-end;
+            align-items: start;
+            /* background-color: rosybrown; */
+            /* box-shadow: 0 0 25px 25px burlywood; */
+        }
+
+        /* ********** LISTA DE MENÚS ********** */
+        #menuPrincipal {
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            justify-content: center;
+        }
+
+        /* TITULO DEL MENÚ */
+        #tituloMenuPrincipal {
+            padding: 0.2rem;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+
+        #menuPrincipal:hover .menus {
+            visibility: visible;
+        }
+
+        /* ELEMENTOS DE MENÚ */
+        .menus {
+            visibility: hidden;
+            /* display: inline-block; */
+            width: fit-content;
+            padding: 2px 4px;
+            border-bottom: 2px solid black;
+            animation: 2s linear all;
+        }
+
+        .menus:hover {
+            border-radius: 10px;
+            border-color: 4px solid grey;
+            box-shadow: 0 2px 15px 5px lightslategray
+        }
+
+        /* SEPARADOR NECESARIO DEBAJO PARA PODER PONER EL MENÚ A AL DERECHA */
+        .separa {
+            height: 1px;
+        }
+
+        /* ********** CUERPO ********** */
+        .sectsCuerpo {
+            width: 80%;
+            height: 75vh;
+        }
+        .marco{
+            width: 300px;
+            height: 500px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="cabecera">
+        <div class="marco">
+            <svg viewbox="0 0 20 15" style="opacity: 1;">
+                <defs></defs>
+                <rect x="0" y="0" width="20" height="15" fill="transparent" ></rect>
+                <path d="M6.79233493022287 14.704691426975709C6.79233493022287 14.704691426975709 0.29368881483024367 8.170203853672161 0.29368881483024367 8.170203853672161-0.09789627161008121 7.776459089639767-0.09789627161008121 7.139765428651216 0.29368881483024367 6.746020664618824 0.29368881483024367 6.746020664618824 1.7100604040824825 5.321837475565486 1.7100604040824825 5.321837475565486 2.1016454905228077 4.928092711533092 2.7348469068943966 4.928092711533092 3.1264319933347213 5.321837475565486 3.1264319933347213 5.321837475565486 7.500520724848989 9.72842781345993 7.500520724848989 9.72842781345993 7.500520724848989 9.72842781345993 16.873568006665273 0.2953085730242946 16.873568006665273 0.2953085730242946 17.2651530931056-0.09843619100809864 17.89835450947719-0.09843619100809864 18.289939595917513 0.2953085730242946 18.289939595917513 0.2953085730242946 19.706311185169753 1.7194917620776318 19.706311185169753 1.7194917620776318 20.09789627161008 2.1132365261100254 20.09789627161008 2.7499301870985766 19.706311185169753 3.1436749511309694 19.706311185169753 3.1436749511309694 8.208706519475108 14.704691426975709 8.208706519475108 14.704691426975709 7.817121433034784 15.098436191008103 7.183920016663193 15.098436191008103 6.79233493022287 14.704691426975709 6.79233493022287 14.704691426975709 6.79233493022287 14.704691426975709 6.79233493022287 14.704691426975709"
+                    stroke-width="0" stroke="none" stroke-dasharray="none" stroke-dashoffset="none" fill="rgb(20, 100, 246)"
+                    fill-rule="evenOdd"></path>
+            </svg>
+        </div>
+    
+    </header>
+    <!-- nav#barraMenu>ul#menuPrincipal>span#tituloMenuPrincipal{MENU PRINCIPAL}+li.menus#item$*5>a.enlaceMenu$#linkMenu${SECCION $} -->
+    <nav id="barraMenu">
+        <ul id="menuPrincipal">
+            <span id="tituloMenuPrincipal">MENU PRINCIPAL</span><br>
+            <li class="menus" id="item1"><a href="#sect1" class="enlaceMenulinkMenu1">SECCION 1</a></li><br>
+            <li class="menus" id="item2"><a href="#sect2" class="enlaceMenulinkMenu2">SECCION 2</a></li><br>
+            <li class="menus" id="item3"><a href="#sect3" class="enlaceMenulinkMenu3">SECCION 3</a></li><br>
+            <li class="menus" id="item4"><a href="#sect4" class="enlaceMenulinkMenu4">SECCION 4</a></li><br>
+            <li class="menus" id="item5"><a href="#sect5" class="enlaceMenulinkMenu5">SECCION 5</a></li><br>
+        </ul>
+    </nav>
+    <div class="separa"></div>
+
+    <!-- ******************** CUERPO ******************** -->
+    <!-- section.sectsCuerpo#sect$*5>h2{SECCION $}+a{INICIO} -->
+    <section class="sectsCuerpo" id="sect1">
+        <h2>SECCION 1</h2>
+        <a href="">INICIO</a>
+    </section>
+    <section class="sectsCuerpo" id="sect2">
+        <h2>SECCION 2</h2>
+        <a href="">INICIO</a>
+    </section>
+    <section class="sectsCuerpo" id="sect3">
+        <h2>SECCION 3</h2>
+        <a href="">INICIO</a>
+    </section>
+    <section class="sectsCuerpo" id="sect4">
+        <h2>SECCION 4</h2>
+        <a href="">INICIO</a>
+    </section>
+    <section class="sectsCuerpo" id="sect5">
+        <h2>SECCION 5</h2>
+        <a href="">INICIO</a>
+    </section>
+
+    <!-- ******************** PIE ******************** -->
+
+</body>
+
+</html>

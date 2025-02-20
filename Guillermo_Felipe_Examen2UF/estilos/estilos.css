@@ -6,12 +6,10 @@
 }
 header {
     display:  flex;
-    text-align: center;
     background-color: gray;
     color: white;
     width: 100vw;
     height: 15vh;
-    margin: 0 auto;
     align-items:center;
     justify-content: center;
     font-family: Georgia, 'Times New Roman', Times, serif;

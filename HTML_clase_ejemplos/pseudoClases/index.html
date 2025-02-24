@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <style>
+      .separador{
+         height: 20vh;
+      }
+      
+         /* SOMBRA INTERNA Y EXTERNA AL MISMO TIEMPO */
+         a{
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 8px 3px black inset, 0 0 15px 10px grey;
+         }
+      /* CUANDO ESTA ACTIVO */
+      .but:active{
+         background-color: coral;
+      }
+
+      /* AL RECIBIR EL FOCO APLICA ESTAS PROPIEDADES */
+         .but:focus{
+            background-color: black;
+            color: lightgrey;
+            box-shadow: 0 0 10px 15px grey;
+            width: 10rem;
+            transition: all 1s ease;
+         }
+         /* CAMBIA LOS ESTILOS DEL ENLACE CUANDO YA LO HEMOS VISITADO */
+         a:visited{
+            color: black;
+         }
+         /* CAMBIA LOS ESTILOS DEL ENLACE CUANDO NUNCA LO HEMOS VISITADO */
+         a:link{
+            color:chartreuse;
+         }
+         /* CUANDO PASAMOS POR ENCIMA */
+         .but:hover{
+            border-radius: 35%;
+            box-shadow: 0 0 10px 15px grey inset;
+            color: white;
+            transition: all 1s ease;
+         }
+         /* CUANDO EL ELEMENTO SE SELECCIONA 'checked' */
+         input[type="checkbox"]:checked{
+            box-shadow: 0 0 10px 15px red;
+         }
+         /* CUANDO EL ELEMENTO NO TIENE HIJOS - CONTENEDOR VACIO - */
+         div:empty{
+            display: none;
+            background-color: brown;
+         }
+         /*  */
+         div:root{
+            
+         }
+
+
+   </style>
+</head>
+
+<body>
+   <!-- nav>button.but#btn${BOTON $}*5 -->
+   <nav>
+      <a href="#"><button class="but" id="btn1">BOTON 1</button></a>
+      <button class="but" id="btn2">BOTON 2</button>
+      <button class="but" id="btn3">BOTON 3</button>
+      <button class="but" id="btn4">BOTON 4</button>
+      <button class="but" id="btn5">BOTON 5</button></nav>
+      <div class="separador"></div>
+      <a target="blank" href="https://www.samsung.com">Ir a Samsung</a>
+      <div class="separador"></div>
+      <fieldset>
+         <input type="checkbox" name="" id="">
+         <input type="radio" name="" id="">
+      </fieldset>
+</body>
+</body>
+
+</html>

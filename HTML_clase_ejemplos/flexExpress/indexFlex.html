@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FLEX EXPRESS</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			
+		}
+		.cajon{
+			width: 100vw;
+			height: 80vh;
+			border: 1px solid orange;
+			
+			display: flex;
+			flex-wrap: wrap;
+		
+			/* flex-direction: column-reverse; */
+			align-items: center;
+			justify-content: space-evenly;
+			gap: 1rem;
+		}
+		.cajas{
+			width: 5rem;
+			height: 5rem;
+			background-color: brown;
+			align-self: baseline;
+		}
+		#caja1{
+			order: 3;
+			background-color: yellow;
+			align-content: end;
+			text-align: right;
+		}
+		#caja2{
+			order: 4;
+		}
+		#caja3{
+			order: 5;
+			background-color: green;
+			align-content: center;
+			text-align: right;
+		}
+		#caja4{
+			order: 1;
+			align-content: center;
+			text-align: center;
+		}
+		#caja5{
+			order: 2;
+			background-color: blue;
+			align-content: center;	
+		}
+		span{
+			position: relative;
+			top: 10px;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="cajon">
+		<div class="cajas" id="caja1">1</div>
+		<div class="cajas" id="caja2">2</div>
+		<div class="cajas" id="caja3">3</div>
+		<div class="cajas" id="caja4"><span>4</span></div>
+		<div class="cajas" id="caja5">5</div>
+	</div>
+	
+</body>
+</html>

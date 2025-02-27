@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PRACTICA 2 CUADROS</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		.filas{
+			width: 100vw;
+			height: 33vh;
+		}
+		.cajas{
+			display: inline-block;
+			width: 33.3%;
+			height: 100%;
+			/* border: 1px solid black; */
+		}
+		.cajasVerticalesDuo{
+			width: 100%;
+			height: 50%;
+			border: 1px solid blue;
+		}
+		.cajasHorizontalesDuo{
+			display: inline-block;
+			width: 50%;
+			height: 100%;
+			border: 1px solid green;
+		}
+		.cajasVerticalesTrio{
+			width: 100%;
+			height: 33.3%;
+			border: 1px solid orange;
+		}
+		.cajasHorizontalesTrio{
+			display: inline-block;
+			width: 33.3%;
+			height: 100%;
+			border: 1px solid magenta;
+		}
+		/* HASTA AQUI MONTAMOS TODOS EXCEPTO EL 7 */
+		.cajasVerticales25{
+			width: 100%;
+			height: 25%;		#caja7{
+			vertical-align: top;
+		}
+		}
+		/* AJUSTE DE LA CAJA 7 */
+
+		/* COLORES */
+		.gr{
+			background-color: gray;
+		}
+		.ma{
+			background-color: magenta;
+		}
+		.co{
+			background-color: coral;
+		}
+		.kh{
+			background-color: khaki;
+		}
+	</style>
+</head>
+<body>
+	<div class="filas" id="fila1">
+		<div class="cajas" id="caja1">
+			<div class="cajasVerticalesDuo">
+				<div class="cajasHorizontalesDuo kh">
+
+				</div><div class="cajasHorizontalesDuo gr"></div>
+			</div>
+			<div class="cajasVerticalesDuo">
+				<div class="cajasHorizontalesDuo gr">
+
+				</div><div class="cajasHorizontalesDuo kh"></div>
+			</div>
+		</div><div class="cajas" id="caja2">
+			<div class="cajasVerticalesDuo "></div>
+			<div class="cajasVerticalesDuo"></div>
+		</div><div class="cajas" id="caja3">
+			<div class="cajasHorizontalesDuo">
+
+			</div><div class="cajasHorizontalesDuo"></div>
+		</div>
+	</div>
+	<div class="filas" id="fila2">
+		<div class="cajas" id="caja4">
+			<div class="cajasVerticalesTrio"></div>
+			<div class="cajasVerticalesTrio"></div>
+			<div class="cajasVerticalesTrio"></div>
+		</div><div class="cajas" id="caja5">
+
+		</div><div class="cajas" id="caja6">
+			<div class="cajasHorizontalesTrio">
+
+			</div><div class="cajasHorizontalesTrio">
+
+			</div><div class="cajasHorizontalesTrio">
+
+			</div>
+		</div>
+	</div>
+	<div class="filas" id="fila3">
+		<div class="cajas" id="caja7">
+			<div class="cajasVerticales25">
+				<div class="cajasHorizontalesDuo">
+
+				</div><div class="cajasHorizontalesDuo">
+
+				</div>
+			</div>
+			<div class="cajasVerticalesDuo"></div>
+			<div class="cajasVerticales25">
+				
+			</div>
+		</div><div class="cajas" id="caja8">
+			<div class="cajasVerticalesDuo">
+				<div class="cajasHorizontalesDuo">
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+							
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+		
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+				</div><div class="cajasHorizontalesDuo">
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+							
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+		
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+				</div>
+			</div>
+			<div class="cajasVerticalesDuo">
+				<div class="cajasHorizontalesDuo">
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+							
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+		
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+				</div><div class="cajasHorizontalesDuo">
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+							
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+		
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+				</div>
+			</div>
+		</div><div class="cajas" id="caja9">
+			<div class="cajasVerticalesDuo">
+				<div class="cajasVerticalesDuo"></div>
+				<div class="cajasVerticalesDuo"></div>
+			</div>
+			<div class="cajasVerticalesDuo">
+				<div class="cajasHorizontalesTrio">
+					
+				</div><div class="cajasHorizontalesTrio">
+
+				</div><div class="cajasHorizontalesTrio">
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+		
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+					<div class="cajasVerticalesDuo">
+						<div class="cajasHorizontalesDuo">
+		
+						</div><div class="cajasHorizontalesDuo"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>

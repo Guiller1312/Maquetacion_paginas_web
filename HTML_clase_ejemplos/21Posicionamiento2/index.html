@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POSICIONAMIENTO II</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            /* background-color: greenyellow; */
+        }
+        ul{
+            list-style-type: none;
+            text-align: center;
+        }
+        li{
+            display: inline-block;
+        }
+        header, nav, main, footer{
+            width: 100vw;
+        }
+        #cabecera{
+            width: 80%;
+            margin: auto;
+            height: 20vh;
+            background-color: lightgrey;
+            text-align: center;
+            /* NO SE APRECIA QUE TOME DE REFERENCIA LA CABECERA */
+            /* PORQUE ESTA PEGADA AL INICIO DEL BODY */
+            /* position: relative; */
+        }
+        #menu{
+            height: 10vh;
+            background-color: darkslategrey;
+            color: white;
+        }
+        #cuerpo{
+            background-color: blue;
+            height: 50vh;
+            position: relative;
+        }
+        #pie{
+            height: 25vh;
+            background-color: lightgrey;
+        }
+        .caja{
+            width: 5rem;
+            height: 5rem;
+            border-radius: 50%;
+            background-color: coral;
+            display: inline-block;
+        }
+        #dentro{
+            background-color:cyan;
+            width: 80%;
+            margin: auto;            
+            position: relative;
+        }
+        #c1{
+            position: relative;
+            /* top: 3rem; */
+            background-color: darkcyan;
+        }
+        #c2{
+            position: absolute;
+            top:0;
+            left: 0;
+            background-color: brown;
+            border-radius: 0;
+        }
+        #c3{
+            background-color: burlywood;
+            border-radius: 0;
+        }
+        .separador{
+            height: 5vh;
+            position: relative;
+        }
+        h1{
+            position: relative;
+        }
+        #superior{
+            height: 45vh;
+            background-color: red;
+            position:relative;
+
+        }
+        #inferior{
+            height: 20vh;
+            background-color: yellow;
+            position:relative;
+        }
+        #c5{
+            background-color: blueviolet;
+            position: relative;
+            /* SI PONEMOS A 0 LAS CUATRO REFERENCIAS EN 'position: absolute' */
+            /* PODEMOS USAR 'margin: auto' PARA CENTRAR EN LA HORIZONTAL Y LA VERTICAL */
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;         
+        }
+
+    </style>
+</head>
+<body>
+    <!-- header#cabecera>h1{POSICIONAMIENTO ABSOLUTO}+section#dentro>div.caja#c$*3 -->
+    <header id="cabecera">
+        <h1>POSICIONAMIENTO ABSOLUTO
+        </h1>
+        <section id="dentro">
+            <div class="caja" id="c1"></div>
+            <div class="caja" id="c2"></div>
+            <div class="caja" id="c3"></div>
+        </section>
+    </header>
+    <!-- nav#section.separador+menu>ul>li{MENU$}*5 -->
+    <nav id="menu">
+        <section class="separador"></section>
+        <ul>
+            <li>MENU1</li>
+            <li>MENU2</li>
+            <li>MENU3</li>
+            <li>MENU4</li>
+            <li>MENU5</li>
+        </ul>
+    </nav>
+    <!-- main#cuerpo>section.separador+section#superior>section.separador+section#inferior>div.caja#c$@4*3 -->
+    <main id="cuerpo">
+        <section class="separador"></section>
+        <section id="superior">
+            <section class="separador"></section>
+            <section id="inferior">
+                <div class="caja" id="c4"></div>
+                <div class="caja" id="c5"></div>
+                <div class="caja" id="c6"></div>
+            </section>
+        </section>
+    </main>
+    <!-- footer#pie>section.separador+section#debajo>div.caja*3 -->
+    <footer id="pie">
+        <section class="separador"></section>
+        <section id="debajo">
+            <div class="caja"></div>
+            <div class="caja"></div>
+            <div class="caja"></div>
+        </section>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FLEX EXPLICADO</title>
+	<style>
+		
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.cabecera{
+			border: 1px solid black;
+			width: 100vw;
+			height: 20rem;
+			
+			/* PROPIEDAD BASICA DE FLEX */
+			/* ALINEA AL INICIO DEL EJE 1º */
+			/*  */
+			display:flex;
+
+			/* flex-direction: row;
+			flex-wrap: nowrap; */
+			/* flex-flow: row nowrap; */
+			/* ESTAS DOS PROPIEDADES ANTERIORES SE RESUMEN EN UNA SOLA 'flwx-flow*/
+			/* ALINEACION EJE 1º */
+			/* justify-content: flex-start; */
+			/* ALINEACION EJE 2º */
+			/* align-items: stretch; */
+		}
+		.hijoCabecera{
+			/* width: 4rem; */
+			/* height: 4rem; */
+			border: 1px solid blue;
+			background-color: coral;
+			/* margin: 1rem; */
+		}
+		span{
+			border: 1px solid red;
+			background-color: yellow;
+		}
+	
+	</style>
+</head>
+<body>
+	<header class="cabecera">
+		<section class="hijoCabecera">Lorem, ipsum.</section>
+		<section class="hijoCabecera">Lorem, ipsum.</section>
+		<section class="hijoCabecera">Lorem, ipsum.</section>
+		<span>Lorem, Ipsum.</span><span>Lorem, Ipsum.</span><span>Lorem, Ipsum.</span>
+	</header>
+	
+</body>
+</html>

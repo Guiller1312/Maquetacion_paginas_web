@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FLEX EN FOOTER</title>
+	<link rel="stylesheet" href="/reset.css">
+	<style>
+		header{
+			background-color: lightgray;
+			width: 100vw;
+			height: 15vh;
+
+		}
+		main{
+			width: 100vw;
+			background-color: darkturquoise;
+			min-height: 60vh;
+
+		}
+		footer{
+			background-color: black;
+			color: white;
+			width: 100vw;
+			height: 80vh;
+		}
+		.tarjetita{
+			/* display: inline-block; */
+			background-color: coral;
+			width: 40%;
+			height: 25vh;
+			/* margin: 0 7rem; */
+			border-radius: 25px;
+			box-shadow: 0 0 10px 5px white;
+		}
+		.menus{
+			width: 90%;
+			height: 15vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+		}
+		#enlaceSup, #enlacesInf{
+			width: 80%;
+			display: flex;
+			justify-content: space-evenly;
+			
+		}
+		#menuPieInf{
+			align-items: flex-end;
+		}
+		#cuerpoPie{
+			height: 45vh;
+			display: flex;
+			justify-content: space-between;
+		}
+		#menuPieIzda,#menuPieDer{
+			width: 20vw;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		#enlacesIzda, #enlacesDer{
+			height: 70%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+		#menuPieCentro{
+			width: 50vw;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		#menuPieCentroSup, #menuPieCentroInf{
+			width: 100%;
+			height: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#enlacesCentroSup, #enlacesCentroInf{
+			width: 70%;
+			display: flex;
+			justify-content: space-between;
+		}
+
+	</style>
+</head>
+<body>
+	<header></header>
+	<main>
+		<div class="tarjetita"></div>
+
+	</main>
+	<footer>
+		<section class="menus" id="menuPieSuperior">
+			<!-- section#menuPieIzda>ul#enlaceSup>li.enlaces#item${MENU}*5 -->
+			<ul id="enlaceSup">
+				<li class="enlaces" id="item1">MENU</li>
+				<li class="enlaces" id="item2">MENU</li>
+				<li class="enlaces" id="item3">MENU</li>
+				<li class="enlaces" id="item4">MENU</li>
+				<li class="enlaces" id="item5">MENU</li>
+			</ul>
+		</section>
+		<section class="enlaces" id="cuerpoPie">
+			<!-- section#menuPieIzda>ul#enlacesIzda>li.enlaces#item$@6{MENU}*5 -->
+			<section id="menuPieIzda">
+				<ul id="enlacesIzda">
+					<li class="enlaces" id="item6">MENU</li>
+					<li class="enlaces" id="item7">MENU</li>
+					<li class="enlaces" id="item8">MENU</li>
+					<li class="enlaces" id="item9">MENU</li>
+					<li class="enlaces" id="item10">MENU</li>
+				</ul>
+			</section>
+			<section id="menuPieCentro">
+				<!-- section#menuPieCentroSup>ul#enlacesCentroSup>li.enlaces#item$@11{MENU}*5 -->
+				<section id="menuPieCentroSup">
+					<ul id="enlacesCentroSup">
+						<li class="enlaces" id="item11">MENU</li>
+						<li class="enlaces" id="item12">MENU</li>
+						<li class="enlaces" id="item13">MENU</li>
+						<li class="enlaces" id="item14">MENU</li>
+						<li class="enlaces" id="item15">MENU</li>
+					</ul>
+				</section>
+				<!-- section#menuPieCentroInf>ul#enlacesCentroSup>li.enlaces#item$@16{MENU}*5 -->
+				<section id="menuPieCentroInf">
+					<ul id="enlacesCentroSup">
+						<li class="enlaces" id="item16">MENU</li>
+						<li class="enlaces" id="item17">MENU</li>
+						<li class="enlaces" id="item18">MENU</li>
+						<li class="enlaces" id="item19">MENU</li>
+						<li class="enlaces" id="item20">MENU</li>
+					</ul>
+				</section>
+			</section>
+			<!-- section#menuPieDer>ul#enlacesDer>li.enlaces#item$@21{MENU}*5 -->
+			<section id="menuPieDer">
+				<ul id="enlacesDer">
+					<li class="enlaces" id="item21">MENU</li>
+					<li class="enlaces" id="item22">MENU</li>
+					<li class="enlaces" id="item23">MENU</li>
+					<li class="enlaces" id="item24">MENU</li>
+					<li class="enlaces" id="item25">MENU</li>
+				</ul>
+			</section>
+		</section>
+		<section class="menus" id="menuPieInf">
+			<!-- section#menuPieInf>ul#enlacesInf>li.enlaces#item$@26{MENU}*5 -->
+				<ul id="enlacesInf">
+					<li class="enlaces" id="item26">MENU</li>
+					<li class="enlaces" id="item27">MENU</li>
+					<li class="enlaces" id="item28">MENU</li>
+					<li class="enlaces" id="item29">MENU</li>
+					<li class="enlaces" id="item30">MENU</li>
+				</ul>
+		</section>
+	</footer>
+	
+</body>
+</html>

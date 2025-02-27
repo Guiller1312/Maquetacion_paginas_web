@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAJAS OCULTAS</title>
+    <style>
+
+        .fondo{
+            background-color:lightgray ;
+            position: relative;
+            z-index: 10;
+        }
+        header, footer{
+            width: 100vw;
+            height: 25vh;
+        }
+        main{
+            background-color: whitesmoke;
+            width: 80vw;
+            height: 50vh;
+            margin: auto;
+        }
+        .cajasOcultas{
+            display: inline-block;
+            margin-inline: 3vw;
+            border: 1px solid black;
+            width: 20vw;
+            height: 10vh;
+        }
+        #izdo{
+            position: relative;
+            right: 10vw;
+        }
+        #dcho{
+            position: relative;
+            left: 10vw;
+        }
+        section{
+            overflow: hidden;
+        }
+        article{
+            margin-top: 10vh;
+        }
+        .cuadrosCortados{
+            display: inline-block;
+            width: 20%;
+            height: 10vh;
+        }
+        #primer{
+            border-top: 1px solid black;
+            border-right: 1px solid black;
+            border-bottom: 1px solid black;
+            margin-right: 19.5%;
+            /* text-wrap: nowrap; */
+            text-align: right;
+            direction: rtl;
+        }
+        #segun{
+            border: 1px solid black;
+            margin-right: 19.5%;
+        }
+        #tercer{
+            border-top: 1px solid black;
+            border-left: 1px solid black;
+            border-bottom: 1px solid black;
+        }
+        #parrafito{
+            display:inline-block;
+            width: 100%;
+            position: relative;
+            right: 2rem;
+            z-index: 2; 
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="fondo">
+        <header></header>
+        <main>
+            <h2>CASOS DE EXITO</h2>
+            <section>
+                <div class="cajasOcultas" id="izdo">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima, magni?</div>
+                <div class="cajasOcultas" id="centro">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus, fugit!
+                </div>
+                <div class="cajasOcultas" id="dcho">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo, similique.</div>
+            </section>
+            <article>
+                <div class="cuadrosCortados" id="primer">
+                    <p id="parrafito">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Mollitia, provident?</p></div>
+                <div class="cuadrosCortados" id="segun">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, ratione!</div>
+                <div class="cuadrosCortados" id="tercer">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, ratione!</div>
+            </article>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

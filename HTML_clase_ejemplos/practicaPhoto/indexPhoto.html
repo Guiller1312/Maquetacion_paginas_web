@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GALERIA DE FOTOS A DISTINTA ALTURA</title>
+	<link rel="stylesheet" href="/reset.css">
+	<style>
+		.galeria{
+		background-color: darkslategrey;
+		width: 99vw;
+		/* HAGO LAS TRES SECCIONES FLEXIBLES Y REPARTO LOS ESPACIOS ENTRE ELLAS */
+		display: flex;
+		justify-content: space-evenly;
+		}
+		.column{
+			height: 630vh;
+			/* HAGO QUE LA SECCION SEA FLEX, LA PONGO EN MODO COLUMNA PARA CENTRAR LOS 'figure' */
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+		}
+		img{
+			/* OBLIGATORIO AJUSTARSE AL ANCHO PARA QUE TODAS RESPETEN SU HUECO EN LA COLUMNA */
+			max-width: 100%;
+		}
+		.marco{
+			/* CONTROLO QUE EL ANCHO DEL 'figure' NO SE SALGA DE SU COLUMNA */
+			width: 90%;
+			/* PERMITO QUE EL FIGURE SE ADAPTE AL ALTO DE CADA IMAGEN */
+			height: fit-content;
+		}
+		.photo{
+			border-radius: 10px;
+			box-shadow: 1px 1px 5px 2px whitesmoke;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- section.galeria>section.column*3>figure.marco*10>img.photo#foto$[src="https://picsum.photos/500/"] -->
+	<section class="galeria">
+		<section class="column">
+			<figure class="marco"><img src="https://picsum.photos/500/" alt="" class="photo" id="foto1"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/900/" alt="" class="photo" id="foto2"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/200/" alt="" class="photo" id="foto3"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/800/" alt="" class="photo" id="foto4"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/300/" alt="" class="photo" id="foto5"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/700/" alt="" class="photo" id="foto6"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/400/" alt="" class="photo" id="foto7"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/600/" alt="" class="photo" id="foto8"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/201/" alt="" class="photo" id="foto9"></figure>
+			<figure class="marco"><img src="https://picsum.photos/510/" alt="" class="photo" id="foto10"></figure>
+		</section>
+		<section class="column">
+			<figure class="marco"><img src="https://picsum.photos/500/201/" alt="" class="photo" id="foto1"></figure>
+			<figure class="marco"><img src="https://picsum.photos/501/" alt="" class="photo" id="foto2"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/501/" alt="" class="photo" id="foto3"></figure>
+			<figure class="marco"><img src="https://picsum.photos/502/" alt="" class="photo" id="foto4"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/601/" alt="" class="photo" id="foto5"></figure>
+			<figure class="marco"><img src="https://picsum.photos/503/" alt="" class="photo" id="foto6"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/801/" alt="" class="photo" id="foto7"></figure>
+			<figure class="marco"><img src="https://picsum.photos/504/" alt="" class="photo" id="foto8"></figure>
+			<figure class="marco"><img src="https://picsum.photos/500/601/" alt="" class="photo" id="foto9"></figure>
+			<figure class="marco"><img src="https://picsum.photos/505/" alt="" class="photo" id="foto10"></figure>
+		</section>
+		<section class="column">
+			<figure class="marco"><img src="https://picsum.photos/590/" alt="" class="photo" id="foto1"></figure>
+			<figure class="marco"><img src="https://picsum.photos/580/200/" alt="" class="photo" id="foto2"></figure>
+			<figure class="marco"><img src="https://picsum.photos/570/" alt="" class="photo" id="foto3"></figure>
+			<figure class="marco"><img src="https://picsum.photos/560/202/" alt="" class="photo" id="foto4"></figure>
+			<figure class="marco"><img src="https://picsum.photos/550/" alt="" class="photo" id="foto5"></figure>
+			<figure class="marco"><img src="https://picsum.photos/540/400/" alt="" class="photo" id="foto6"></figure>
+			<figure class="marco"><img src="https://picsum.photos/530/" alt="" class="photo" id="foto7"></figure>
+			<figure class="marco"><img src="https://picsum.photos/520/600/" alt="" class="photo" id="foto8"></figure>
+			<figure class="marco"><img src="https://picsum.photos/511/" alt="" class="photo" id="foto9"></figure>
+			<figure class="marco"><img src="https://picsum.photos/501/601/" alt="" class="photo" id="foto10"></figure>
+		</section>
+	</section>
+</body>
+</html>

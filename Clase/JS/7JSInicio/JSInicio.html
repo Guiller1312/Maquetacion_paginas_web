@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS INICIO</title>
+    <script>
+      // OBJETO 'document' --> MÉTODO 'write()'
+      document.write(`
+			<h1>EJEMPLO DE ESCRITURA EN EL DOCUMENTO CON JS</h1>
+			<p>EJEMPLO JS EN CABECERA</p>
+			<p>EJEMPLO JS EN CABECERA</p>
+			<p>EJEMPLO JS EN CABECERA</p>
+			<p>EJEMPLO JS EN CABECERA</p>
+			<p>EJEMPLO JS EN CABECERA</p>
+		`);
+    </script>
+	 <style>
+		p{
+			color: blue;
+		}
+		h1{
+			text-shadow: 5px 5px gray;
+		}
+	 </style>
+  </head>
+
+  <body>
+    <h2>MI CONTENIDO DE BODY</h2>
+    
+	 <script>
+      // OBJETO 'document' --> MÉTODO 'write()'
+      document.write(`
+		<p>MI SCRIPT DENTRO DE BODY Y DEBAJO DEL H2</p>
+	`);
+    </script>
+    
+	 <h2>MI SEGUNDO H2 DE BODY</h2>
+    
+	 <script>
+      // OBJETO 'document' --> MÉTODO 'write()'
+      document.write(`
+		<section>	
+			<p>MI SCRIPT DENTRO DE BODY Y DEBAJO DEL SEGUNDO H2</p>
+		</section>
+		`);
+    </script>
+
+    <script>
+      // ESTE ES EL SITIO MÁS COMÚN DONDE METEREMOS LOS SCRIPTS
+      // PORQUE YA EXISTEN TODOS LOS ELEMENTOS DEL DOM
+      // EN EL ULTIMO LUGAR ANTES DE CERRAR EL BODY
+      // NO ES UNA NORMA ES UNA RECOMENDACIÓN
+    </script>
+  </body>
+</html>

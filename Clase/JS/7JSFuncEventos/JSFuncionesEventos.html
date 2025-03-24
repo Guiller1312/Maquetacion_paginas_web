@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FUNCIONES Y EVENTOS</title>
+	<script>
+		// DECLARO UNA FUNCIÓN QUE CONTIENE UNA PORCIÓN DE CÓDIGO
+		// PARA EJECUTARLO POSTERIORMETE A DEMANDA
+		function muestraMensaje(){
+			alert("Hello Coders!");
+		}
+		function pintaHR(){
+			document.write(`
+				<hr>
+				<h2>GENERADO CON UNA FUNCIÓN</h2>
+				<input ondblclick="pintaHR()" type="button" value="PULSAME">
+			`);
+		}
+		
+	</script>
+</head>
+<body>
+	<button onclick="muestraMensaje()">PULSAME</button>
+	<input ondblclick="pintaHR()" type="button" value="PULSAME">
+	<img 
+		onclick="muestraMensaje()" 
+		src="https://picsum.photos/400/"
+		alt="">
+</body>
+</html>

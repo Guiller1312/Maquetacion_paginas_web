@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS EN FORMULARIOS</title>
+	<style>
+		[type="number"]{
+			background-color: yellow;
+
+		}
+		[name='formularioInicial']{
+			border-radius: 25px;
+			min-height: 25vh ;
+		}
+		[value="BORRAR CAMPOS"]{
+			min-width: 15rem ;
+		}
+
+	</style>
+</head>
+<body>
+	<form action="#" method="get" name="formularioInicial">
+		<input type="button" value="MOSTRAR" onclick="
+					document.querySelector('#fld1').style.visibility= 'visible';
+					document.querySelector('#fld2').style.display= 'block';
+			">
+			<input type="button" value="OCULTAR" onclick="
+					document.querySelector('#fld1').style.visibility= 'hidden';
+					document.querySelector('#fld2').style.display= 'none';">
+		<fieldset id="fld1">
+			<legend>DATOS</legend>
+			<label for="dato1">DATO 1</label>
+			<input type="number" name="numDato1" id="dato1">
+			<label for="dato2">DATO 2</label>
+			<input type="number" name="numDato2" id="dato2">
+			<label for="dato3">DATO 3</label>
+			<input type="number" name="numDato3" id="numDato3">
+
+
+		</fieldset>
+
+		<fieldset id="fld2">
+			<legend>CONTROL</legend>
+			<input type="reset" value="BORRAR CAMPOS">
+			<input type="submit" value="ENVIAR FORMULARIO">
+		</fieldset>
+
+	</form>
+
+	<script>
+		document.querySelector("[name='formularioInicial']").style.backgroundColor= "darkSlateGrey";
+		document.querySelector("#dato1").style.backgroundColor= "cyan";
+
+		document.querySelector('#fld1').style.backgroundColor= "darkGrey";
+		document.querySelector('#fld2').style.backgroundColor= "darkGrey";
+
+		document.querySelector('#fld1').style.visibility= 'hidden';
+		document.querySelector('#fld2').style.display= 'none';
+	</script>
+
+</body>
+</html>

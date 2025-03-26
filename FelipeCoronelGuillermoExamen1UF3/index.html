@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXAMEN UNIDAD FORMATIVA 3: FLEX Y FORMULARIOS</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+    <header>
+         <!-- Contenedor de la imagen del header -->
+        <figure id="marcoHeader">
+            <!-- Imagen del header -->
+            <img id="imgHeader" src="img/Ine.jpg" alt="">
+            <figcaption>
+                <!-- Titulo del header -->
+                <h1>EXAMEN UNIDAD FORMATIVA 3: FLEX Y FORMULARIOS</h1>
+            </figcaption>
+        </figure>
+    </header>
+    <main>
+        <h2>Japón</h2>
+        <!-- Marco de la primera seccion -->
+        <section id="main1">
+        <!-- Contenedor de la imagen de la primera seccion -->
+            <figure id="marcoMain1">
+                <img id="imgMain1" src="img/Desierto-Tottori.jpeg" alt="">
+            </figure>
+            <!-- Texto relativo de la imagen de la primera seccion -->
+            <article>
+                <p>Las dunas de arena de Tottori o Tottori Sakyu (鳥取砂丘) en la costa del mar de Japón son un destino
+                    interesante pero muy poco conocido entre los occidentales. Situadas al norte de la ciudad de
+                    Tottori, en la región de Chugoku, las dunas de arena ocupan 131 hectáreas de terreno y son un
+                    espectáculo precioso y nada típico de Japón que, por ello, bien merecen una visita.
+
+                    Declarada zona protegida, las dunas forman parte del Parque Nacional San’in Kaigan y son la
+                    principal atracción turística de la ciudad. No en vano 1,3 millones de turistas al año visitan estas
+                    dunas, según datos de la oficina de turismo de la ciudad.</p>
+            </article>
+        </section>
+         <!-- Marco de la segunda seccion -->
+        <section id="main2">
+            <!-- Contenedor de la imagen de la primera seccion -->
+            <figure id="marcoMain2">
+                <img id="imgMain2" src="img/Amanohashidate.jpg" alt="">
+                <figcaption>
+                    <p>Amanohashidate (天橋立), algo así como el «puente sobre el cielo», es uno de los tres paisajes más
+                        bellos del país, una de esas listas de lo mejor de Japón que tanto gustan allí.
+    
+                        Sin embargo, pese a su gran belleza natural, suele quedarse fuera de las rutas habituales entre los
+                        turistas extranjeros. Pero si estás por Kioto, en la región de Kansai, puedes visitar Amanohashidate
+                        como excursión de día. Merece la pena y harás algo diferente que poca gente hace.
+    
+                        Amanohashidate es un pequeño y precioso pueblo costero situado en la bahía de Miyazu, al norte de la
+                        prefectura de Kioto.
+    
+                        Su principal atracción turística es la larga lengua de arena cubierta por pinos japoneses que une
+                        ambas orillas. Puedes moverte tranquilamente por aquí a pie, en bicicleta o subiendo a alguno de los
+                        ferries y cruceros turísticos que salen de los muelles a cada lado de la lengua de arena.</p>
+                    </figcaption>
+            </figure>
+            
+        </section>
+    </main>
+    <!-- Footer con sus 2 secciones, la primera su formulario y la segunda de datos -->
+    <footer>
+        <section id="formulario">
+            <form action="#" method="get" name="formularioInicial" id="formularioInicial">
+                <!-- Etiquetas para saber que debes de poner en las casillas  -->
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="submit" value="Enviar">
+            </form>
+        </section>
+        <section id="datos">
+            <ul>
+                <!-- Titulo para dar una idea de lo que va a tener la lista -->
+                <h3>Datos alumno</h3>
+                <!-- Elementos de una lista con los datos que se piden -->
+                <li> Nombre: Guillermo</li>
+                <li>Apellidos: Felipe Coronel</li>
+                <li>DNI:51118577L</li>
+                <li>Email: guillermodf76@gmail.com</li>
+                <li>Teléfono: 650577702</li>
+            </ul>
+        </section>
+    </footer>
+</body>
+</html>

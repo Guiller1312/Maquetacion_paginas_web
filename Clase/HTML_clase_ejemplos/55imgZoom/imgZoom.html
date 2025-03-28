@@ -5,19 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ZOOM EN IMAGENES AL APARECER EN PANTALLA</title>
 	 <style>
-		figure{
+		body{
+			background-color: cornflowerblue;
+			text-align: center;
+		}
+		.zonas{
 			width: 80vw;
 			margin: auto;
 		}
-
+		.texto{
+			font-size: 1.5rem;
+			line-height: 2rem;
+			text-align: justify;
+		}
+		figure{
+			width: 60vw;
+			margin: auto;
+		}
 		@keyframes show{
 			from{
 				opacity: 0;
 				scale: 5%;
 			}
+			5%{
+				opacity: 0.05;
+				scale: 5%;
+			}
+			10%{
+				opacity: 0.1;
+				scale: 10%;
+			}
+			20%{
+				opacity: 0.2;
+				scale: 20%;
+			}
 			25%{
 				opacity: 0.25;
 				scale: 25%;
+			}
+			30%{
+				opacity: 0.3;
+				scale: 30%;
+			}
+			35%{
+				opacity: 0.35;
+				scale: 35%;
+		
+			}
+			40%{
+				opacity: 0.40;
+				scale: 40%;
+			}
+			45%{
+				opacity: 0.45;
+				scale: 45%;
 			}
 			50%{
 				opacity: 0.50;
@@ -27,22 +68,31 @@
 				opacity: 0.75;
 				scale: 75%;
 			}
-			100%{
+			to{
 				opacity: 1;
 				scale: 100%;
+				/* ROTA LA IMAGEN MIENTRAS DURA LA TRANSICION */
+				transform: skew(360deg);
 			}
 		}
 		img{
 			width: 100%;
+			border-radius: 22px;
+			box-shadow: 0 0 22px whitesmoke;
+
 			/* PROPIEDADES DE ANIMACION PARA LAS IMAGENES */
 			/* NOMBRE DEL ELEMENTO A ANIMAR 'timeline' */
 			view-timeline-name: --image;
 			/* DIRECCION DE LA ANIMACION ('block' ANIMACION EN VERTICAL) */
 			view-timeline-axis: block;
-			
+			/* ASOCIACION DE LA ANIMACION AL 'timeline' GENERADO */
 			animation-timeline: --image;
+			/* ORDEN QUE GENERA LA ANIMACION */
 			animation-name: show;
-			animation-range: entry 25% cover 30%;
+			/* INDICAMOS DESDE QUE PARTE VA A INICIAR LA ANIMACION 'entry' (10% ) */
+			/* Y A PARTIR DE QUE % SE APLICARA YA POR COMPLETO LA ANIMACION 'cover' (90%)  */
+			animation-range: entry 10% cover 90%;
+			/* EN QUE DIRECCION VA A EFECTUAR LA ANIMACION 'both' ES EN AMBOS SENTIDOS */
 			animation-fill-mode: both;
 		}
 	 </style>
@@ -500,5 +550,30 @@
 			<img src="/img/images1.jfif" alt="" class="foto" id="foto5" />
 		 </figure>
     </section>
+	 <p class="texto">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum ducimus eveniet, pariatur expedita vero ut et ratione, quisquam repellat hic, veritatis modi excepturi officia aperiam id sit sint possimus voluptates?
+	 Voluptatem rerum temporibus nihil placeat quasi adipisci qui non magni repellat, iusto modi veniam, iure tempora dolores rem aliquid repellendus, nemo explicabo? Molestiae, qui. Cum doloribus minima corrupti ea quod!
+	 Officia ducimus, asperiores esse harum architecto, sunt dicta perspiciatis eaque ex nobis, officiis illo explicabo veritatis pariatur vitae deserunt aut quisquam enim nemo? Accusantium quo hic temporibus, dolorem suscipit recusandae?
+	 Et nihil nesciunt alias necessitatibus est magni ex eos explicabo quo similique, dolore fugit? Dolorum earum quisquam, minus quas tempore pariatur voluptatem hic dicta sunt iusto amet quis perspiciatis sint!
+	 Doloremque blanditiis, aliquam exercitationem, commodi dolores, velit laudantium maxime sint reiciendis cupiditate totam. Iste, nemo laborum esse et, praesentium saepe eligendi beatae quos, debitis enim animi eaque nesciunt nobis quaerat?
+	 Commodi, rem voluptates! Obcaecati qui assumenda error a quae repellendus inventore, eum aut sint repellat consequuntur? Corrupti impedit praesentium, similique in numquam magnam perferendis quae excepturi modi mollitia cum est!
+	 Explicabo esse aliquid molestiae? Suscipit, facere architecto placeat iure itaque quo eos incidunt nemo dolorum et quam voluptas, distinctio animi illum possimus ipsum omnis corrupti, expedita repudiandae! A, animi unde.
+	 Voluptatum harum sequi adipisci ipsam corrupti commodi repellat. Autem, nobis architecto necessitatibus enim at illo officiis consectetur sequi nihil corrupti asperiores praesentium, laudantium fuga, fugiat ratione amet doloremque ipsa a.
+	 Laboriosam exercitationem, dicta facere tempore praesentium porro hic aspernatur illum debitis optio? Incidunt atque, sed, cum sunt, quae libero harum eius nulla cupiditate est alias vero quibusdam soluta numquam. Adipisci.
+	 Beatae commodi odit suscipit illum rerum aliquam distinctio qui sit incidunt alias eius voluptas at molestias nihil, esse explicabo nisi cum officiis tempore, necessitatibus fugiat nulla, iusto quas blanditiis! Veritatis.
+	 Quasi voluptates velit sapiente facilis nesciunt tempora blanditiis recusandae ab beatae! Sed ab enim, maiores soluta repellat libero expedita quo assumenda vero iusto! Natus qui adipisci perferendis dolorum vero voluptatum?
+	 Odit nisi cupiditate eos perferendis tempora dolore velit consequuntur omnis illum enim tenetur cumque tempore optio beatae quidem, eligendi debitis excepturi magnam. Cum architecto laboriosam quibusdam eveniet maxime tempore impedit.
+	 Qui in fugit odit debitis expedita officia asperiores dolorum ad voluptatum? Voluptates incidunt officiis molestiae assumenda eius possimus perspiciatis ducimus eligendi deserunt facilis. Cupiditate asperiores odio eum earum amet dicta.
+	 Quaerat ullam, magnam provident odit reprehenderit dolorem adipisci, eveniet facilis nisi nesciunt, illum rerum ratione. Magni optio nisi et voluptates repellat animi, cum quam aut inventore vitae labore eius ad!
+	 Quo deleniti impedit necessitatibus, laudantium animi hic fugit nisi esse error cum quas in consequatur nostrum tempora quos doloremque eligendi. Delectus neque mollitia deleniti sed exercitationem quasi velit, vero quod.
+	 Et voluptatum in nesciunt est, aliquam facere neque dolores adipisci fugiat magnam repellat ratione qui nostrum. A reiciendis, distinctio commodi autem ipsa neque repudiandae alias animi, sapiente consequuntur iste quibusdam.
+	 Asperiores eveniet ullam doloribus dolores quasi qui ipsa officia rerum quos consequatur maxime quis atque similique excepturi ab ad explicabo alias, neque iusto, cupiditate, quod eligendi debitis ea? Quibusdam, eum.
+	 Laborum temporibus ut cupiditate at harum deserunt esse placeat quae. Maiores ducimus ut asperiores accusamus quibusdam necessitatibus tenetur eos. Cupiditate excepturi saepe corporis cum ipsam eaque numquam est labore ullam.
+	 Asperiores, quod? Quos sint sequi possimus recusandae sed vitae ipsum perferendis excepturi distinctio, quasi repellendus laboriosam quis, commodi quisquam suscipit soluta quae molestiae voluptates iure error? Quis, quisquam hic! Exercitationem?
+	 Nulla, aliquid, tenetur dolor quaerat ducimus dolorum excepturi, at magni veritatis nesciunt culpa ut cumque! Mollitia voluptatem veniam nisi tempora esse veritatis quo libero quam. Quas sit deleniti minus est.
+	 Sint quia, modi ab facere placeat odio. Obcaecati recusandae dignissimos expedita asperiores? Distinctio, adipisci totam praesentium odio consequuntur corporis autem consectetur omnis commodi. Est omnis explicabo molestiae deleniti, eveniet fugit?
+	 In accusamus odio beatae molestias, similique nisi quia ut iste? Ex sunt, cupiditate doloremque sit perspiciatis aperiam doloribus quos dignissimos culpa facere libero unde debitis esse expedita asperiores? Blanditiis, impedit.
+	 Voluptate quidem minima eaque atque, aliquam deleniti. Voluptatibus, possimus a! Recusandae praesentium maiores dicta quasi enim. Error, similique ut? Autem error corporis incidunt in, officia exercitationem sint perspiciatis quam rem?
+	 Incidunt perspiciatis dolorem iusto neque debitis? Nisi ullam eaque odio. Laudantium provident nam assumenda aperiam, eos pariatur exercitationem impedit rerum iure nemo doloremque sed reiciendis corporis, qui recusandae saepe alias.
+	 Distinctio temporibus ipsum possimus esse expedita necessitatibus! Ratione recusandae ut laudantium dolorum accusamus magni aliquam odio rem quia. Necessitatibus inventore eaque perferendis laboriosam harum, cumque fuga quasi iure aliquid iste.</p>
   </body>
 </html>

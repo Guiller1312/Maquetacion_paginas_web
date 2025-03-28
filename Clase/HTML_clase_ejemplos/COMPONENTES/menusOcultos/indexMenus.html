@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MENUS OCULTOS</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <style>
+      /* ********** ANCHO DE CONTENEDORES PRINCIPALES ********** */
+      .principal {
+        width: 100vw;
+      }
+
+      /* ********** ESTILOS DE CABECERA Y PIE ********** */
+      #cabecera,
+      #pie {
+        height: 20vh;
+        background-color: darkslategray;
+        color: whitesmoke;
+      }
+
+      /* ********** CABECERA ********** */
+      #cabecera {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      #cabeceraSup {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      #cabeceraInf {
+        width: 100%;
+        height: 20%;
+      }
+      #menuCabecera {
+        width: 100%;
+      }
+
+      /* ********** MENU NAV ********** */
+      #menuNav {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      /* ********** SUB MENU NAV ********** */
+      /* ESCONDEMOS LA UL ANIDADA DE INICIO  */
+      .subMenuNav {
+        /* OPACIDAD 0 PARA ESCONDER LA LISTA ANIDADA EN EL PRIMER LI */
+        opacity: 0;
+        /* ALTO A CERO PARA QUE EN LA TRANSICION HAGA EFECTO PERSIANA */
+        height: 0rem;
+        /* FUENTE DE INICIO A 0 PARA QUE APAREZCA LA LETRA CRECIENDO */
+        font-size: 0;
+        /* COLOR DE FONDO TRANSPARENTE DE INICIO PARA QUE APAREZCA POCO A POCO */
+        background-color: transparent ;
+        /* COLOR DE FUENTE TRANSPARENTE DE INICIO PARA QUE APAREZCA POCO A POCO */
+        color: transparent;
+
+        transition: all 1s linear;
+        }
+      .itemMenuNav:hover .subMenuNav {
+        /* DAMOS ALTURA A 10 REM PARA QUE HAGA EL EFECTO PERSIANA DESCENDENTE AL CRECER  */
+        height: 10rem;
+        /* OPACIDAD A 1 PARA QUE APAREZCA GRADUALMENTE EL SUBMENU */
+        opacity: 1;
+        /* FUENTE EN HERENCIA PARA QUE TOME EL VALOR DE LA FUENTE DEL SISTEMA Y CREZCA */
+        font-size: inherit;
+        background-color: darkslategray;
+        color: whitesmoke;
+        
+        transition: all 1s linear;
+      }
+      .itemMenuNav:hover .subItemMenuNav{
+        transition: all 1s linear;
+      }
+
+		/* DECORACION MENUS */
+		.itemMenuNav{
+			width: fit-content;
+			height: 2rem;
+			padding: 0.4rem;
+			border: 1px solid darkslategray;
+			border-radius: 4px;
+			background-color: darkslategray;
+			color: gray;
+		}
+		.itemMenuNav:hover{
+			color: whitesmoke;
+			box-shadow: inset 0 0 10px 2px whitesmoke;
+			transition: all 0.4s linear;
+		}
+
+		/* ********** DECORACION SUBMENUS ********** */
+		.subItemMenuNav:first-child{
+			margin-top: 0.3rem;
+		}
+		.subItemMenuNav{
+			width: fit-content;
+      height: 2rem;
+			padding: 0.4rem;
+			border: 1px solid transparent;
+			border-radius: 4px;
+      background-color: transparent;
+			color: gray;
+      transition: all 0.5s linear;
+		}
+		.subItemMenuNav:hover{
+      background-color: darkslategray;
+			color: whitesmoke;
+      border: 1px solid whiteSmoke;
+      border-radius: 4px;
+			box-shadow: inset 0 0 10px 2px whitesmoke;
+		}
+
+      /* ********** CUERPO ********** */
+      #cuerpo {
+        height: 60vh;
+        background-color: whitesmoke;
+      }
+
+      .caja{
+        width: 0rem;
+        height: 0rem;
+        background-color: transparent ;
+        color: transparent;
+        /* border: 1px solid whitesmoke; */
+        transition: all 1s linear;
+      }
+      .cajon:hover .caja{
+        width: fit-content;
+        height: 5rem;
+        background-color: grey;
+        color: whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- header#cabecera.principal+main#cuerpo.principal+footer#pie.principal -->
+    <header id="cabecera" class="principal">
+      <!-- section#cabeceraSup>h1#tituloCabecera{TITULO} -->
+      <section id="cabeceraSup">
+        <h1 id="tituloCabecera">TITULO</h1>
+      </section>
+      <!-- section#cabeceraInf>nav#menuCabecera>ul#menuNav>li.itemMenuNav#itemMenu$*5>span.tituloSubMenuNav{MENU$}+ul#subMenuNav$.subMenuNav>li#subItemMenuNav$.subItemMenuNav*5>a#enlaceSubMenuNav$.enlacesSubMenuNav[target="_blank"]{AQUI} -->
+		<section id="cabeceraInf">
+			<nav id="menuCabecera">
+				<ul id="menuNav">
+					<li class="itemMenuNav" id="itemMenu1">
+						<span class="tituloSubMenuNav">MENU1</span>
+						<ul id="subMenuNav1" class="subMenuNav">
+							<li id="subItemMenuNav1" class="subItemMenuNav"><a href="https://Google.com" id="enlaceSubMenuNav1" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav2" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav2" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav3" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav3" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav4" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav4" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav5" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav5" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+						</ul>
+					</li>
+					<li class="itemMenuNav" id="itemMenu2">
+						<span class="tituloSubMenuNav">MENU2</span>
+						<ul id="subMenuNav2" class="subMenuNav">
+							<li id="subItemMenuNav1" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav1" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav2" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav2" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav3" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav3" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav4" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav4" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav5" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav5" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+						</ul>
+					</li>
+					<li class="itemMenuNav" id="itemMenu3">
+						<span class="tituloSubMenuNav">MENU3</span>
+						<ul id="subMenuNav3" class="subMenuNav">
+							<li id="subItemMenuNav1" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav1" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav2" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav2" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav3" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav3" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav4" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav4" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav5" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav5" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+						</ul>
+					</li>
+					<li class="itemMenuNav" id="itemMenu4">
+						<span class="tituloSubMenuNav">MENU4</span>
+						<ul id="subMenuNav4" class="subMenuNav">
+							<li id="subItemMenuNav1" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav1" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav2" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav2" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav3" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav3" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav4" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav4" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav5" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav5" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+						</ul>
+					</li>
+					<li class="itemMenuNav" id="itemMenu5">
+						<span class="tituloSubMenuNav">MENU5</span>
+						<ul id="subMenuNav5" class="subMenuNav">
+							<li id="subItemMenuNav1" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav1" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav2" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav2" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav3" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav3" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav4" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav4" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+							<li id="subItemMenuNav5" class="subItemMenuNav"><a href="#" id="enlaceSubMenuNav5" class="enlacesSubMenuNav" target="_blank">AQUI</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav>
+		</section>
+    </header>
+    <main id="cuerpo" class="principal"></main>
+    <footer id="pie" class="principal">
+      <div class="cajon">
+        <div class="caja">
+          <span>MENU1</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

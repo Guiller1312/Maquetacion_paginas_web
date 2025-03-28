@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SWIPER BASICO</title>
+	 <!-- TENEMOS QUE COPIAR ESTE CÓDIGO DE JS PARA QUE FUNCIONE -->
+	 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <style>
+		/* LIMPIAMOS ESTILOS */
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+		/* CREAMOS EL ANCHO DEL CONTENEDOR DE LA 'img' */
+		/* USAMOS 'swiper-slide' EN VEZ DE FIGURE */
+		.cajaFotos{
+			/* SE PONE COMO '!important' PARA QUE SOBREESCRIBA LOS ESTILOS EN LINEA QUE GENERA EL CÓDIGO JAVASCRIPT */
+			/* SI LE DAMOS UN TAMAÑO, EN ALTO Y ANCHO, CONTROLAMOS EL ANCHO DEL SLLIDE QUE CONTIENE LA IMAGEN (IGUAL QUE UN 'figure') */
+			width: 100vw!important;
+			/* USAMOS UN ALTO PARA QUE EL SLIDE RELLENE LA PANTALLA */
+			height: 80vh;
+			/* USAMOS LA MITAD DEL ALTO QUE SOBRA PARA CENTRAR VERTICALMENTE LA IMAGEN */
+			margin-top: 10vh;
+		}
+		/* IMPEDIMOS QUE LA FOTO SE SALGA DE SU CONTENEDOR A LO ANCHO */
+		.fotos{
+			/* CONTROLAMOS QUE LA FOTO NO SE SALGA DE SU CONTENEDOR 'swiper-container' A LO ANCHO */
+			max-width: 90%!important;
+			/* UTILIZAMOS LA MITAD DEL ANCHO QUE SOBRA PARA CENTRAR HORIZONTALMENTE LA IMAGEN */
+			margin-inline: 5vw!important;
+		}
+	 </style>
+	 
+  </head>
+  <body>
+		<!-- EL MODELO QUE SE CREA AUTOMÁTICAMENTE GENERA LOS ESTILOS EN LINEA Y ES RESPONSIVO/FLEXIBLE -->
+		<!-- ATRIBUTOS DE 'swiper-container' -->
+		<!-- 'slides-per-view' NUMERO DE IMAGENES POR CADA VISTA EN PANTALLA QUE MUESTRA AL DESLIZAR  -->
+		<!-- 'speed' TIEMPO QUE TARDA EN COLOCARSE EN SU SITIO AL HACER SCROLL PARCIAL -->
+		<!-- 'loop' PERMITE QUE AL LLEGAR AL FINAL O AL INICIO MUESTRE A CONTINUACIÓN EL OTRO EXTREMO Y SIGA -->
+		<!-- 'css-mode' ': false' PERMITE EL SCROLL SUAVE Y ': true' HACE LA TRANSICION INSTANTÁNEA -->
+		<!-- 'grid-rows="4"' CREA TANTAS FILAS COMO PERMITA EL TAMAÑO DE CADA FOTO -->
+		<!-- 'navigation="true"' DESACTIVA EL USO MANUAL DEL SCROLL Y UTILIZA SUS CONTROLES LATERALES -->
+		<!-- 'pagination="true"' MUESTRA UN BARRA INFERIOR DE ICONOS QUE MUESTRA EN QUE SLIDE ESTAMOS -->
+		<!-- 'scrollbar="true"' MUESTRA UNA SCROLLBAR INFERIOR QUE MUESTRA EN QUE SLIDE ESTAMOS -->
+      <swiper-container slides-per-view="3" speed="4000" loop="true" css-mode="false" grid-rows="1"  pagination="true" scrollbar="true">
+        <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/900" alt=""/></swiper-slide>
+        <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/901" alt=""/>
+		</swiper-slide>
+        <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/902" alt=""/>
+		</swiper-slide>
+		  <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/903" alt=""/>
+		</swiper-slide>
+        <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/904" alt=""/>
+		</swiper-slide>
+        <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/905" alt=""/>
+		</swiper-slide>
+		  <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/906" alt=""/>
+		</swiper-slide>
+        <swiper-slide class="cajaFotos">
+			<img class="fotos" src="https://picsum.photos/2000/907" alt=""/>
+		</swiper-slide>
+      </swiper-container>
+  </body>
+</html>

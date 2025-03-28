@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>SWIPER SLIDE</title>
+	<link rel="stylesheet" href="/css/reset.css">
+	<style>
+		*{
+			scroll-behavior: smooth;
+		}
+		#cabecera{
+			width: 100vw;
+			height: 25vh;
+			background-color: rgba(0,0,0,0.5);
+			color: #f1f1f1;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#cuerpo{
+			width: 90vw;
+			margin: auto;
+			/* background-color: khaki; */
+		}
+		#pie{
+			width: 100vw;
+			height: 50vh;
+			background-color: rgba(0,0,0,0.5);
+			color: #f1f1f1
+		}
+		.menuNav{
+			width: 100%;
+			height: 7vh;
+		}
+		.menus{
+			display: flex;
+			justify-content: space-evenly;
+		}
+		.menuItem{
+			background-color: rgba(0,0,0,0.5);
+			color: #f1f1f1;
+			padding: 0.3rem;
+			border-bottom-left-radius: 10px;
+			border-bottom-right-radius: 10px;
+		}
+		.card{
+			width: 100%;
+			height: fit-content;
+			border-radius: 20px;
+			box-shadow: 2px 2px 5px 6px rgba(0,0,0,0.5);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+		.miniCard{
+
+		}
+		.container{
+			width: 100%;
+			/* height: 80%; */
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 50vh;
+		}
+		img{
+			/* margin: 0.5rem 0; */
+			border-radius: 20px;
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+			max-width: 100%;
+		}
+		.sliderContainer{
+			width: 100%;
+			display: flex;
+			justify-content: space-evenly;
+		}
+		.slide{
+			width: 48%!important;
+			margin: 1rem 0 1rem 2rem;
+			height:fit-content;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			padding: 1rem;
+			border-radius: 20px;
+			box-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+			background-color: #f1f1f1;
+		}
+		.slide>h2{
+			align-self: self-start;
+			padding-left: 12%; 
+		}
+		.slide>p{
+			align-self: flex-end;
+		}
+		.filas{
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			margin: 2rem 0;
+		}
+		.parrafada{
+			width: 50%;
+			background-color: #e0e0e0;
+			box-shadow: 2px 2px 15px 25px #e0e0e0;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- CABECERA -->
+	<header id="cabecera">
+		<h1>TITULO SWIPER SLIDES</h1>
+	</header>
+
+	<!-- CUERPO -->
+	<main id="cuerpo">
+
+		<!-- MENU DE NAVEGACION POR EL CONTENIDO -->
+		<nav class="menuNav">
+			<ul class="menus">
+				<!-- li.menuItem#item$*8>a.enlacesMenuItem{Articulo $}[href="#fila$"] -->
+				<li class="menuItem" id="item1"><a href="#fila1" class="enlacesMenuItem">Articulo 1</a></li>
+				<li class="menuItem" id="item2"><a href="#fila2" class="enlacesMenuItem">Articulo 2</a></li>
+				<li class="menuItem" id="item3"><a href="#fila3" class="enlacesMenuItem">Articulo 3</a></li>
+				<li class="menuItem" id="item4"><a href="#fila4" class="enlacesMenuItem">Articulo 4</a></li>
+				<li class="menuItem" id="item5"><a href="#fila5" class="enlacesMenuItem">Articulo 5</a></li>
+				<li class="menuItem" id="item6"><a href="#fila6" class="enlacesMenuItem">Articulo 6</a></li>
+				<li class="menuItem" id="item7"><a href="#fila7" class="enlacesMenuItem">Articulo 7</a></li>
+				<li class="menuItem" id="item8"><a href="#fila8" class="enlacesMenuItem">Articulo 8</a></li>
+
+			</ul>
+		</nav>
+
+		<!-- SECCION CENTRAL CON EL CONTENIDO -->
+		<section class="card">
+			<article class="filas" id="fila1">
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+				Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+				<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<img src="https://picsum.photos/351/150/" alt="" class="fotos">
+			</article>
+			<article class="filas" id="fila2">
+				<img src="https://picsum.photos/352/150/" alt="" class="fotos">
+				<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+			</article>
+			<article class="filas" id="fila3">
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+					<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<img src="https://picsum.photos/353/150/" alt="" class="fotos">
+			</article>
+			<article class="filas" id="fila4">
+				<img src="https://picsum.photos/354/150/" alt="" class="fotos">
+				<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+			</article>
+			<article class="filas" id="fila5">
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+					<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<img src="https://picsum.photos/355/150/" alt="" class="fotos">
+			</article>
+			<article class="filas" id="fila6">
+				<img src="https://picsum.photos/356/150/" alt="" class="fotos">
+				<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+				
+			</article>
+			<article class="filas" id="fila7">
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+					<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<img src="https://picsum.photos/357/150/" alt="" class="fotos">
+			</article>
+			<article class="filas" id="fila8">
+				<img src="https://picsum.photos/358/150/" alt="" class="fotos">
+				<a href="#cabecera"><img src="https://picsum.photos/16/16/" alt=""></a>
+				<p class="parrafada">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis ex ut porro incidunt reprehenderit saepe labore iste maiores beatae? Cumque obcaecati accusantium consectetur sint totam fugiat aut illum aliquam amet.
+					Quae amet velit debitis voluptatem nobis officiis, nesciunt dolor, qui quo laudantium earum aliquid illo excepturi non perferendis harum consequatur accusantium nam porro delectus iusto. Quia eligendi fugit suscipit doloribus?</p>
+			</article>
+		</section>
+
+		<!-- SLIDER CON LAS FOTOS '.container'-->
+		<section class="container">
+				<!-- SCRIPT QUE GENERA EL MOVIMIENTO DE LOS SLIDES -->
+				<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+				<!-- CONTENEDOR DE SLIDES -->
+				<!-- ATRIBUTOS DEL CONTAINER DE LOS SLIDES -->
+				<!-- NUMERO DE SLIDES POR PANTALLA slides-per-view="2" -->
+				<swiper-container class="sliderContainer" slides-per-view="3" speed="500" loop="true" css-mode="true" navigation="true" >
+					<!-- CADA UNO DE LOS SLIDES VA DENTRO DE ESTA ETIQUETA -->
+					<swiper-slide class="slide">
+						<img src="https://picsum.photos/400/150/" alt="">
+						<h2>Hola Alumnis!</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</swiper-slide>
+					<swiper-slide class="slide">
+						<img src="https://picsum.photos/401/150/" alt="">
+						<h2>Hola Alumnis!</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</swiper-slide>
+					<swiper-slide class="slide">
+						<img src="https://picsum.photos/402/150/" alt="">
+						<h2>Hola Alumnis!</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</swiper-slide>
+					<swiper-slide class="slide">
+						<img src="https://picsum.photos/403/150/" alt="">
+						<h2>Hola Alumnis!</h2>
+						<p>Lorem ipsum dolor sit amet.</p>
+					</swiper-slide>
+				</swiper-container>
+			
+				<!-- BOTONES PARA IR HACIA DELANTE O HACIA ATRAS -->
+				<button id="but1">SIGUIENTE</button>
+				<button id="but2">ANTERIOR</button>
+				<!-- CARGA DEL SCRIPT QUE CONFIGURA LOS BOTONES -->
+				<script src="/js/jsButtons.js"></script>
+		</section>
+	</main>
+
+	<!-- PIE -->
+	<footer id="pie">
+
+	</footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRADIENTES</title>
+	<style>
+		body{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+		}
+		.cajas{
+			width: 80vw;
+			height: 12vh;
+			/* border: 1px solid black; */
+		}
+		/* ********** GRADIENTES LINEALES ********** */
+		#caja1{
+			/* 'to bottom' DE ARRIBA HACIA ABAJO */
+			background: linear-gradient(to bottom, coral, cadetblue);
+		}
+		/* 'to right' DE IZQUIERDA A DERECHA */
+		#caja2{
+			background: linear-gradient(to right, rgb(248, 242, 189),  rgb(249, 239, 153),  rgb(247, 228, 53),  rgba(251, 226, 2, 0.9));
+		}
+		/* EN DIAGONAL */
+		#caja3{
+			background: linear-gradient(to bottom left, darkcyan, cornflowerblue, deepskyblue, aquamarine);
+			background-color: dark;
+		}
+		/* EN DIAGONAL */
+		#caja4{
+			background: linear-gradient(to top left, darkcyan, cornflowerblue, deepskyblue, aquamarine);
+			background-color: dark;
+		}
+		/* CON EL ANGULO EXPRESADO EN GRADOS (Xdeg) */
+		#caja5{
+			background: linear-gradient(215deg, darkcyan, cornflowerblue, deepskyblue, aquamarine);
+		}
+		/* COMBINANDO GRADIENTES LINEALES CON IMAGENES DE FONDO */
+		#caja6{
+			background: linear-gradient(to right, rgba(90, 90, 90, 0.6),   rgba(128, 128, 128, 0.7)), url('https://picsum.photos/id/237/1000/150/');
+		}
+		/* LINEAL CON ZONAS SEPARADAS CON DIRECCION Y AL 50% CADA COLOR, SEPARANDOLOS, NO HACE EL DEGRADADO*/
+		#caja7{
+			background: linear-gradient(to top left, rgba(125, 230, 0, 0.8) 50%, rgba(245,0,25,0.6) 50%)
+
+		}
+		/* ********** GRADIENTES RADIALES ********** */
+		/* EN CIRCULO */
+		#caja8{
+			height: 40vh;
+			background: radial-gradient(ellipse, blue, red, green, yellow);
+		}
+		/* EN ELLIPSE CON IMAGEN DE FONDO Y ALGUN COLOR TRANSPARENTE */
+		#caja9{
+			height: 30vh;
+			background: radial-gradient(ellipse, transparent 10%, black), url('https://picsum.photos/id/237/1000/300/') ;
+		}
+		/* 'conic-radial' NOS VA CUBRIENDO EL CONTENEDOR CON CAPAS QUE SIGUEN EL SENTIDO DE LAS AGUJAS DEL RELOJ DESDE 0DEG HASTA 360 DEG  */
+		#caja10{
+			height: 40vh;
+			background: conic-gradient(coral 45deg, transparent 45deg 120deg, cadetblue 120deg 180deg, transparent 180deg 270deg, whitesmoke 270deg 360deg), url('https://picsum.photos/id/237/1000/350/');
+		}
+	</style>
+</head>
+<body>
+	<!-- section.cajas#caja$*8 -->
+	<section class="cajas" id="caja1"></section>
+	<section class="cajas" id="caja2"></section>
+	<section class="cajas" id="caja3"></section>
+	<section class="cajas" id="caja4"></section>
+	<section class="cajas" id="caja5"></section>
+	<section class="cajas" id="caja6"></section>
+	<section class="cajas" id="caja7"></section>
+	<section class="cajas" id="caja8"></section>
+	<section class="cajas" id="caja9"></section>
+	<section class="cajas" id="caja10"></section>
+</body>
+</html>

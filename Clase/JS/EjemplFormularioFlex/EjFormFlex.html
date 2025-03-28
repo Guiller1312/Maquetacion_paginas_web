@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EJEMPLO FORMULARIO FLEX</title>
+	<style>
+		#pie{
+			width: 100vw;
+			min-height: 50vh;
+			display: flex;
+			flex-direction: column;
+		}
+		#miForm{
+			width: 100%;
+			height: 50%;
+			font-size: 0.8rem;
+			display: flex;
+			justify-content: center;
+			border: 1px solid black;
+		}
+		#datosalumno{
+			width: 100%;
+			height: 5rem;
+			border: 1px solid black;
+		}
+		label{
+			width: 5rem;
+		}
+		[type="text"]{
+			width: 5rem;
+		}
+	</style>
+</head>
+<body>
+	<header id="pie">
+		<form action="get" id="miForm">
+			<label for="nombre">NOMBRE</label>
+			<input type="text" name="txtNombre" id="nombre">
+			<label for="apellidos">APELLIDOS</label>
+			<input type="text" name="txtApellidos" id="apellidos">
+			<input type="submit" value="ENVIAR">
+		</form>
+		<section id="datosalumno">
+
+		</section>
+	</header>
+	
+</body>
+</html>

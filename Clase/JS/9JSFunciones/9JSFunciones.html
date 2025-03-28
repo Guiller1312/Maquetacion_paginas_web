@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FUNCIONES</title>
+	<style>
+
+	</style>
+	<script>
+
+	</script>
+</head>
+<body>
+	<form action="#" method="get" name="CalculaForm">
+		<fieldset id="fldNumeros">
+			<label for="num1">NUMERO 1</label>
+			<input type="number" name="numNum1" id="num1" value="0">
+			<label for="num2">NUMERO 2</label>
+			<input type="number" name="numNum2" id="num2" value="0">
+			<input type="button" value="CALCULAR" id="btnCalcula" onclick="calcular()">
+			<label for="resultado">RESULTADO</label>
+			<input type="text" name="txtResultado" id="resultado">
+		</fieldset>
+		<fieldset id="fldStrings">
+			<label for="texto1">TEXTO 1</label>
+			<input type="text" name="txtTexto1" id="texto1" value="Hello alumnis!">
+			<label for="texto2">TEXTO 2</label>
+			<input type="text" name="txtTexto2" id="texto2" value="Coders">
+			<input type="button" value="CONCATENAR" id="btnConcatena" onclick="concatenar()">
+			<label for="concatenado">CONCATENACION</label>
+			<input type="text" name="txtConcatenado" id="concatenado">
+
+		</fieldset>
+
+		
+	</form>
+
+	<script>
+		// DECLARAMOS LAS VARIABLES 
+		let numero1;
+		let numero2;
+		let resultado;
+		// ASIGNAMOS VALOR A LAS VARIABLES
+		// MEDIANTE EL ACCESO A LA PROPIEDAD 'value' RECUPERAMOS EL CONTENIDO DEL INPUT
+		function calcular(){
+			numero1= document.querySelector("#num1").value;
+			numero2= document.querySelector("#num2").value;
+			resultado= numero1 + numero2;
+			document.querySelector("#resultado").value= resultado;
+		}
+		let palabra1;
+		let palabra2;
+		let concatenado;
+		function concatenar(){
+			palabra1= document.querySelector("#texto1").value;
+			palabra2= document.querySelector("#texto2").value;
+			concatenado= palabra1 + palabra2;
+			document.querySelector("#concatenado").value= concatenado;
+		}
+		// SACA LOS RESULTADOS POR LOS TRES MÉTODOS VISTOS AL INICIO DEL CURSO
+		// alert(resultado);
+		// console.log(resultado);
+		// document.write(resultado);
+	</script>
+
+	<script>
+		// DATOS PRIMITIVOS
+		// ********** 'string' **********
+		let cadena1= "Ivan Noe";
+		let cadena2= "'El profe'";
+		let cadena3= "Arevalo Vela";
+		// MANERA RUDIMENTARIA DE METER ESPACIOS CONCATENANDO 'strings'
+		// alert(cadena1+" "+cadena2+" "+cadena3);
+		// MANERA MAS CORRECTA (INTERPOLANDO VARIABLES) DE METER ESPACIOS CONCATENANDO 'strings'
+		// alert(`${cadena1} ${cadena2} ${cadena3}`);
+		let cadena4= "15";
+		let cadena5= 10;
+		let cadenaNueva= cadena4 + cadena5;
+		// alert(cadenaNueva);
+		let palabraNula= null;
+		let palabra;
+		// let palabra1= "Soy \"una cadena\"... ";
+		// let palabra2= 'y \n yo \t otra... ';
+		let palabra3= `incluso así se graban`;
+		let misPalabras= palabra+palabra1+palabra2+palabra3+palabraNula
+		
+		alert(palabraNula);
+		console.log(palabraNula);
+		// console.log(palabra2);
+		console.log(misPalabras.length);
+		
+		// SECUENCIAS DE ESCAPE DENTRO DE UN 'string'
+		
+		// \f SALTO DE PAGINA
+		// \n SALTO DE LINEA
+		// \r RETORNO DE CARRO
+		// \t TABULADOR HORIZONTAL
+		// \v TABULADOR VERTICAL
+
+		// \' COMILLA SIMPLE
+		// \" COMILLA DOBLE
+		// \\ 'backslash' PARA QUE SE VISUALICE
+	
+		</script>
+
+</body>
+</html>

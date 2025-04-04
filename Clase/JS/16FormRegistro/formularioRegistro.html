@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FORMULARIO REGISTRO</title>
+	<link rel="stylesheet" href="reset.css">
+	<link rel="stylesheet" href="/formulario.css">
+</head>
+<body>
+	<!-- PRIMER FORMULARIO: ENTRADA DE DATOS -->
+	<form name="formRegistro" action="#" method="get" id="formRegistro" onsubmit="guardarCampos(); return false;">
+		<label for="user">USER:</label>
+		<input type="text" name="txtUser" id="user">
+		<label for="pass" form="formRegistro" >PASSWORD:</label>
+		<input type="password" name="txtPass" id="pass" form="formRegistro">
+		<input type="submit" value="ENVIAR">
+	</form>
+
+	<!-- SEGUNDO FORMULARIO: SALIDA DE DATOS -->
+	<form name="formImprimeDatos" action="#" method="get" id="formImprimeDatos">
+		<input type="text" name="datoUsuario" id="datoUsuario" disabled>
+		<input type="text" name="datoPassword" id="datoPassword" disabled>
+	</form>
+	<script src="/comprobar.js"></script>
+</body>
+</html>

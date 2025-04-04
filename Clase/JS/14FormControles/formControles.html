@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CONTROLES DE FORMULARIO</title>
+	<link rel="stylesheet" href="/reset.css">
+	<style>
+		body{
+			min-height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		form{
+			width: 90vw;
+			height: 90vh;
+			background-color: gray;
+			border-radius: 15px;
+			box-shadow: 5px 6px 15px black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		fieldset{
+			width: 90%;
+			height: 90%;
+		}
+		meter, progress, input[type="range"]{
+			width: 15rem;
+			height: 2rem;
+		}
+	</style>
+</head>
+<body>
+	<!-- ******************** FORMULARIOS ******************** -->
+	<!-- ******************** ******************** -->
+	<!-- FORMULARIO -->
+	<!-- 'action="-URL del Servidor-" DIRECCION EN INTERNET DONDE ESTA EL SERVIDOR A DONDE ENVIAMOS LOS DATOS DEL FORMULARIO -->
+	<!-- 'method: get o post' PARA INDICARLE CÓMO ENVÍA LOS DATOS AL SERVER-->
+	<!-- CUANDO HAGAMOS CONSULTAS A UN SERVIDOR USAMOS 'get' SOLO PIDE DATOS 'post' HACE CAMBIOS -->
+	<!-- 'name="nombreFormulario' PARA IDENTIFICARLO SI TENEMOS VARIOS EN EL DOCUMENTO -->
+	<form action="#" method="get" name="formularioPrimero">
+		<!-- SEPARACION NATURAL DENTRO DE LOS FORMULARIOS - SECCIONES INTERNAS -->
+		<fieldset>
+			<!-- ETIQUETA QUE DA TITULO VISUAL AL FIELDSE - SE INCRUSTA EN EL BORDE -->
+			<legend>DATOS BASICOS</legend>
+
+			<label for="nombre">INPUT TEXT:</label>
+			<input type="text" name="nombre" id="nombre">
+			<label for="">NUMBER:</label>
+			<input type="number" name="" id="">
+			<label for="">PASSWORD:</label>
+			<input type="password" name="" id="">
+			<label for="">HIDDEN:</label>
+			<input type="hidden" name="OCULTO" value="ESCONDIDO">
+			<label for="">SEARCH:</label>
+			<input type="search" name="" id="">
+			<hr>
+			<label for="area">TEXTAREA:</label>
+			<textarea name="textarea" id="area">Hola soy un texto dentro del textarea</textarea>
+			<hr>
+			<label for="datos">SELECT - OPTION:</label>
+			<select name="seleccion" id="datos">
+				<option value="opcionRojo">color ROJO</option>
+				<option value="opcionVerde">VERDE añil</option>
+				<option value="opcionAzul">AZUL pastoso</option>
+				<option value="opcionAmarillo">AMARILLO ocre</option>
+				<option value="opcionVerde">VERDE amarillento</option>
+			</select>
+			<hr>
+			<label for="medidor">METER:</label>
+			<meter value="9" min="0" max="10" id="medidor"></meter>
+			<hr>
+			<label for="progreso">PROGRESS:</label>
+			<progress min="0" max="256" value="142" id="progreso"></progress>
+			<hr>
+			<label for="rango">INPUT RANGE:</label>
+			<input type="range" name="rango" id="rango" value="75" step="10">
+			<hr>
+			<label for="radioBtn">RADIO BUTTON:</label>
+			<input type="radio" name="radioBtn1" id="radio1">
+			<label for="radioBtn">RADIO BUTTON:</label>
+			<input type="radio" name="radioBtn2" id="radio2">
+			<label for="checkbox">CHECKBOX:</label>
+			<input type="checkbox" name="checkBox" id="check2">
+			<input type="checkbox" name="checkBox" id="check2">
+			<hr>
+			<label for="">COLOR:</label>
+			<input type="color" name="" id="">
+			<label for="">FICHERO:</label>
+			<input type="file" name="" id="">
+			<label for="">MAIL:</label>
+			<input type="email" name="" id="">
+			<label for="">URL:</label>
+			<input type="url" name="" id="">
+			<hr>
+			<label for="">FECHA / HORA:</label>
+			<input type="date" name="" id="">
+			<input type="datetime" name="" id="">
+			<input type="datetime-local" name="" id="">
+			<input type="month" name="" id="">
+			<input type="week" name="" id="">
+			<input type="time" name="" id="">
+			<hr>
+			<input type="reset" value="LIMPIAR CAMPOS">
+			<input type="submit" value="ENVIAR">
+			<details>Lo que está oculto.
+				<summary>Datos:</summary>
+			</details>
+		</fieldset>
+
+
+
+
+
+	</form> 
+</body>
+</html>

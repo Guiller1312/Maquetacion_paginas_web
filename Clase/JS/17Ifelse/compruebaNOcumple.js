@@ -2,7 +2,7 @@
 // EN ESTE CASO NUNCA LLEGA A CUMPLIRSE LA SEGUNDA
 // AL CUMPLIRSE LA PRIMERA, NO ANALIZA EL RESTO
 
-function comprobarEdad1EdNOCUMPLE() {
+function compruebaEdad() {
 	tuEdad = document.querySelector("#edad").value;
 	if (tuEdad >= 18) {
 	  // SI SE CUMPLE CONDICIÓN (LA COMPARACION ES 'true')

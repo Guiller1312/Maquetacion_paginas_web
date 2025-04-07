@@ -16,18 +16,21 @@
 		[value="BORRAR CAMPOS"]{
 			min-width: 15rem ;
 		}
+		fieldset>legend{
+			font-size: 2rem;
+			font-weight: bolder;
+			background:url("https://picsum.photos/1200/");
+			/* background: linear-gradient(whiteSmoke,darkSlateGrey); */
+  			background-clip: text;
+  			color: transparent; 
+		}
 
 	</style>
 </head>
 <body>
 	<form action="#" method="get" name="formularioInicial">
-		<input type="button" value="MOSTRAR" onclick="
-					document.querySelector('#fld1').style.visibility= 'visible';
-					document.querySelector('#fld2').style.display= 'block';
-			">
-			<input type="button" value="OCULTAR" onclick="
-					document.querySelector('#fld1').style.visibility= 'hidden';
-					document.querySelector('#fld2').style.display= 'none';">
+		<input type="button" value="MOSTRAR" onclick="mostrarFieldset()">
+		<input type="button" value="OCULTAR" onclick="ocultarFieldset()">
 		<fieldset id="fld1">
 			<legend>DATOS</legend>
 			<label for="dato1">DATO 1</label>
@@ -54,9 +57,17 @@
 
 		document.querySelector('#fld1').style.backgroundColor= "darkGrey";
 		document.querySelector('#fld2').style.backgroundColor= "darkGrey";
-
-		document.querySelector('#fld1').style.visibility= 'hidden';
-		document.querySelector('#fld2').style.display= 'none';
+		
+		function mostrarFieldset(){
+			// MEDIANTE 'visibility: hidden' ESCONDEMOS LOS CONTENEDORES PERO NO PIERDEN SITIO
+			document.querySelector('#fld1').style.visibility= 'visible';
+			// MEDIANTE 'display: none' DESAPARECEN LOS CONTENEDORES DEL CÇODIGO Y PIERDEN SITIO
+			document.querySelector('#fld2').style.display= 'block';
+		}
+		function ocultarFieldset(){
+			document.querySelector('#fld1').style.visibility= 'hidden';
+			document.querySelector('#fld2').style.display= 'none';
+		}
 	</script>
 
 </body>

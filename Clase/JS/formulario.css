@@ -1,0 +1,37 @@
+
+body{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+form{
+	width: 11rem;
+	height: 10rem;
+	background-color:dodgerblue;
+	color: whitesmoke;
+	border: 1px solid gray;
+	border-radius: 15px;
+	box-shadow: 5px 6px 15px black;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	align-items: center;
+}
+#formImprimeDatos{
+	/* OCULTAR EL SEGUNDO FORMULARIO */
+	display: none;
+	background-color:goldenrod!important ;
+}
+input{
+	width: 10rem;
+}
+input[type="submit"]{
+	background-color: lightgray;
+	color:dodgerblue;
+	text-shadow: 1px 1px black;
+}
+label{
+	align-self: flex-start;
+	padding-left: 0.4rem;
+}

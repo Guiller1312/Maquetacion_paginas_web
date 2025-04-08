@@ -4,26 +4,45 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IF ELSE</title>
-    <link rel="stylesheet" href="/reset.css" />
-    <link rel="stylesheet" href="/miniCard.css" />
+    <!-- <link rel="stylesheet" href="/reset.css" /> -->
+    <link rel="stylesheet" href="miniCard.css" />
   </head>
   <body>
-    <section class="miniCard">
+     <section class="miniCard">
       <label for="edad">Dime tu edad: </label>
       <input type="number" name="numEdad" id="edad" oninput="comprobarEdad()" />
+      <input type="text" name="" id="nombre" onblur="compruebaDato()">
       <label id="visorDatos">DATOS DEL VISOR</label>
-      <!-- <button onclick="comprobarEdad()">COMPRUEBA LA EDAD</button> -->
     </section>
     <section class="miniCardIRPF">
-      <label for="IRPF">Dime tu IRPF: </label>
-      <input type="number" name="IRPF" id="IRPF" oninput="compruebaIRPF()" />
+      <label for="IRPF">Dime tu sueldo anual: </label>
+      <input type="number" name="porcentajeIRPF" id="IRPF" oninput="compruebaIRPF()" />
       <label id="visorDatosIRPF">DATOS DEL VISOR</label>
       <!-- <button onclick="comprobarEdad()">COMPRUEBA LA EDAD</button> -->
     </section>
-    <!-- <script src="/compruebaCumple.js"></script> -->
-    <!-- <script src="/compruebaAbreviado.js"></script>
-    <script src="/compruebaNOcumple.js"></script> -->
-    <script>src ="/compruebaIfAnidado.js"</script>
- 
+    <section class="miniCard">
+      <label for="dia">Dime un día de la semana: </label>
+      <select name="dia de la semana" id="dia" oninput="elegirDiaSemana()">
+        <option value="" selected disabled>Elige un día</option>
+        <optgroup label = "Día de la semana">
+        <option value="Lunes">Lunes</option>
+        <option value="Martes">Martes</option>
+        <option value="Miércoles">Miércoles</option>
+        <option value="Jueves">Jueves</option>
+        <option value="Viernes">Viernes</option>
+      </optgroup>
+      <optgroup label = "Fin de semana">
+        <option value="Sábado">Sábado</option>
+        <option value="Domingo">Domingo</option>
+      </optgroup>
+      </select>
+      <input type="text" name="diaElegido" id="diaElegido" />
+      <label id="visorDatosdia">DATOS DEL VISOR</label>
+    </section>
+    <script>src ="compruebaIfAnidado.js"</script>
+    <script src="compruebaAbreviado.js"></script>
+    <script src="compruebaNOcumple.js"></script>
+    <script src="switch.js"></script>
+    <script src="switch_dia_semana.js"></script>
   </body>
 </html>

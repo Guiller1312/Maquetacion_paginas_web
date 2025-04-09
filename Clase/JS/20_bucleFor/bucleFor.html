@@ -6,19 +6,47 @@
 	<title>BUCLES FOR</title>
 	<link rel="stylesheet" href="/reset.css">
 	<link rel="stylesheet" href="/miniCard.css">
+	<style>
+		#menu{
+			display: flex;
+		}
+		.elementos{
+			font-size: 2rem;
+			color: blue;
+		}
+	</style>
 </head>
 <body>
 	<form action="">
-		<h2>SOY TEXTO EN HTML</h2>
-		<label id="visor"></label>
-		<span id="visor2"></span>
+		<section id="sec1">
+
+		</section>
+		<!-- <h2>SOY TEXTO EN HTML</h2> -->
+		<!-- <label id="visor"></label> -->
+		<ul id="visor2"></ul>
+		
 		
 	</form>
 	<script>
-		// for (let c=0; c<10; C=C+1){
-		// 	// INSTRUCCIONES A EJECUTAR
-		// 	document.querySelector('#visor2').innerHTML = "Hola soy un texto";
-		// }
+		let frase;
+		let valor;
+		// document.getElementById('sec1').innerHTML = "<ul id='menu'><li class='elementos'>Hola Reyes</li><li class='elementos'>Hola Bernadette</li>";
+		// document.getElementById('sec1').innerHTML += "Hello coders!";
+		
+		frase = "Porrompompero";
+		frase += "Lo que tu digas guapis!";
+		// ES LA MISMA EXPRESIÓN: frase = frase + "Lo que tu digas guapis!";
+		
+		valor = 2;
+		valor = 2 / 2;
+		// ES LA MISMA EXPRESIÓN: valor = valor + 2;
+		// alert(valor);
+
+		for (let c=0; c<10; c=c+1){
+			// INSTRUCCIONES A EJECUTAR
+			document.querySelector('#visor2').innerHTML += `<p>${c} </p>`;
+			
+		}
 	</script>
 </body>
 </html>

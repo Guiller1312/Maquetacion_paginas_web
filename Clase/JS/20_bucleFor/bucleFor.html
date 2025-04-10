@@ -38,15 +38,48 @@
 		// ES LA MISMA EXPRESIÓN: frase = frase + "Lo que tu digas guapis!";
 		
 		valor = 2;
-		valor = 2 / 2;
+		valor = 2 ** 2;
 		// ES LA MISMA EXPRESIÓN: valor = valor + 2;
 		// alert(valor);
 
-		for (let c=0; c<10; c=c+1){
-			// INSTRUCCIONES A EJECUTAR
-			document.querySelector('#visor2').innerHTML += `<p>${c} </p>`;
-			
+		// ********** BUCLES FOR **********
+
+		// for (let c=10; c>=0; c -= 5){
+		// 	// INSTRUCCIONES A EJECUTAR
+		// 	document.querySelector('#visor2').innerHTML += `<p>${c} </p>`;	
+		// }
+		// let num1 = 22; // SU TIPO ES INT
+		//num1 = "22"; //LO CAMBIA A STRING
+		// let num2 = '22'; // SU TIPO ES STRING
+		// if (num1 == num2){
+		// 	document.querySelector('#visor2').innerHTML = "IGUALES ==";
+		// }
+		// if (num1 === num2){
+		// 	document.querySelector('#visor2').innerHTML += "IGUALES ESTRICTOS ===";
+		// }
+
+		// ********** BUCLES WHILE **********
+		let numero = prompt('Introduce un numero...')
+		
+		while (numero <= 10){
+			if (numero%2 == 0){
+				document.querySelector('#visor2').innerHTML += ` Nº ${numero}`;
+			}
+			numero ++; //numero = numero - 1;  
 		}
+
+		// ********** BUCLES DO... WHILE **********
+		let n;
+		n = prompt("Escribe las veces que se repite..."); 
+		let saludo;
+		do{
+			// NOS ASEGURAMOS QUE EJECUTA ESTAS INSTRUCCIONES AL MENOS UNA VEZ
+			saludo = `Vamos a hacerlo ${n} veces`;
+			document.querySelector('#visor2').innerHTML += saludo;
+			n --;
+		} while (n>0);
+
+
 	</script>
 </body>
 </html>

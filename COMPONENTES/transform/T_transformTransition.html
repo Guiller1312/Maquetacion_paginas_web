@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform Transition Animation</title>
+    <style>
+        *{
+            text-align: center;
+            writing-mode:vertical-lr ;
+        }
+        body{
+            text-align: center;
+            /* background-color: #999999; */
+            /* ESCONDE LA PARTE TRASERA AL ROTAR */
+            backface-visibility: hidden;
+            /* AÑADIMOS PERSPECTIVA */
+            perspective: 200px;
+            /* ORIGEN DE LA PERSPECTIVA */
+            perspective-origin: 50% 20%;
+        }
+        body >div{
+            display: block;
+            width: 200px;
+            margin: 15px auto;
+            padding: 10px;
+            border: 1px solid #999999;
+        }
+
+        /* ********** ********** TRANSFORM ********** ********** */
+        /* CADA TRANSFORMACION 'LIMPIA' DE NUEVO EL ESTILO DEL ELEMENTO */
+        /* PARA COMBINAR VARIAS SE PONEN EN LA MISMA INSTRUCCION */
+        
+        /* ********** SCALE ********** */
+            /* ESCALA EL TAMAÑO A LA PROPORCION INDICADA */
+            /* PROPORCIONA AMBOS EJES X E Y */
+            /* transform: scale(2); */
+            /* SOLO PROPORCIONA EL EJE X (ANCHO- HORIZONTAL) */
+            /* transform: scaleX(2); */
+            /* SOLO PROPORCIONA EL EJE Y (ALTO- VERTICAL) */
+            /* transform: scaleY(2); */
+            /* VALORES NEGATIVOS INVIERTEN EL EJE X E Y */
+            /* transform: scale(-1, -1); */
+
+        /* ********** ROTATE ********** */
+            /* ROTA EN EL SENTIDO DE LAS AGUJAS DEL RELOJ EN GRADOS ('deg') */
+            /* transform: rotate(45deg); */
+
+        /* ********** SKEW ********** */
+            /* CAMBIA LA SIMETRIA EN GRADOS ('deg') */
+            /* transform: skew(45deg); */
+            /* transform: skewX(45deg); */
+            /* transform: skewY(45deg); */
+
+        /* ********** TRANSLATE ********** */
+            /* MUEVE EL ELEMENTO POR LA PANTALLA DESDE ESQ. SUP. IZDA. */
+            /* USA COMO REFERENCIA LA POSICION DE ORIGEN DEL ELEMENTO */
+            /* transform: translate(-50px); */
+            /* transform: translateX(-10px); */
+            /* transform: translateY(-50px); */
+
+        /* PARA COMBINAR VARIOS ELEMENTOS SE SEPARAN CON ESPACIOS */
+            /* transform: rotate(5deg) translateY(-100px) skew(-45deg); */
+
+        /* ********** ********** TRANSFORM 3D ********** ********** */
+        /* ROTA 3D Y PONE EN PERSPECTIVA */
+
+        /* ********** PERSEPCTIVE ********** */    
+        /* 'perspective' AÑADE PROFUNDIDAD A LA ESCENA */
+        /* OJO, AÑADIR 'perspective' A SU CONTENEDOR PADRE (px % o center/left/right/top/bottom*/
+            /* perspective-origin: 100px, 100px; */
+            /* 'backface-visibility' DETERMINA SI LA PARTE TRASERA DE UN ELEMENTO ES HIDDEN O VISIBLE (POR DEFECTO)  */
+            /* backface-visibility: hidden; */
+
+        /* ********** SCALE3D ********** */    
+        /* 'scale3d' ESCALA EL TAMAÑO CON VALORES ENTEROS 1=ORIGINAL (x, y, z)*/
+            /* transform: perspective(200px) scale3d(1.5, 1.5, 2); */
+
+        /* ********** ROTATE3D ********** */
+        /* 'rotate3d' HACE GIRAR SOBRE SUS EJES(x, y, z, deg) */
+            /* transform: perspective(500px) rotate3d(2, 2, 2, 90deg); */
+
+        /* ********** TRANSLATE3D ********** */
+        /* 'translate3d' MUEVE HACIA UNA NUEVA POSICION EN EL ESPACIO 3D (x, y, z) */
+            /* transform: perspective(200px) translate3d(0, 0, -200px); */
+        
+        /* PODEMOS COMBINAR VARIAS AL MISMO TIEMPO  */
+            /* transform: perspective(500px) translate3d(0, 0, -300px) rotate3d(0, 1, 0, 50deg); */
+            /* transform: perspective(500px) translate3d(0, 0, -300px) rotate3d(0, 1, 0, 50deg); */
+        
+        /* ********** ********** TRANSITION ********** ********** */
+        /* ********** TRANSITION (PARA ANIMAR TODO LO ANTERIOR) ********** */
+        /* 1 -NOMBRE TRANSFORMACION/'all' (TODAS) */
+        /* 2 - TIEMPO DURACION EFECTO (s) */
+        /* 3 - EFECTO 'ease/linear/ease-in/ease-out/ease-in-out' */
+        /* 4 - TIEMPO EN EMPEZAR (s) */
+        /* transition: transform ease-in-out 2s; */
+        
+        /* ********** ********** ANIMATION ********** ********** */
+        /* ********** ANIMATION (MUEVEN LOS ELEMENTOS) **********  */
+        /* 'nomnbre' / DURACION / FUNCION_BEZIER / RETRASO / REPETICION / DIRECCION / INTERACCION */            
+            /* ARGUMENTO COMPLETO CON TODOS SUS VALORES EN UNA SOLA LINEA: */
+            /* animation: mueveSpan 20s ease-in-out 0s infinite reverse none; */
+            /* ARGUMENTO SENCILLO DA EL NOMBRE A LA ANIMACION */
+            /* animation-name: mueveSpan; */
+            /* ARGUMENTO SENCILLO DETERMINA LA DURACION EN SEGUNDOS */
+            /* animation-duration: 2s; */
+            /* ARGUMENTO SENCILLO DETERMINA COMO SE LLEVA A CABO LA ANIMACION */
+            /* animation-timing-function: ease-in-out; */
+            /* ARGUMENTO SENCILLO DETERMINA EL TIEMPO QUE TARDA EN EMPEZAR */
+            /* animation-delay: 1s; */
+            /* ARGUMENTO SENCILLO DETERMINA CUANTAS VECESE SE REALIZA O SIEMPRE */
+            /* animation-iteration-count: infinite; */
+            /* ARGUMENTO SENCILLO DETERMINA LA DIRECCION DE LA ANIMACION */
+            /* animation-direction: normal / reverse / alternate / alternate-reverse; */
+            /* ARGUMENTO SENCILLO DETERMINA COMO INTERACTUA CON LOS ESTILOS CSS */
+            /* animation-fill-mode: none / forwards / backforwards / both; */
+        .contenedor{
+            transition: transform ease-in-out 2s;
+        }
+        .cont{
+            transition: transform ease-in-out 2s;
+        }
+        .cont:hover{  
+            /* 4 TRANSFORMACIONES 3D DIFERENTES: */
+            /* transform: perspective(500px) rotate3d(0, 1, 0, 360deg); */
+            transform: perspective(100px) translate3d(0, 0, -200px) rotate3d(1, 1, 25, 360deg);
+            /* transform: perspective(200px) scale3d(1.5, 1.5, 2); */
+            /* transform: perspective(500px) rotate3d(2, 2, 15, 90deg); */
+        }
+        .contenedor:hover{
+            /* transform: perspective(200px) scale3d(1.5, 1.5, 2); */
+            /* transform: perspective(500px) rotate3d(0, 0, 2, 90deg); */
+            transform: perspective(100px) translate3d(0, 0, -300px);
+
+            
+        }
+        .contAnim{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            animation: bajadaDiv 5s ease-in-out 0s infinite normal none;
+        }
+        @keyframes bajadaDiv{
+            0%{
+                top: -100px;
+                background-color: khaki;
+                color: coral;
+            }
+            25%{
+                top: 0px;
+                background-color: coral;
+                color: khaki;
+            }
+            50%{
+                top: 100px;
+                background-color: khaki;
+                color: coral;
+            }
+            75%{
+                top: 200px;
+                background-color: coral;
+                color: khaki;
+            }
+            100%{
+                top: 300px;
+                background-color: khaki;
+                color: coral;
+            }
+        }
+        .textoAnim{
+            position: absolute;
+            left: 0px;
+            white-space: nowrap;
+            animation: mueveSpan 20s ease-in-out 0s infinite reverse none;
+            }
+        @keyframes mueveSpan{
+            0%{
+                left: 0px;
+            }
+            25%{
+                left: 100px;
+            }
+            50%{
+                left: 200px
+            }
+            75%{
+                left: 300px;
+            }
+            100%{
+                left: 400px;
+            }
+        }
+
+        
+    </style>
+</head>
+<body>
+    <span class="textoAnim">Hola, me muevo horizontalmente</span>
+    <div class="contAnim">
+        <h4>Hola, soy un contenedor animado</h1>
+    </div>
+    <div class="contenedor">
+        <h1>HOLA IVAN</h1>
+    </div>
+    
+    <div class="cont">
+        <h1>HOLA ALUMNIS</h1>
+    </div>
+    
+
+    
+</body>
+</html>

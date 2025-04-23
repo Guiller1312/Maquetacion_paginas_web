@@ -25,9 +25,28 @@
 #menuSencillo>ul>li{
     display: inline-block;
     text-transform: uppercase;
-
+}
+#menuSencillo>ul>li>a{
+    text-decoration: none;
+    color: inherit;
 }
 #menuSencillo>ul>li:hover{
     text-shadow: 2px 0 5px black;
     color: white;
+}
+
+/* MENU BASICO PINTA ENLACE DEBAJO */
+/* nav#menuBasico>ul>li*5>a{MENU $} */
+#menuBasico>ul>li{
+    display: inline-block;
+    text-transform: uppercase;
+}
+#menuBasico>ul>li>a{
+    text-decoration: none;
+    color: inherit;
+}
+#menuBasico>ul>li:hover{
+    color: rgb(80, 80, 80);
+    border-radius: 5px;
+    text-decoration: underline;
 }

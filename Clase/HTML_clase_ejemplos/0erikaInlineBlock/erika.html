@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DISPLAY INLINE-BLOCK</title>
+    <link rel="stylesheet" href="/reset.css">
+    <style>
+        figure{
+            height: 100%;
+            /* width: 40%; */
+        }
+        img{
+            /* max-width: 100%; */
+            max-height: 100%;
+        }
+        
+        .separadorHeader{
+            display: inline-block;
+            width: 10%;
+            height: 100%;
+        }
+        header,
+        main,
+        footer {
+            width: 100vw;
+        }
+
+        header {
+            height: 25vh;
+            background-color: gray;
+            color: white;
+            /* text-align: center; */
+        }
+        p{
+            display: inline-block;
+        }
+        figure{
+            display: inline-block;
+        }
+
+        main {
+            height: 50vh;
+            background-color: khaki;
+            color: inherit;
+        }
+
+        footer {
+            height: 25vh;
+            background-color: lightgray;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <p class="separadorHeader"></p>
+        <p>Lorem ipsum dolor sit amet consectetur</p>
+        <div class="separadorHeader"></div>
+        <figure><img src="/Google__G__Logo-512.webp" alt=""></figure>
+    </header>
+    <main></main>
+    <footer></footer>
+</body>
+</html>

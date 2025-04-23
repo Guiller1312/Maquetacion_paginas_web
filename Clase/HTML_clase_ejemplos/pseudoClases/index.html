@@ -48,36 +48,145 @@
          input[type="checkbox"]:checked{
             box-shadow: 0 0 10px 15px red;
          }
+
          /* CUANDO EL ELEMENTO NO TIENE HIJOS - CONTENEDOR VACIO - */
          div:empty{
             display: none;
             background-color: brown;
          }
-         /*  */
-         div:root{
-            
+
+         /* ********** POR POSICION DE HERMANO ********** */
+         /* ********** NOTAS SOBRE LA IMPLEMENTACION ********** */
+         /* CUANDO TENEMOS EL ELEMENTO EN BODY SOLO FUNCIONA 'first-child' */
+         /* CON 'only-child' Y 'last-child' DEBEN ESTAR DENTRO DE UN CONTENEDOR  */
+
+         /* CUANDO ES EL PRIMERO VARIOS HERMANOS -NECESITA ESTAR EN UN CONTENEDOR- 'first-child' */
+         /* p:first-child{
+            text-decoration: underline;
+            color: brown;
+            font-weight: bolder;
+         } */
+         /* CUANDO ES EL ULTIMO VARIOS HERMANOS -NECESITA ESTAR EN UN CONTENEDOR- 'last-child' */
+         /* p:last-child{
+            background-color: darkturquoise;
+            font-size: x-large;
+         } */
+         /* CUANDO ES EL UNICO VARIOS HERMANOS -NECESITA ESTAR EN UN CONTENEDOR- 'first-child' */
+         /* p:only-child{
+            background-color: darkkhaki;
+            font-size: x-large;
+         } */
+
+         /* ********** POR TIPO ********** */
+
+         /* CUANDO COINCIDE QUE ES EL PRIMERO DE ESE TIPO 'first-of-type' */
+         /* P:first-of-type{
+            font-size: 24px;
+         } */
+         /* CUANDO ULTIMO QUE ES EL PRIMERO DE ESE TIPO 'first-of-type' */
+         /* P:last-of-type{
+            color: red;
+            background-color: dodgerblue;
+         } */
+         /* CUANDO UNICO QUE ES EL PRIMERO DE ESE TIPO 'first-of-type' */
+         /* P:only-of-type{
+            font-weight: bolder;
+            color: greenyellow;
+            background-color: darkolivegreen;
+         } */
+
+         /* ********** POR NUMERO DE POSICION ********** */
+         /* EL ELEMENTO NUMERO '(n)' QUE TENGA HERMANOS */
+         p:nth-last-child(1) {
+            font-weight: bolder;
+            text-decoration: underline;
          }
 
+         /* PSEUDO ELEMENTOS */
+         p::selection{
+            background-color: transparent;
+            text-decoration: underline;
+         }
 
    </style>
 </head>
 
 <body>
+<div>
+   <section>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+   </section>
+</div>
+<div>
+   <section>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+   </section>
+</div>
+<div>
+   <section>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+   </section>
+</div>
+<div>
+   <section>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+      <p>hello Coders!</p>
+   </section>
+
+</div>
+   <ul>
+      <li class="menus">MENU1</li>
+      <li class="menus">MENU2</li>
+      <li class="menus">MENU3</li>
+      <li class="menus">MENU4</li>
+      <li class="menus">MENU5</li>
+   </ul>
+   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima illo qui rem, nihil repudiandae esse quaerat ipsa nesciunt perspiciatis? Numquam fugit velit ipsum perspiciatis atque, commodi aliquid quaerat fuga!</p>
+
    <!-- nav>button.but#btn${BOTON $}*5 -->
    <nav>
       <a href="#"><button class="but" id="btn1">BOTON 1</button></a>
       <button class="but" id="btn2">BOTON 2</button>
       <button class="but" id="btn3">BOTON 3</button>
       <button class="but" id="btn4">BOTON 4</button>
-      <button class="but" id="btn5">BOTON 5</button></nav>
+      <button class="but" id="btn5">BOTON 5</button>
+   </nav>
       <div class="separador"></div>
       <a target="blank" href="https://www.samsung.com">Ir a Samsung</a>
       <div class="separador"></div>
+      
       <fieldset>
          <input type="checkbox" name="" id="">
          <input type="radio" name="" id="">
       </fieldset>
-</body>
+
+      <div>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi nobis perspiciatis quae facilis, illum fugiat a optio esse minima deserunt, eaque tempore. Maiores accusantium exercitationem dolores quibusdam quaerat, earum suscipit?</p>
+         <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, cum laudantium architecto ipsam tenetur explicabo quidem nesciunt ad unde minima accusantium et laboriosam! Facere, hic? Ullam iure commodi nobis eveniet?</P>
+         <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, cum laudantium architecto ipsam tenetur explicabo quidem nesciunt ad unde minima accusantium et laboriosam! Facere, hic? Ullam iure commodi nobis eveniet?</P>
+         <P>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, cum laudantium architecto ipsam tenetur explicabo quidem nesciunt ad unde minima accusantium et laboriosam! Facere, hic? Ullam iure commodi nobis eveniet?</P>
+      </div>
+
+      <section>
+         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero delectus dolores placeat dolore dolor neque quidem, velit eius, modi impedit alias cumque voluptatibus! Fugiat, atque reiciendis. Laudantium ipsa velit nam.</p>
+         <p>Pepe</p>
+      </section>
+      <div>
+         <p>Pepe</p>
+      </div>
+      <div>
+         <p>Pepe</p>
+      </div>
+      <div>
+         <p>Juan</p>
+      </div>
 </body>
 
 </html>

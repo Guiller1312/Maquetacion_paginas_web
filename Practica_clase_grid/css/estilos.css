@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.modelo {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-areas: "header1 header1 header1"
+        "aside1 section1 section2"
+        "aside1 section3 section3"
+        "footer1 footer1 footer1";
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-template-rows: 24vh 25vh 25vh 24vh;
+    gap: 0.2vw;
+}
+figure {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#item1 {
+    grid-area: header1;
+    background-color: blue;
+
+}
+
+#item2 {
+    grid-area: aside1;
+    background-color: green;
+
+}
+
+#item3 {
+    grid-area: section1;
+    background-color: coral;
+
+}
+
+#item4 {
+    grid-area: section2;
+    background-color: pink;
+
+}
+
+#item5 {
+    grid-area: section3;
+    background-color: yellow;
+
+}
+
+#item6 {
+    grid-area: footer1;
+    background-color: gray;
+
+}

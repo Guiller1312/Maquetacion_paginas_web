@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GRID 3 METODOS</title>
+    <link rel="stylesheet" href="/reset.css" />
+    <style>
+
+      .contGrid {
+        width: 90vw;
+        height: 32vh;
+      }
+      .itemsGrid {
+        border: 1px solid black;
+        border-radius: 4px;
+      }
+      /* ********** C) GRID-TEMPLATE-AREAS ********** */
+      #rejilla3 {
+        width: 100vw;
+        height: 100vh;
+        display: grid;
+        grid-template-areas:
+          "header header header "
+          "aside sect1 sect2"
+          "aside sect3 sect3"
+          "footer footer footer";
+        grid-template-columns: 20% 50% 30%;
+        grid-template-rows: 20% 30% 30% 20%;
+      }
+      #item13 {
+        grid-area: header;
+        display: grid;
+        grid-template-areas:
+          "foto espacio1 menu"
+          "foto titulo menu"
+          "foto espacio2 menu";
+        grid-template-columns: 20% 55% 15%;
+        justify-content: space-between;
+      }
+      #itemC1 {
+        grid-area: foto;
+        justify-self: center;
+        align-self: center;
+      }
+      #itemC2 {
+        grid-area: espacio1;
+      }
+      #itemC3 {
+        grid-area: titulo;
+      }
+      #itemC4 {
+        grid-area: espacio2;
+      }
+      #itemC5 {
+        grid-area: menu;
+        justify-self: center;
+        align-self: center;
+      }
+      #item14 {
+        grid-area: aside;
+      }
+      #item15 {
+        grid-area: sect1;
+      }
+      #item16 {
+        grid-area: sect2;
+      }
+      #item17 {
+        grid-area: sect3;
+      }
+      #item18 {
+			width: 100%;
+			height: 100%;
+        grid-area: footer;
+        display: grid;
+        grid-template-areas:
+          "lista1 lista2 lista3"
+          "lista1 social1 lista3"
+          "lista1 espacio lista3"
+          "lista4 lista4 lista4";
+			 grid-template-columns: 20% 60% 20%;
+			grid-template-rows: repeat(4, 25%);
+      }
+      #itemP1 {
+        grid-area: lista1;
+      }
+      #itemP2 {
+        grid-area: lista2;
+      }
+      #itemP3 {
+			width: 100%;
+        grid-area: social1;
+      }
+		#menuSocialPie{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: space-evenly;
+		}
+		#menuSocialPie li{
+			width: 18%;
+			height: 100%;
+		}
+		#menuSocialPie li a{
+			width: 100%;
+			height: 100%;
+		}
+		.marco{
+			/* width: 50%; */
+			height: 90%
+		}
+      #itemP4 {
+        grid-area: espacio;
+      }
+      #itemP5 {
+        grid-area: lista3;
+      }
+      #itemP6 {
+        grid-area: lista4;
+      }
+      .menuSupPie, .menuInfPie {
+        display: flex;
+		  width: 100%;
+		  justify-content: space-evenly;
+
+      }
+		.menuLateral{
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-evenly;
+			align-items: center;
+		}
+    </style>
+  </head>
+  <body>
+    <!-- (section.contGrid#rejilla1>div.itemsGrid#item${$}*6)+(section.contGrid#rejilla2>div.itemsGrid#item$@7{$@7}*6)+section.contGrid#rejilla3>div.itemsGrid#item$@13{$@13}*6 -->
+
+    <!-- <section class="contGrid" id="rejilla1">
+		<div class="itemsGrid" id="item1">1</div>
+		<div class="itemsGrid" id="item2">2</div>
+		<div class="itemsGrid" id="item3">3</div>
+		<div class="itemsGrid" id="item4">4</div>
+		<div class="itemsGrid" id="item5">5</div>
+		<div class="itemsGrid" id="item6">6</div>
+	</section> -->
+
+    <!-- <section class="contGrid" id="rejilla2">
+		<div class="itemsGrid" id="item7">7</div>
+		<div class="itemsGrid" id="item8">8</div>
+		<div class="itemsGrid" id="item9">9</div>
+		<div class="itemsGrid" id="item10">10</div>
+		<div class="itemsGrid" id="item11">11</div>
+		<div class="itemsGrid" id="item12">12</div>
+	</section> -->
+
+    <section class="contGrid" id="rejilla3">
+      <!-- ********** HEADER ********** -->
+      <div class="itemsGrid" id="item13">
+        <div class="itemsCabecera" id="itemC1">
+          <img src="https://picsum.photos/id/237/100/100" alt="" />
+        </div>
+        <div class="itemsCabecera" id="itemC2"></div>
+        <div class="itemsCabecera" id="itemC3">
+          <h1>MI GRID BONITO</h1>
+        </div>
+        <div class="itemsCabecera" id="itemC4"></div>
+        <div class="itemsCabecera" id="itemC5">
+          <ul class="menu">
+            <li class="itemsMenu">MENU1</li>
+            <li class="itemsMenu">MENU2</li>
+            <li class="itemsMenu">MENU3</li>
+          </ul>
+        </div>
+      </div>
+      <!-- ********** ASIDE ********** -->
+      <div class="itemsGrid" id="item14">14</div>
+      <!-- ********** MAIN ********** -->
+      <div class="itemsGrid" id="item15"></div>
+      <div class="itemsGrid" id="item16">16</div>
+      <div class="itemsGrid" id="item17">17</div>
+      <!-- ********** FOOTER ********** -->
+      <div class="itemsGrid" id="item18">
+        <div class="itemsPie" id="itemP1">
+          <ul class="menuLateral">
+            <li class="itemsMenu">MENU1</li>
+            <li class="itemsMenu">MENU2</li>
+            <li class="itemsMenu">MENU3</li>
+          </ul>
+        </div>
+        <div class="itemsPie" id="itemP2">
+          <ul class="menuSupPie">
+            <li class="itemsMenuSupPie">MENU1</li>
+            <li class="itemsMenuSupPie">MENU2</li>
+            <li class="itemsMenuSupPie">MENU3</li>
+          </ul>
+        </div>
+        <div class="itemsPie" id="itemP3">
+          <ul class="menu" id="menuSocialPie">
+            <li class="itemsMenuSupPie" id="itemsSocial1">
+              <a href="" class="enlaceSocial" title="Enlace a Google!">
+                <figure class="marco">
+                  <img
+                    src="/logoGoogle.png"
+                    alt=""
+                    class="iconoSocial"
+                  />
+                </figure>
+              </a>
+            </li>
+            <li class="itemsMenuSupPie" id="itemsSocial2">
+              <a href="" class="enlaceSocial" title="Enlace a Google!">
+                <figure class="marco">
+                  <img
+                    src="/logoGoogle.png"
+                    alt=""
+                    class="iconoSocial"
+                  />
+                </figure>
+              </a>
+            </li>
+            <li class="itemsMenuSupPie" id="itemsSocial3">
+              <a href="" class="enlaceSocial" title="Enlace a Google!">
+                <figure class="marco">
+                  <img
+                    src="/logoGoogle.png"
+                    alt=""
+                    class="iconoSocial"
+                  />
+                </figure>
+              </a>
+            </li>
+            <li class="itemsMenuSupPie" id="itemsSocial4">
+              <a href="" class="enlaceSocial" title="Enlace a Google!">
+                <figure class="marco">
+                  <img
+                    src="/logoGoogle.png"
+                    alt=""
+                    class="iconoSocial"
+                  />
+                </figure>
+              </a>
+            </li>
+            <li class="itemsMenuSupPie" id="itemsSocial5">
+              <a href="" class="enlaceSocial" title="Enlace a Google!">
+                <figure class="marco">
+                  <img
+                    src="/logoGoogle.png"
+                    alt=""
+                    class="iconoSocial"
+                  />
+                </figure>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="itemsPie" id="itemP4">&nbsp;</div>
+        <div class="itemsPie" id="itemP5">
+          <ul class="menuLateral">
+            <li class="itemsMenu">MENU1</li>
+            <li class="itemsMenu">MENU2</li>
+            <li class="itemsMenu">MENU3</li>
+          </ul>
+        </div>
+        <div class="itemsPie" id="itemP6">
+          <ul class="menuInfPie">
+            <li class="itemsMenuSupPie">MENU1</li>
+            <li class="itemsMenuSupPie">MENU2</li>
+            <li class="itemsMenuSupPie">MENU3</li>
+            <li class="itemsMenuSupPie">MENU4</li>
+            <li class="itemsMenuSupPie">MENU5</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

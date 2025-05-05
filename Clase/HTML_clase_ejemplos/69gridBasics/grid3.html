@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GRID AREAS</title>
+	<style>
+		body{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			background-color: darkkhaki;
+			/* height: 100vh; */
+			/* CONTENEDOR FLEX PARA COLOCAR LAS SECCIONES */
+			/* display: flex; */
+			/* flex-direction: column; */
+			/* justify-content: space-evenly; */
+			/* align-items: center; */
+
+		}
+		#superior{
+			background-color: aquamarine;
+			border-radius: 5px;
+			/* INICIALIZAMOS EL GRID LAYOUT */
+			display: grid;
+			grid-template-areas: 
+			"humm cabec cabec cabec cabec cabec cabec cabec cabec zonaRR"
+			"aside1 filasT1 filasT1 filasT1 filasT1 colImg colImg colImg colImg zonaRR"
+			"aside1 filasT2 filasT2 filasT2 filasT2 colImg colImg colImg colImg zonaRR"
+			"aside1 filasT3 filasT3 filasT3 filasT3 colImg colImg colImg colImg zonaRR"
+			"aside1 filasT4 filasT4 filasT4 filasT4 colImg colImg colImg colImg zonaRR"
+			"aside1 filasT5 filasT5 filasT5 filasT5 colImg colImg colImg colImg zonaRR"
+			"imagen2 imagen2 c1 c1 c2 c2 caja1 caja1 caja1 caja1"
+			"imagen2 imagen2 c1 c1 c2 c2 caja2 caja2 caja2 caja2"
+			"imagen2 imagen2 c1 c1 c2 c2 caja3 caja3 caja3 caja3"
+			"img1 img1 img2 img2 img3 img3 img4 img4 img5 img5"
+			"l1 l1 l1 tresEn1 tresEn1 tresEn1 tresEn1 l2 l2 l2"
+			"imagen3 imagen3 imagen3 caja4 caja4 caja4 caja4 imagen4 imagen4 imagen4"
+			"imagen3 imagen3 imagen3 caja5 caja5 caja5 caja5 imagen4 imagen4 imagen4"
+			"imagen3 imagen3 imagen3 caja6 caja6 caja6 caja6 imagen4 imagen4 imagen4";
+			grid-template-rows: repeat(14, 10vh);
+			grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+		}
+		.items{
+			background-color: blue;
+			/* border-radius: 10px; */
+			text-align: center;
+			color: white;
+			border: 1px solid white;
+		}
+		#item1{
+			grid-area: humm;
+		}
+		#item2{
+			grid-area: cabec;
+		}
+		#item3{
+			grid-area: zonaRR;
+		}
+		#item4{
+			grid-area: aside1;
+		}
+		#item5{
+			grid-area: filasT1;
+		}
+		#item6{
+			grid-area: filasT2;
+		}
+		#item7{
+			grid-area: filasT3;
+		}
+		#item8{
+			grid-area: filasT4;
+		}
+		#item9{
+			grid-area: filasT5;
+		}
+		#item10{
+			grid-area: colImg;
+		}
+		#item11{
+			grid-area: imagen2;
+		}
+		#item12{
+			grid-area: c1;
+		}
+		#item13{
+			grid-area: c2;
+		}
+		#item14{
+			grid-area: caja1;
+		}
+		#item15{
+			grid-area: caja2;
+		}
+		#item16{
+			grid-area: caja3;
+		}
+		#item17{
+			grid-area: img1;
+		}
+		#item18{
+			grid-area: img2;
+		}
+		#item19{
+			grid-area: img3;
+		}
+		#item20{
+			grid-area: img4;
+		}
+		#item21{
+			grid-area: img5;
+		}
+		#item22{
+			grid-area: l1;
+		}
+		#item23{
+			grid-area: tresEn1;
+		}
+		#item24{
+			grid-area: l2;
+		}
+		#item25{
+			grid-area: imagen3;
+		}
+		#item26{
+			grid-area: caja4;
+		}
+		#item27{
+			grid-area: caja5;
+		}
+		#item28{
+			grid-area: caja6;
+		}
+		#item29{
+			grid-area: imagen4;
+		}
+
+	</style>
+</head>
+<body>
+	<!-- section#superior.secciones>.items#item${$}*29 -->
+	<section id="superior" class="secciones">
+		<div class="items" id="item1">1</div>
+		<div class="items" id="item2">2</div>
+		<div class="items" id="item3">3</div>
+		<div class="items" id="item4">4</div>
+		<div class="items" id="item5">5</div>
+		<div class="items" id="item6">6</div>
+		<div class="items" id="item7">7</div>
+		<div class="items" id="item8">8</div>
+		<div class="items" id="item9">9</div>
+		<div class="items" id="item10">10</div>
+		<div class="items" id="item11">11</div>
+		<div class="items" id="item12">12</div>
+		<div class="items" id="item13">13</div>
+		<div class="items" id="item14">14</div>
+		<div class="items" id="item15">15</div>
+		<div class="items" id="item16">16</div>
+		<div class="items" id="item17">17</div>
+		<div class="items" id="item18">18</div>
+		<div class="items" id="item19">19</div>
+		<div class="items" id="item20">20</div>
+		<div class="items" id="item21">21</div>
+		<div class="items" id="item22">22</div>
+		<div class="items" id="item23">23</div>
+		<div class="items" id="item24">24</div>
+		<div class="items" id="item25">25</div>
+		<div class="items" id="item26">26</div>
+		<div class="items" id="item27">27</div>
+		<div class="items" id="item28">28</div>
+		<div class="items" id="item29">29</div>
+	</section>
+
+</body>
+</html>

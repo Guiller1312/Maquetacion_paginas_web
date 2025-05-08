@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BASIC RESPONSIVE WEB DESIGN</title>
+    <link rel="stylesheet" href="/css/reset.css" />
+    <!-- <link rel="stylesheet" href="/css/transparentCard.css" /> -->
+    <link rel="stylesheet" href="/css/miniCard.css" />
+    <style>
+      /* ESTILOS COMUNES DE INICIO */
+
+      body {
+        min-height: 100vh;
+        font-family: sans-serif;
+        color: rgba(245, 245, 245, 0.8);
+        background: linear-gradient(50deg, #01171c, #203a43, #102128);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #cabecera {
+        width: 100vw;
+        min-height: 25vh;
+
+        background: rgba(245, 245, 245, 0.8);
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      #titulo {
+        color: darkslategray;
+      }
+      #cuerpo {
+        width: 90vw;
+        height: 300vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .marco {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+      }
+      .fotos {
+        max-width: 100%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px whitesmoke;
+      }
+    </style>
+  </head>
+  <body>
+    <header id="cabecera">
+      <h1 id="titulo">EJEMPLO RWD</h1>
+    </header>
+    <main id="cuerpo">
+      <!-- figure.marco*5>img.fotos#foto$ -->
+      <!-- section.miniCard#card$*5>h2{MI TARJETA}+p{Curso IFCD0110}+p{Core Networks}+a{TRANSPARENCIA} -->
+      <figure class="marco">
+        <img src="/img/act-5025516_640.jpg" alt="" class="fotos" id="foto5" />
+      </figure>
+      <section class="miniCard" id="card1">
+        <h2>MI TARJETA</h2>
+        <p>Curso IFCD0110</p>
+        <p>Core Networks</p>
+        <a href="">TRANSPARENCIA</a>
+      </section>
+      <figure class="marco">
+        <img
+          src="/img/body-scape-5411861_640.jpg"
+          alt=""
+          class="fotos"
+          id="foto2"
+        />
+      </figure>
+      <section class="miniCard" id="card2">
+        <h2>MI TARJETA</h2>
+        <p>Curso IFCD0110</p>
+        <p>Core Networks</p>
+        <a href="">TRANSPARENCIA</a>
+      </section>
+      <figure class="marco">
+        <img
+          src="/img/couple-4877039_640.jpg"
+          alt=""
+          class="fotos"
+          id="foto5"
+        />
+      </figure>
+      <section class="miniCard" id="card3">
+        <h2>MI TARJETA</h2>
+        <p>Curso IFCD0110</p>
+        <p>Core Networks</p>
+        <a href="">TRANSPARENCIA</a>
+      </section>
+      <figure class="marco">
+        <img src="/img/face-1869641_640.jpg" alt="" class="fotos" id="foto5" />
+      </figure>
+      <section class="miniCard" id="card4">
+        <h2>MI TARJETA</h2>
+        <p>Curso IFCD0110</p>
+        <p>Core Networks</p>
+        <a href="">TRANSPARENCIA</a>
+      </section>
+      <figure class="marco">
+        <img
+          src="/img/models-6921432_640.jpg"
+          alt=""
+          class="fotos"
+          id="foto5"
+        />
+      </figure>
+      <section class="miniCard" id="card5">
+        <h2>MI TARJETA</h2>
+        <p>Curso IFCD0110</p>
+        <p>Core Networks</p>
+        <a href="">TRANSPARENCIA</a>
+      </section>
+    </main>
+  </body>
+</html>

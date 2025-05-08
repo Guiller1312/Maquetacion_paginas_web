@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DISEÑO RESPONSIVO 1</title>
+	<link rel="stylesheet" href="/reset.css">
+	<style>
+		/* ******************* ESTILOS COMUNES ******************* */
+		.principales{
+			width: 100vw;
+		}
+		#cabecera{
+			height: 25vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		#titulo{
+			font-size: 2rem;
+			font-family:Arial, Helvetica, sans-serif;
+			font-weight: 900;
+		}
+		#cuerpo{
+			width: 100vw;
+			display: grid;
+			justify-content: center;
+		}
+		.apartados{
+			width: 90%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.marco{
+			width: 50%;
+			height: 50%;
+		}
+		.fotosPortrait{
+			max-height: 100%;
+		}
+		.fotosLandscape{
+			max-width: 100%;
+		}
+		.zonas{
+			width: 90%;
+		}
+
+
+		/* ******************** HASTA 720PX ******************** */
+		/* TIPOS DE MEDIOS 'all', 'screen' Y 'print' */
+		@media screen and (max-width: 720px) and (orientation: portrait) {
+			#titulo{
+				font-size: 1.5rem;
+			}
+			#cuerpo{
+				grid-template-columns: 90vw;
+				grid-template-rows: repeat(4, 40vh);
+				grid-template-areas:
+				'sect1'
+				'sect2'
+				'sect3'
+				'sect4';
+			}
+			#apartado1{
+				grid-area: sect1;
+			}
+			#apartado2{
+				grid-area: sect2;
+			}
+			#apartado3{
+				grid-area: sect3;
+			}
+			#apartado4{
+				grid-area: sect4;
+			}
+			.zonas{
+			width: 75%;
+		}
+			
+		}
+	</style>
+</head>
+<body>
+	<!-- header.principales#cabecera>h1#titulo -->
+	<header class="principales" id="cabecera">
+		<h1 id="titulo">DISEÑO RESPONSIVO 1 MOBILE FIRST</h1>
+	</header>
+	<!-- main.principales#cuerpo>section.apartados#apartado$*4 -->
+	<main class="principales" id="cuerpo">
+		<section class="apartados" id="apartado1">
+			<!-- figure.marco>img.fotos -->
+			<figure class="marco">
+				<img src="/assets/img/face-1869641_640.jpg" alt="" class="fotosPortrait">
+			</figure>
+			<!-- article.zonas#zona1>h2.subtitulo+p.textos -->
+			<article class="zonas" id="zona1">
+				<h2 class="subtitulo">SECCION 1</h2>
+				<p class="textos">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quibusdam deleniti eius animi facere quidem, incidunt delectus quisquam officiis blanditiis nam distinctio in, rerum sed, voluptas totam non? Harum, consequatur.</p>
+			</article>
+		</section>
+		<section class="apartados" id="apartado2">
+			<!-- (figure.marco>img.fotos)+article.zonas#zona1>h2.subtitulo+p.textos -->
+			<figure class="marco">
+				<img src="/assets/img/girl-2164410_640.jpg" alt="" class="fotosLandscape">
+			</figure>
+			<article class="zonas" id="zona1">
+				<h2 class="subtitulo">SECCION 2</h2>
+				<p class="textos">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus accusantium possimus fugit vel. A quidem, porro veniam ab, cupiditate vel assumenda reprehenderit saepe ad doloribus accusantium consectetur? Accusamus, id eos?</p>
+			</article>
+		</section>
+		<section class="apartados" id="apartado3">
+			<!-- (figure.marco>img.fotos)+article.zonas#zona1>h2.subtitulo+p.textos -->
+			<figure class="marco">
+				<img src="/assets/img/act-5025516_640.jpg" alt="" class="fotosPortrait">
+			</figure>
+			<article class="zonas" id="zona1">
+				<h2 class="subtitulo">SECCION 3</h2>
+				<p class="textos">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia odit nemo sed aperiam qui inventore, eum in error odio pariatur quo molestiae animi a fugiat iure maiores natus, quaerat veniam.</p>
+			</article>
+		</section>
+		<section class="apartados" id="apartado4">
+			<!-- (figure.marco>img.fotos)+article.zonas#zona1>h2.subtitulo+p.textos -->
+			<figure class="marco">
+				<img src="/assets/img/man-2539437_640.webp" alt="" class="fotosPortrait">
+			</figure>
+			<article class="zonas" id="zona1">
+				<h2 class="subtitulo">SECCION 4</h2>
+				<p class="textos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, minus cum quia aut iusto optio officiis magnam sequi voluptatum enim laudantium rem debitis voluptate, adipisci voluptates explicabo quas, repudiandae commodi.</p>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

@@ -1,8 +1,9 @@
 let NIE = 12345678;
 let letra = ' ';
+let resultado = 0;
 let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
 
-for (let i = 0; i < NIE; i++) {
+for (let i = 0; i < NIE[0]; i++) {
     if (NIE[0] == 0){
         NIE[0] = X;
     }else if (NIE[0] == 1){

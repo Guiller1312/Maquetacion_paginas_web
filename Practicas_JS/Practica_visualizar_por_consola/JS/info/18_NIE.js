@@ -5,11 +5,11 @@ let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', '
 
 for (let i = 0; i < NIE[0]; i++) {
     if (NIE[0] == 0){
-        NIE[0] = X;
+        NIE[0] == X;
     }else if (NIE[0] == 1){
-        NIE[0] = Y;
+        NIE[0] == Y;
 }else if (NIE[0] == 2){
-        NIE[0] = Z;
+        NIE[0] == Z;
 }else{
         console.log("El NIE no es correcto");
     }

@@ -1,14 +1,16 @@
+let primo = 1;
+for (let i = 2; i <= 100; i++) {
+    let esPrimo = true;
+    for (let j = 2; j < i; j++) {
+        if (i % j === 0) {
+            esPrimo = false;
+            break;
+        }
 
-for (let i = 1; i <= 100; i++) {
-
-    if (i == 1 && i == 2) {
+    }
+    if (esPrimo) {
         console.log(i + " es primo");
-    }
-    if (i % 2 == 0 && i != 2){
-        console.log(i + " no es primo");
-    }
-    if (i % 3 == 0 && i != 3){
-        console.log(i + " no es primo");
+        primo++;
     }
 
 }

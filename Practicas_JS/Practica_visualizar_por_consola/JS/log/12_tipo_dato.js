@@ -1,11 +1,11 @@
-let num = 1;
+
 let cadena = "";
 let booleano = true;
 
 if (typeof num === "number"){
     console.log("number");
 
-} else if (typeof booleano === boolean){
+} else if (typeof booleano === Boolean){
     console.log("boolean");
 }else if (typeof cadena === "string"){
     console.log("string");

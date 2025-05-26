@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULO DE BINARIO</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="style/styleFrameAll.css">
+ 
+</head>
+<body>
+    <header>
+        <h1>EJERCICIO</h1>
+    </header>
+    <main>
+          
+         <section class="qNumber" id="qNumber1">
+             <label for="idnum1">INTRODUCE NUMERO: </label>
+             <input type="number" name="num1" id="idnum1" onfocus="this.value=''" onfocusin ="limpiaResultado()">  
+         </section>
+         <section class="qNumber" id="qNumber2" >
+             <label for="idnum2">INTRODUCE NUMERO: </label>
+             <input type="number" name="num2" id="idnum2" onfocus="this.value=''" onfocusin = "limpiaResultado()">
+         </section>
+         <section class="qText" id="qText1" >
+            <label for="idText1">INTRODUCE CADENA: </label>
+            <input type="text" name="text1" id="idtext1" onfocus="this.value=''" onfocusin = "limpiaResultado()">
+        </section>
+
+        <input type="submit" value="ACEPTAR" onclick="ejercicio()">
+
+
+        <section id="frameRes"><label id="resultado">RESULTADO</label></section>
+
+    </main>
+
+     <script>
+           document.querySelector("#qNumber2").style.display="none";
+           document.querySelector("#qText1").style.display="none";
+       
+           function ejercicio () {
+                //Obtengo el número
+                let miNumero = parseInt(document.querySelector("#idnum1").value);
+                let flgError=false;
+
+                let txtBinary ="";
+                let digBinary = 0;
+               
+              
+                console.log(`${miNumero}`);
+
+                //Validamos que se ha introducido el valor correcto.
+                if (isNaN(miNumero) || miNumero <=0) {
+                    showError("ERROR: Debe ser numérico e informado")
+                }
+                else
+                {
+                    do {
+                         
+                        digBinary = miNumero % 2;  //obtengo el digito calculando el resto sucesivamente
+                        txtBinary = digBinary + txtBinary;    //concateno cada digito de modo que el último desplace al resto a la derecha.
+                        miNumero = Math.floor (miNumero/2);   //Obtendo la parte entera
+                        console.info (`digBinary: ${digBinary} txtBinary: ${txtBinary} miNumero: ${miNumero}`);
+                
+                    } while (miNumero > 0);
+          
+                        
+                    //Si no ha ocurrido ningún error pues mostramos mensaje.
+                    document.querySelector("#resultado").innerHTML = `${txtBinary}`;
+                   
+                }
+               
+            }
+
+            function showError(texto) {
+                document.querySelector("#resultado").innerHTML = texto;
+                document.querySelector("#resultado").style.color ="#c61a09";
+                document.querySelector("#resultado").style.backgroundColor = "#edef00";
+            }
+          
+            function limpiaResultado() {
+                document.querySelector("#resultado").innerHTML = "";
+                //Recuperamos estilo del label del formulario
+                document.querySelector("#resultado").style.backgroundColor = "#ffffff";
+                document.querySelector("#resultado").style.color ="#000000";
+            }
+
+     </script>
+</body>
+</html>

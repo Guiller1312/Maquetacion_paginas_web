@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PRE-EXAMEN MF2</title>
+	<style>
+		#txtNombre:hover{
+			/* box-shadow: 0 0 5px 5px yellow;  */
+		}
+
+
+
+		/* ********** GRID ********** */
+		/* PRIMER NIVEL GRID 'body' */
+		body{
+			display: grid;
+			grid-template-areas:
+			"cabecera"
+			"formulario";
+			grid-template-columns: 90vw;
+			justify-content: center;
+			row-gap: 5rem;	
+		}
+		header{
+			background-color: gray;
+			color: white;
+			grid-area: cabecera;
+
+			display: flex;
+			justify-content: center;
+		}
+		main{
+			grid-area: formulario;
+		}
+		/* SEGUNDO NIVEL GRID 'form' */
+		form{
+			display: grid;
+			grid-template-areas:
+			"datos notas"
+			"controles controles";
+			gap: 5rem 5rem
+		}
+		/* TERCER NIVEL 'grid' */
+		#datosAlumno{
+			background-color: lightskyblue;
+			grid-area: datos;
+			/* AUTO-FLOW 'grid' */
+			display: grid;
+			grid-auto-flow: row;
+
+		}
+		#notasAlumno{
+			background-color: lightyellow;
+			grid-area: notas;
+			/* AUTO-FLOW 'grid' */
+			display: grid;
+			grid-auto-flow: dense;
+		}
+		#controlesFormulario{
+			background-color: grey;
+			color: white;
+			grid-area: controles;
+
+			display: grid;
+			grid-template-areas: "hueco1 boton1 hueco2 boton2 hueco3";
+			grid-template-columns: 5% 5rem 50% 5rem 25%;
+
+			/* justify-content: space-evenly; */
+			/* gap: 1rem; */
+		}
+		#btn1{
+			grid-area: boton1;
+		}
+		#btn2{
+			grid-area: boton2;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>PRE EXAMEN MF2</h1>
+	</header>
+	<main>
+		<!-- CREAMOS UN FORMULARIO QUE NOS PERMITA VER LOS DATOS EN CABECERA 'get' -->
+		 <form action="#" method="get">
+			<!-- fieldset#datosAlumno.secciones -->
+			 <fieldset id="datosAlumno" class="secciones">
+				<!-- ********** DATOS ALUMNO ********** -->
+				 <label for="txtNombre">NOMBRE:</label>
+				 <input type="text" name="nombreAlumno" id="txtNombre" onfocus="iluminaTxtNombre()" onblur="apagaTxtNombre()">
+				 <label for="txtApellido1">APELLIDO 1:</label>
+				 <input type="text" name="apellido1Alumno" id="txtApellido1" onfocus="iluminaTxtApellido1()" onblur="apagaTxtApellido1()">
+				 <label for="txtApellido2">APELLIDO 2:</label>
+				 <input type="text" name="apellido2Alumno" id="txtApellido2" onfocus="iluminaTxtApellido2()" onblur="apagaTxtApellido2()">
+			 </fieldset>
+			 <!-- fieldset#notasAlumno.secciones -->
+			  <fieldset id="notasAlumno" class="secciones" disabled>
+				<!-- ********** NOTAS ALUMNO ********** -->
+				<label for="numNotaMF1">NOTA MODULO 1</label>
+				<input type="number" name="nota1Modulo" id="numNotaMF1">
+				<label for="numNotaMF2">NOTA MODULO 2</label>
+				<input type="number" name="nota2Modulo" id="numNotaMF2">
+				<label for="numNotaMF3">NOTA MODULO 3</label>
+				<input type="number" name="nota3Modulo" id="numNotaMF3">
+			</fieldset>
+			  <!-- fieldset#controlesFormulario.secciones  -->
+			  <fieldset id="controlesFormulario" class="secciones">
+					<!-- ********** CONTROLES DEL FORMULARIO ********** -->
+					<!-- EL 'input'' DE TIPO 'submit' ES LA PIEZA FUNDAMENTAL DEL ENVÍO -->
+					<!-- ES EL QUE REÚNE LOS VALORES 'value' DE CADA CAMPO Y LOS ENVÍA -->
+					<input type="submit" value="ENVIAR" id="btn1" disabled>
+					<!-- EL 'input' DE TIPO 'reset' ES EL QUE LIMPIA LOS CAMPOS -->
+					<input type="reset" value="BORRAR" id="btn2">
+			  </fieldset>
+			</form>
+	</main>
+	<script src="/validacion.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULO DEL DIGITO DE CONTROL: NIF</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="style/styleFrameAll.css">
+ 
+</head>
+<body>
+    <header>
+        <h1>EJERCICIO</h1>
+    </header>
+    <main>
+          
+         <section class="qNumber" id="qNumber1">
+             <label for="idnum1">INTRODUCE NUMERO: </label>
+             <input type="number" name="num1" id="idnum1" onfocus="this.value=''" onfocusin ="limpiaResultado()">  
+         </section>
+         <section class="qNumber" id="qNumber2" >
+             <label for="idnum2">INTRODUCE NUMERO: </label>
+             <input type="number" name="num2" id="idnum2" onfocus="this.value=''" onfocusin="limpiaResultado()">
+         </section>
+         <section class="qText" id="qText1" >
+            <label for="idText1">INTRODUCE CADENA: </label>
+            <input type="text" name="text1" id="idtext1" onfocus="this.value=''" onfocusin="limpiaResultado()">
+        </section>
+         <input type="submit" value="ACEPTAR" onclick="ejercicio()">
+
+
+         <section id="frameRes"><label id="resultado">RESULTADO</label></section>
+
+    </main>
+
+     <script>
+           document.querySelector("#qNumber2").style.display="none";
+           document.querySelector("#qText1").style.display="none";
+           
+           function ejercicio () {
+                //Obtengo el número
+                let miNumero = document.querySelector("#idnum1").value;
+                let miLetra = "";
+                let miResto = 0;
+               
+                            
+                //Obtengo el resto de dividir entre 23:
+                if (miNumero.length != 8)
+                {
+                    console.error(`El numero debe tener longitud de ocho caracteres`);
+                    showError(`ERROR: QUE SON OCHO DIGITOS!!`);
+                }
+                else
+                {
+                    //Calculo el resto entre 23.
+                    miResto = parseInt(miNumero) % 23;
+                    switch(miResto) {
+                        case 0:
+                            miLetra="T";
+                            break;
+                        case 1:
+                            miLetra="R"
+                            break;
+                        case 2: 
+                            miLetra="W"
+                            break;
+                        case 3:
+                             miLetra="A"
+                             break;
+                        case 4:
+                             miLetra="G"
+                             break;
+                        case 5:
+                             miLetra="M"
+                             break;
+                        case 6:
+                             miLetra="Y"
+                             break;
+                        case 7:
+                             miLetra="F"
+                             break;
+                        case 8:
+                             miLetra="P"
+                             break;
+                        case 9:
+                             miLetra="D"
+                             break;
+                        case 10:
+                             miLetra="X"
+                             break;
+                        case 11:
+                             miLetra="B"
+                             break;
+                        case 12: 
+                             miLetra="N"
+                             break;
+                        case 13:
+                             miLetra="J"
+                             break;
+                        case 14:
+                             miLetra="Z"
+                             break;
+                        case 15:
+                             miLetra="S"
+                             break;
+                        case 16:
+                             miLetra="Q"
+                             break;
+                        case 17:
+                             miLetra="V"
+                             break;
+                        case 18:
+                             miLetra="H"
+                             break;
+                        case 19:
+                             miLetra="L"
+                             break;
+                        case 20:
+                             miLetra="C"
+                             break;
+                        case 21:
+                             miLetra="K"
+                             break;
+                        case 22:
+                             miLetra="E"
+                             break;
+                      
+                                                                     
+                    }
+                    
+                    //Si no ha ocurrido ningún error pues mostramos mensaje.
+                    console.info(`${miNumero}-${miLetra}`);
+                    document.querySelector("#resultado").innerHTML = `${miNumero}-${miLetra}`;
+
+
+                }
+             
+               
+             
+            }
+
+            function showError(texto) {
+                document.querySelector("#resultado").innerHTML = texto;
+                document.querySelector("#resultado").style.color ="#c61a09";
+                document.querySelector("#resultado").style.backgroundColor = "#edef00";
+            }
+
+            function limpiaResultado() {
+                document.querySelector("#resultado").innerHTML = "";
+                //Recuperamos estilo del label del formulario
+                document.querySelector("#resultado").style.backgroundColor = "#ffffff";
+                document.querySelector("#resultado").style.color ="#000000";
+           }
+     </script>
+</body>
+</html>

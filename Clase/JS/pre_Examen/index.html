@@ -5,12 +5,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PRE-EXAMEN MF2</title>
 	<style>
-		#txtNombre:hover{
-			/* box-shadow: 0 0 5px 5px yellow;  */
-		}
-
-
-
 		/* ********** GRID ********** */
 		/* PRIMER NIVEL GRID 'body' */
 		body{
@@ -41,7 +35,7 @@
 			"controles controles";
 			gap: 5rem 5rem
 		}
-		/* TERCER NIVEL 'grid' */
+		/* TERCER NIVEL GRID 'fieldset' */
 		#datosAlumno{
 			background-color: lightskyblue;
 			grid-area: datos;
@@ -92,8 +86,10 @@
 				 <label for="txtApellido1">APELLIDO 1:</label>
 				 <input type="text" name="apellido1Alumno" id="txtApellido1" onfocus="iluminaTxtApellido1()" onblur="apagaTxtApellido1()">
 				 <label for="txtApellido2">APELLIDO 2:</label>
-				 <input type="text" name="apellido2Alumno" id="txtApellido2" onfocus="iluminaTxtApellido2()" onblur="apagaTxtApellido2()">
-			 </fieldset>
+				 <input type="text" name="apellido2Alumno" id="txtApellido2" onfocus="iluminaTxtApellido2()" onblur="apagaTxtApellido2()" required>
+				  <input type="button" value="apagar" onclick="apagarTodos()">
+				</fieldset>
+				<input type="button" value="Ilumina" onclick="iluminaTodos()">
 			 <!-- fieldset#notasAlumno.secciones -->
 			  <fieldset id="notasAlumno" class="secciones" disabled>
 				<!-- ********** NOTAS ALUMNO ********** -->
@@ -115,6 +111,6 @@
 			  </fieldset>
 			</form>
 	</main>
-	<script src="/validacion.js"></script>
+	<script src="validacion.js"></script>
 </body>
 </html>

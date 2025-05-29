@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>querySelectorAll</title>
+    <style>
+      form {
+        width: 60vw;
+        height: 60vh;
+        display: grid;
+        grid-template-areas:
+          "entrada"
+          "datos"
+          "controles";
+        grid-template-columns: 80%;
+        grid-template-rows: 25% 40% 10%;
+        justify-content: center;
+        align-content: space-evenly;
+        border: 1px solid black;
+      }
+      #primero {
+        grid-area: "entrada";
+      }
+      #espacioError{
+        font-size: 1.5rem;
+        color: red;
+      }
+      #segundo {
+        grid-area: "datos";
+        visibility: hidden;
+        /* display: none; */
+      }
+      #tercero {
+        grid-area: "controles";
+        visibility:hidden;
+      }
+
+		#primero input{
+			/* background-color: aquamarine; */
+		}
+		.entradas{
+			/* background-color: darkcyan; */
+		}
+
+    </style>
+  </head>
+  <body>
+    <form action="#" method="get">
+      <fieldset id="primero">
+			<legend>PRIMERO: ENTRADA</legend>
+        <label for="txtUser">Usuario:</label>
+        <input type="text" name="user" id="txtUser" class="entradas" placeholder="MAYUSCULAS solo..." oninput="validaCampoUser()"/>
+        <label for="txtPass">Password:</label>
+        <input type="password" name="Pass" class="entradas" id="txtPass" oninput="validaCampoPass()" disabled/>
+        <!-- <input type="button" value="PULSAME Y VERAS..."> -->
+        <button id="btnSign" onclick="compruebaCredenciales()" disabled>SIGN IN</button>
+        <label for="" id="espacioError"></label>
+      </fieldset>
+      <fieldset id="segundo" disabled>
+			<legend>SEGUNDO: DATOS</legend>
+        <label for="txtCampo1">Usuario:</label>
+        <input type="text" name="campo1" id="txtCampo1" />
+        <label for="txtCampo2">Password:</label>
+        <input type="text" name="campo2" id="txtCampo2" />
+        <label for="txtCampo3">Usuario:</label>
+        <input type="text" name="campo3" id="txtCampo3" />
+        <label for="txtCampo4">Password:</label>
+        <input type="text" name="camp04" id="txtCampo4" />
+      </fieldset>
+      <fieldset id="tercero" disabled>
+        <input type="submit" value="ENVIAR" />
+        <input type="reset" value="BORRAR" />
+      </fieldset>
+    </form>
+    <script src="/script.js"></script>
+  </body>
+</html>

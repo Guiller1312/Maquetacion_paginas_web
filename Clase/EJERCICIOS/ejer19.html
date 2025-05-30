@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /**
+        *| padStart(targetLength, 'padString'):
+        *? es un método de los strings que rellena el inicio de una cadena con caracteres hasta alcanzar una longitud deseada.
+        ** targetLength: parámetro obligatorio.Referencia a la longitud de la cadena(dígitos)
+        ** 'padString': parámetro opcional; referencia la cadena que se rellenará al inicio. Por defecto es vacio("")
+
+        *| .join(''): 
+        *?quita los caracteres de separacion de un array
+        
+        *| .split():
+        *? convierte un string a array
+
+        *| toString(a):
+        *? es un método que convierte un valor (generalmente un número) en una cadena de texto (string).
+        ** a: si se espesifica el parametro este hace referencia a la base(sistema numerico)
+        ** si no se espesifica el parametro por defecto es 10(sistema decimal)
+        *!nota:
+        ** si le pasamos un segundo parametro este método puede convertir un numero a otra base(lo determina el segundo parámetro llamado radik).
+        
+        *|parseInt(a,b):
+        *? metodo que convierte a enteros valores string
+        ** a: parametro obligatorio, referencia a la cadena de texto que se quiere convertir a nro
+        ** b(radix): este parametro hace referencia a la base(sistema numerico) de la cadena. 
+        */
+        function binario(nro) {
+            let resto;
+            let copia = nro;
+
+            let convierte = (nro) => {
+                let binario = "";
+                while (nro > 0) {
+                    resto = nro % 2;
+                    // resul+=resto;
+                    binario = resto + binario;
+                    nro = parseInt(nro / 2);
+                }
+                //console.error(copia + " en base 10 " + "y en base 2(binario): " +resul)
+                return binario;
+            }
+
+            if (nro > 0) {
+                let resul = convierte(nro);
+                console.error("el nro: " + copia + "\u2081\u2080" + " \u2261 " + resul+"\u2082");
+            } else if (nro == 0) {
+                let resul = "0";
+                console.error("el nro: " + copia + "\u2081\u2080" + " \u2261 " + resul+"\u2082");
+
+            }
+            else {
+                nro *= -1;
+                let resul = convierte(nro).padStart(8, '0');
+                console.warn(resul);//comparacion
+
+                let nuevoBinario = resul.split('').map(digito =>
+                    digito === '0' ? '1' : '0').join('');
+                let decimal = parseInt(nuevoBinario, 2) + 1;
+                // resultado=decimal.toString(2).padStart(8,'0');
+                let resultado = convierte(decimal);
+
+                // console.log(nuevoBinario);
+                console.error("el nro: " + copia + "\u2081\u2080" + " \u2261 " + resultado + "\u2082");
+            }
+        }
+        binario(-15);
+    </script>
+</body>
+
+</html>

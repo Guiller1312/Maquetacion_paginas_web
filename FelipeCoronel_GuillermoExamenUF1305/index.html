@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXÁMEN UF1305 DEL CERTIFICADO DE PROFESIONALIDAD IFCD0110</title>
+</head>
+<body>
+    <form action="#" method="get">
+			<!-- fieldset#NOMBRE DE USUARIO -->
+			 <fieldset id="NombredeUsuario">
+				<!-- ********** NOMBRE DE USUARIO ********** -->
+				 <label for="Nombre">NOMBRE:</label>
+				 <input type="text" name="Nombre" id="Nombre" minlength="3" maxlength="15" onmousemove="iluminaCampo(`#Nombre`)" onblur = "apagarcampo(`#Nombre`)" required>
+				 <label for="Apellido1">APELLIDO 1:</label>
+				 <input type="text" name="Apellido1" id="Apellido1"  minlength="3" maxlength="15"  onfocus="iluminaCampo(`#Apellido1`)" onblur = "apagarcampo(`#Apellido1`)" required>
+				 <label for="Apellido2">APELLIDO 2:</label>
+				 <input type="text" name="Apellido2" id="Apellido2"  minlength="3" maxlength="15"  onblur = "apagarcampo(`#Apellido2`)"  onmouseover="iluminaCampo(`Apellido2`)" onfocus="iluminaCampo(`#Apellido2`)"required>
+                 <label for="NombreUsuario">Nombre usuario: </label>
+				 <input type="text"  name="NombreUsuario" id="NombreUsuario" disabled >
+				</fieldset>
+			 <!-- fieldset#notasAlumno.secciones -->
+			  <fieldset id="DatosdeUsuario">
+				<!-- ********** DATOS DE USUARIO ********** -->
+				<label for="NIF">NIF</label>
+				<input type="number" name="NIF" id="NIF" maxlength="8" onblur="validarDNI()" onfocus="iluminaCampo(`#NIF`)" onblur = "apagarcampo(`#NIF`)"  >
+				<label for="Telefono">Teléfono</label>
+				<input type="number" name="Telefono" id="Telefono" onblur = "apagarcampo(`#Telefono`)" onfocus="iluminaCampo(`#Telefono`)" >
+                <label for="correo">Correo</label>
+				<input type="text" name="correo" id="correo" onblur = "apagarcampo(`#correo`)" onfocus="iluminaCampo(`#correo`)" >
+                <label for="DatosUsuario">Datos usuario: </label>
+				<input type="text" name="DatosUsuario" id="DatosUsuario" disabled>
+              </fieldset>
+
+			  <!-- fieldset#controlesFormulario.secciones  -->
+			  <fieldset id="controlesFormulario" class="secciones">
+					<!-- ********** CONTROLES DEL FORMULARIO ********** -->
+					<!-- EL 'input'' DE TIPO 'submit' ES LA PIEZA FUNDAMENTAL DEL ENVÍO -->
+					<!-- ES EL QUE REÚNE LOS VALORES 'value' DE CADA CAMPO Y LOS ENVÍA -->
+					<input type="submit" value="ENVIAR" id="btn1" >
+					<!-- EL 'input' DE TIPO 'reset' ES EL QUE LIMPIA LOS CAMPOS -->
+					<input type="reset" value="BORRAR" id="btn2">
+			  </fieldset>
+			</form>
+</body>
+<script src="JS/js.js"></script>
+</html>

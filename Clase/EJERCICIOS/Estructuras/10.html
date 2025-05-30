@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS JS 10</title>
+    <script>
+
+    let salida = false;
+
+    do{
+
+    const respuesta = prompt("¿Quieres salir del bucle? Escribe 'sí' para salir");
+
+    if(respuesta && respuesta.toLowerCase() === "sí"){
+    
+    salida = true;
+
+    alert("¡Saliste del bucle como todo un héroe!");
+
+    }
+
+    else if(respuesta === ""){
+
+    alert("EL campo va vacio");
+        
+    }
+
+    else{
+
+    alert("Sigues atrapado en el bucle... 😈");
+
+    }
+
+    } while (!salida);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

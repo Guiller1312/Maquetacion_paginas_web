@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJERCICIOS JS 7</title>
+    <script>
+
+        let secuenciaNumeros = "";
+
+        for(let i=0; i<=100; i+=5){
+            console.log(i);
+
+            secuenciaNumeros += i + `<br>`;       
+        
+        }
+
+        function cambiarTexto() {
+            
+            document.getElementById("mensaje").innerHTML = `<h1>👋 ¡Hola JavaScript! </h1><br>${secuenciaNumeros}`;
+            
+        }       
+        
+    </script>
+</head>
+<body>
+
+    <div id="mensaje"></div>
+    <button onclick="cambiarTexto()">Cambiar mensaje</button>
+
+</body>
+</html>

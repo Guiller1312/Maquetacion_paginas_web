@@ -1,0 +1,63 @@
+/* ********** GRID ********** */
+		/* PRIMER NIVEL GRID 'body' */
+		body{
+			display: grid;
+			grid-template-areas:
+			"cabecera"
+			"formulario";
+			grid-template-columns: 90vw;
+			justify-content: center;
+			row-gap: 5rem;	
+		}
+		header{
+			background-color: gray;
+			color: white;
+			grid-area: cabecera;
+			display: flex;
+			justify-content: center;
+		}
+		main{
+			grid-area: formulario;
+		}
+		/* SEGUNDO NIVEL GRID 'form' */
+		form{
+			display: flex;
+			flex-direction: column;
+           justify-content: center;
+           align-items: center; 
+			gap: 5rem 5rem
+		}
+		/* TERCER NIVEL GRID 'fieldset' */
+		#datosAlumno{
+			background-color: lightskyblue;
+			grid-area: datos;
+			/* AUTO-FLOW 'grid' */
+			display: grid;
+			grid-auto-flow: row;
+
+		}
+		#notasAlumno{
+			background-color: lightyellow;
+			grid-area: notas;
+			/* AUTO-FLOW 'grid' */
+			display: grid;
+			grid-auto-flow: dense;
+		}
+		#controlesFormulario{
+			background-color: grey;
+			color: white;
+			grid-area: controles;
+
+			display: grid;
+			grid-template-areas: "hueco1 boton1 hueco2 boton2 hueco3";
+			grid-template-columns: 5% 5rem 50% 5rem 25%;
+
+			/* justify-content: space-evenly; */
+			/* gap: 1rem; */
+		}
+		#btn1{
+			grid-area: boton1;
+		}
+		#btn2{
+			grid-area: boton2;
+		}

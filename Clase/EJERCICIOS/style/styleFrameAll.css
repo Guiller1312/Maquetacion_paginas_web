@@ -1,0 +1,87 @@
+/* Marco modelo para ejercicios  */
+header {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 10vh;
+    margin: auto;
+    border: 0.1rem solid burlywood;
+    position: relative;
+    top: 5rem;
+    border-radius: 1rem;
+    
+}
+
+main {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: flex-start;
+    border: 0.2rem solid black;
+    border-radius: 1rem;
+    background-color: burlywood;
+    width: 30vw;
+    height: 50vh;
+    margin: auto;
+    margin-top:5%;
+    
+}
+ 
+
+section {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 90%;
+    height: 30%;
+    
+}
+ 
+section> input, label, select{
+    width: 70%;
+    height: 30%;
+    text-align:left;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+#resultado {
+    width: 100%;
+    text-align: center;
+}
+section>input {
+     text-align: center;
+     position: relative;
+     top:-0.5rem;
+}
+ 
+ 
+select {
+    text-align:left;
+    position: relative;
+    top: -1rem;
+}
+
+input[type="submit"] {
+    width: 30%;
+    height: 10%;
+    background-color: brown;
+    margin: auto;
+}
+#frameRes {
+      display: flex;
+      flex-direction: column;
+      justify-content:center;
+      align-content: center;
+      align-items:center;
+      width: 90% ;
+      height: 15%;
+      background-color: aliceblue;
+      border-radius: 1rem;
+      margin: 5% 5%;
+   
+}

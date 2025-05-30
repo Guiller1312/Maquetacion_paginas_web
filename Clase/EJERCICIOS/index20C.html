@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUMERO DE AMSTRONG</title>
+    <link rel="stylesheet" href="/style/reset.css">
+    <link rel="stylesheet" href="style/styleFrameAll.css">
+ 
+</head>
+<body>
+    <header>
+        <h1>EJERCICIO</h1>
+    </header>
+    <main>
+          
+         <section class="qNumber" id="qNumber1">
+             <label for="idnum1">INTRODUCE NUMERO: </label>
+             <input type="number" name="num1" id="idnum1" onfocus="this.value=''" focusin = "limpiaResultado()">  
+         </section>
+         <section class="qNumber" id="qNumber2" >
+             <label for="idnum2">INTRODUCE NUMERO: </label>
+             <input type="number" name="num2" id="idnum2" onfocus="this.value=''" focusin = "limpiaResultado()">
+         </section>
+         <section class="qText" id="qText1" >
+            <label for="idText1">INTRODUCE CADENA: </label>
+            <input type="text" name="text1" id="idtext1" onfocus="this.value=''" focusin = "limpiaResultado()">
+        </section>
+         <input type="submit" value="ACEPTAR" onclick="ejercicio()">
+
+
+         <section id="frameRes"><label id="resultado">RESULTADO</label></section>
+
+    </main>
+
+     <script>
+           document.querySelector("#qNumber2").style.display="none";
+           document.querySelector("#qText1").style.display="none";
+           document.querySelector("#frameRes").style.minHeight = "4rem";
+           
+           function ejercicio () {
+                //Obtengo el número
+                let miNumero = document.querySelector("#idnum1").value;
+                let miAmstrong = 0;
+                let miResultado="";
+                for (n=0;n<=parseInt(miNumero);n++) {
+                    if (esAmstrong (n)){
+                       miResultado += ` ${n}`;
+                    }
+                }
+                // if (miResultado.length() === 0 ) {
+                //     miResultado = "NO HAY NA DE NA";
+                // }
+      
+                document.querySelector("#resultado").innerHTML = miResultado;
+                    
+                             
+            }
+
+            function esAmstrong(n){
+                let e = parseInt(n.toString().length);
+                // console.log(e);
+                let miAmstrong=0;
+                //Recorro con un bucle cada digito de la cadena para tratarlo como número y calcular si es Amstrong
+                for (let i=1; i<=e; i++) {
+                    //Obtenemos cada digito de la cadena del número convertida a entero y lo elevamos a su longitud (e)
+                    //por cada uno de los digitos, acumulandose en la suma.
+                    miAmstrong += Math.pow(parseInt(n.toString()[i-1]), e)
+                }
+                // console.log(miAmstrong);
+                if (parseInt(miAmstrong) === parseInt(n)) {
+                    console.log(n);
+                    return true;
+                }
+             
+                return false;
+             
+                
+            }
+
+            function limpiaResultado() {
+                document.querySelector("#resultado").innerHTML = "";
+                //Recuperamos estilo del label del formulario
+                document.querySelector("#resultado").style.backgroundColor = "#ffffff";
+                document.querySelector("#resultado").style.color ="#000000";
+            }
+
+     </script>
+</body>
+</html>

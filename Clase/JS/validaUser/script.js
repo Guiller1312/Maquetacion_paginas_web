@@ -1,4 +1,4 @@
-// VALIDA CAMPO USUARIO
+// 1. VALIDA EL FORMATO DE ENTRADA DEL CAMPO USUARIO
 function validaCampoUser() {
 	// CREO UNA VARIABLE PARA METER EL ID DEL INPUT QUE SELECCIONO
 	let campo = '#txtUser';
@@ -8,6 +8,7 @@ function validaCampoUser() {
 	compruebaLongitud(campo, 5);
 }
 
+// 2. VALIDA EL FORMATO DE ENTRADA DEL CAMPO PASSWORD
 function validaCampoPass() {
 	// CREO UNA VARIABLE PARA METER EL ID DEL INPUT QUE SELECCIONO
 	let campo = '#txtPass';
@@ -41,11 +42,6 @@ function compruebaCredenciales() {
 	}
 
 }
-// ESTA FUNCIÓN ILUMINA EL CAMPO EN AMARILLO -- ES GENÉRICA --
-function iluminaCampo(inputID) {
-	// RECIBO EL ID Y LE DIGO QUE APLIQUE LA SOMBRA AMARILLA A ESE CAMPO
-	document.querySelector(`${inputID}`).style.boxShadow = "0 0 5px 5px yellow";
-}
 
 // ESTA FUNCION COMPRUEBA QUE EL USUARIO O EL PASSWORD TENGAN LOS CARACTERES EXIGIDOS
 function compruebaLongitud(inputID, longitudDeseada) {
@@ -63,11 +59,11 @@ function compruebaLongitud(inputID, longitudDeseada) {
 	// GUARDAMOS EN EL INTERIOR DEL CAMPO (EN SU 'value') EL RESULTADO DE COMPARAR:
 	// 1. (TRUE) SI SE CUMPLE QUE TIENE 5 O MAS LETRAS EL CONTENIDO (SACANDO UN 'substr') Y CONVIRTIENDOLO A MAYÚSCULAS
 	// 2. (FALSE) SI NO SE CUMPLE Y SE VA A LA FUNCION 'errorCampo' ME DEVUELVE EL MISMO CONTENIDO QUE HE ESCRITO
-	document.querySelector(`${inputID}`).value = (longitudCampo >= longitudDeseada) ? activaPass(inputID, contenido) : errorCampo(inputID, `Te faltan ${caracteresRestantes} caracteres más...`);
+	document.querySelector(`${inputID}`).value = (longitudCampo >= longitudDeseada) ? activaCampos(inputID, contenido) : errorCampo(inputID, `Te faltan ${caracteresRestantes} caracteres más...`);
 }
 
 // ESTA FUNCION COMPRUEBA LAS LONGITUDES DE LOS CAMPOS Y ACTIVA O DESACTIVA LOS CAMPOS
-function activaPass(nombreCampo, cadena) {
+function activaCampos(nombreCampo, cadena) {
 	// RECIBO EL CONTENIDO DEL INPUT, EXTRAIGO AL SUBCADENA Y LO PASO A MAYÚSCULAS
 	if (nombreCampo == '#txtUser') {
 		cadena = cadena.substr(0, 5).toUpperCase();
@@ -78,13 +74,19 @@ function activaPass(nombreCampo, cadena) {
 	}
 	else if (nombreCampo == '#txtPass') {
 		cadena = cadena.substr(0, 4);
-		//  ACTIVO EL CAMPO PASSWORD
+		//  DESACTIVO EL CAMPO PASSWORD
 		document.querySelector('#txtPass').disabled = true;
 		//  ACTIVO EL BOTÓN DE VALIDACIÓN DE ENTRADA
 		document.querySelector('#btnSign').disabled = false;
 	}
 	//  DEVUELVE EL VALOR DE 'cadena' PARA QUE LO ESCRIBA DE NUEVO EN EL INPUT
 	return cadena;
+}
+
+// ESTA FUNCIÓN ILUMINA EL CAMPO EN AMARILLO -- ES GENÉRICA --
+function iluminaCampo(inputID) {
+	// RECIBO EL ID Y LE DIGO QUE APLIQUE LA SOMBRA AMARILLA A ESE CAMPO
+	document.querySelector(`${inputID}`).style.boxShadow = "0 0 5px 5px yellow";
 }
 
 // ESTA FUNCION METE EN EL HTML DE LA LABEL EL MENSAJE DE ERROR QUE SEA...

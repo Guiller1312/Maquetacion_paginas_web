@@ -17,9 +17,7 @@ function validarDNI() {
     let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
 
     if (DNI.length != 8) {
-        alert('El DNI debe tener 8 números y una letra');
-
-
+        alert('El DNI debe tener 8 números');
     } else {
         resultado = DNI % 23;
         letra = letras[resultado];
@@ -37,7 +35,6 @@ function mostrarNombreUsuario() {
 }
 function mostrarDatos() {
     let dni = document.querySelector('#NIF').value;
-    console.log(dni);
     let telefono = document.querySelector('#Telefono').value;
     let correo = document.querySelector('#correo').value;
 

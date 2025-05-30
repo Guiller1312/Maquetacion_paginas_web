@@ -4,7 +4,8 @@
 			display: grid;
 			grid-template-areas:
 			"cabecera"
-			"formulario";
+			"formulario"
+			"pie";
 			grid-template-columns: 90vw;
 			justify-content: center;
 			row-gap: 5rem;	
@@ -17,14 +18,15 @@
 			justify-content: center;
 		}
 		main{
+			display: flex;
+			justify-content: center;
+			align-content: center;
 			grid-area: formulario;
 		}
 		/* SEGUNDO NIVEL GRID 'form' */
 		form{
 			display: flex;
 			flex-direction: column;
-           justify-content: center;
-           align-items: center; 
 			gap: 5rem 5rem
 		}
 		/* TERCER NIVEL GRID 'fieldset' */
@@ -60,4 +62,11 @@
 		}
 		#btn2{
 			grid-area: boton2;
+		}
+		footer{
+			background-color: gray;
+			color: white;
+			grid-area: pie;
+			display: flex;
+			justify-content: center;
 		}

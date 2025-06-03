@@ -11,7 +11,6 @@ function apagarCampo(inputID) {
 
 function validarDNI() {
     let DNI = document.querySelector('#NIF').value;
-    iluminaCampo('#NIF');
     let letra = ' ';
     let resultado = 0;
     let letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E'];
@@ -21,7 +20,7 @@ function validarDNI() {
     } else {
         resultado = DNI % 23;
         letra = letras[resultado];
-        document.querySelector('#NIF').innerHTML = ` ${DNI} ${letra}`
+        document.querySelector('#DatosUsuario').value = `${DNI} ${letra}`
     }
 }
 
@@ -31,16 +30,12 @@ function mostrarNombreUsuario() {
     let apellido2 = document.querySelector('#Apellido2').value;
 
 
-    document.querySelector('#datosalumno').innerHTML = `${nombre} ${apellido} ${apellido2}`;
+    document.querySelector('#NombreUsuario').value = `${nombre} ${apellido} ${apellido2}`;
 }
 function mostrarDatos() {
     let dni = document.querySelector('#NIF').value;
     let telefono = document.querySelector('#Telefono').value;
     let correo = document.querySelector('#correo').value;
 
-    document.querySelector('#datosexamen').innerHTML = `
-        DNI: ${dni}
-        Teléfono: ${telefono}
-        correo: ${correo}
-    `;
+    document.querySelector('#DatosUsuario').value = `DNI: ${dni} Teléfono: ${telefono} correo: ${correo}`;
 }

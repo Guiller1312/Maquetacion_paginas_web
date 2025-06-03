@@ -11,11 +11,11 @@
 			 <fieldset id="NombredeUsuario">
 				<!-- ********** NOMBRE DE USUARIO ********** -->
 				 <label for="Nombre">NOMBRE:</label>
-				 <input type="text" name="Nombre" id="Nombre" minlength="3" maxlength="15"  onfocus = "iluminaCampo(`#Nombre`)" onmousemove="iluminaCampo(`#Nombre`)" onblur = "apagarCampo(`#Nombre`)" required>
+				 <input type="text" name="Nombre" id="Nombre" minlength="3" maxlength="15" oninput="mostrarNombreUsuario()" onfocus = "iluminaCampo(`#Nombre`)" onmousemove="iluminaCampo(`#Nombre`)" onblur = "apagarCampo(`#Nombre`)" required>
 				 <label for="Apellido1">APELLIDO 1:</label>
-				 <input type="text" name="Apellido1" id="Apellido1"  minlength="3" maxlength="15"  onfocus="iluminaCampo(`#Apellido1`)" onblur = "apagarCampo(`#Apellido1`)" required>
+				 <input type="text" name="Apellido1" id="Apellido1"  minlength="3" maxlength="15" oninput="mostrarNombreUsuario()" onfocus="iluminaCampo(`#Apellido1`)" onblur = "apagarCampo(`#Apellido1`)" required>
 				 <label for="Apellido2">APELLIDO 2:</label>
-				 <input type="text" name="Apellido2" id="Apellido2"  minlength="3" maxlength="15"  onblur = "apagarCampo(`#Apellido2`)"  onmouseover="iluminaCampo(`Apellido2`)" onfocus="iluminaCampo(`#Apellido2`)"required>
+				 <input type="text" name="Apellido2" id="Apellido2"  minlength="3" maxlength="15" oninput="mostrarNombreUsuario()" onblur = "apagarCampo(`#Apellido2`)"  onmouseover="iluminaCampo(`Apellido2`)" onfocus="iluminaCampo(`#Apellido2`)"required>
                  <label for="NombreUsuario">Nombre usuario: </label>
 				 <input type="text"  name="NombreUsuario" id="NombreUsuario" disabled >
 				</fieldset>
@@ -23,11 +23,11 @@
 			  <fieldset id="DatosdeUsuario">
 				<!-- ********** DATOS DE USUARIO ********** -->
 				<label for="NIF">NIF</label>
-				<input type="number" name="NIF" id="NIF" onchange="validarDNI()" onblur="validarDNI()" onfocus="iluminaCampo(`#NIF`)" onblur = "apagarCampo(`#NIF`)"  >
+				<input type="number" name="NIF" id="NIF" onchange="validarDNI()"  onfocus="iluminaCampo(`#NIF`)" onblur = "apagarCampo(`#NIF`)"  >
 				<label for="Telefono">Teléfono</label>
-				<input type="number" name="Telefono" id="Telefono" onblur = "apagarCampo(`#Telefono`)" onfocus="iluminaCampo(`#Telefono`)" >
+				<input type="number" name="Telefono" id="Telefono" oninput="mostrarDatos()" onblur = "apagarCampo(`#Telefono`)" onfocus="iluminaCampo(`#Telefono`)" >
                 <label for="correo">Correo</label>
-				<input type="text" name="correo" id="correo" onblur = "apagarCampo(`#correo`)" onfocus="iluminaCampo(`#correo`)" >
+				<input type="email" name="correo" id="correo" oninput="mostrarDatos()" onblur = "apagarCampo(`#correo`)" onfocus="iluminaCampo(`#correo`)" >
                 <label for="DatosUsuario">Datos usuario: </label>
 				<input type="text" name="DatosUsuario" id="DatosUsuario" disabled>
               </fieldset>
